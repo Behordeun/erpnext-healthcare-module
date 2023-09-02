@@ -1,0 +1,39 @@
+{
+ "actions": [],
+ "creation": "2021-06-08 15:36:14.163307",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "reported_boolean",
+  "reported_reference"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "reported_boolean",
+   "fieldtype": "Check",
+   "label": "Reported Boolean",
+   "options": "boolean"
+  },
+  {
+   "description": "Patient\nPractitioner\nPractitionerRole\nRelatedPerson\nOrganization",
+   "fieldname": "reported_reference",
+   "fieldtype": "Table",
+   "label": "Reported Reference",
+   "options": "Dynamic Link"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-06-11 19:48:30.455877",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Reported Child",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

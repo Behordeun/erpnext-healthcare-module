@@ -1,0 +1,79 @@
+{
+ "actions": [],
+ "autoname": "Prompt",
+ "creation": "2021-06-15 19:10:16.978719",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "relationship",
+  "fullname",
+  "telecom",
+  "address",
+  "gender",
+  "organization",
+  "period"
+ ],
+ "fields": [
+  {
+   "description": "The kind of relationship",
+   "fieldname": "relationship",
+   "fieldtype": "Table MultiSelect",
+   "label": "Relationship",
+   "options": "Codable Concept"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "description": "A contact detail for the person",
+   "fieldname": "telecom",
+   "fieldtype": "Table",
+   "label": "Telecom",
+   "options": "Contact Point"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "address",
+   "fieldtype": "Table",
+   "label": "Address",
+   "options": "Addresses"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "male\nfemale\nother\nunknown"
+  },
+  {
+   "fieldname": "organization",
+   "fieldtype": "Link",
+   "label": "Organization",
+   "options": "Organization"
+  },
+  {
+   "description": "The period during which this contact person or organization is valid to be contacted relating to this patient",
+   "fieldname": "period",
+   "fieldtype": "Table",
+   "label": "Period",
+   "options": "Period"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "description": "A name associated with the contact person",
+   "fieldname": "fullname",
+   "fieldtype": "Table",
+   "label": "Name",
+   "options": "Human Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-07-18 01:15:40.521404",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Patient Contact",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

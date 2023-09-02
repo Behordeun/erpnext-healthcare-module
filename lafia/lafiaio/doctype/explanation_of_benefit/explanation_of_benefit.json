@@ -1,0 +1,343 @@
+{
+ "actions": [],
+ "creation": "2021-06-08 14:25:22.940459",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "identifier",
+  "status",
+  "type",
+  "subtype",
+  "use",
+  "patient",
+  "billable_period",
+  "created",
+  "enterer",
+  "insurer",
+  "provider",
+  "priority",
+  "funds_reserve_requested",
+  "funds_reserve",
+  "related",
+  "prescription",
+  "original_prescription",
+  "payee",
+  "referral",
+  "facility",
+  "claim",
+  "claim_response",
+  "outcome",
+  "disposition",
+  "pre_auth_ref",
+  "pre_auth_ref_period",
+  "careteam",
+  "supporting_info",
+  "diagnosis",
+  "procedure",
+  "precedence",
+  "insurance",
+  "accident",
+  "item",
+  "add_item",
+  "adjudication",
+  "total",
+  "payment",
+  "form_code",
+  "form",
+  "process_note",
+  "benefit_period",
+  "benefit_balance"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "active\ncancelled\ndraft\nentered-in-error",
+   "reqd": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Table",
+   "label": "Type",
+   "options": "Codable Concept",
+   "reqd": 1
+  },
+  {
+   "fieldname": "subtype",
+   "fieldtype": "Table",
+   "label": "Subtype",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "use",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Use",
+   "reqd": 1
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient LafiaIO",
+   "reqd": 1
+  },
+  {
+   "fieldname": "billable_period",
+   "fieldtype": "Data",
+   "label": "Billable Period"
+  },
+  {
+   "fieldname": "created",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Created",
+   "reqd": 1
+  },
+  {
+   "description": "Practitioner\nPractitionerRole",
+   "fieldname": "enterer",
+   "fieldtype": "Table",
+   "label": "Enterer",
+   "options": "Dynamic Link"
+  },
+  {
+   "fieldname": "insurer",
+   "fieldtype": "Link",
+   "label": "Insurer",
+   "options": "Organization",
+   "reqd": 1
+  },
+  {
+   "description": "Practitioner\nPractitionerRole\nOrganization",
+   "fieldname": "provider",
+   "fieldtype": "Link",
+   "label": "Provider",
+   "options": "Dynamic Link",
+   "reqd": 1
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Table",
+   "label": "Priority",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "funds_reserve_requested",
+   "fieldtype": "Table",
+   "label": "Funds Reserve Requested",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "funds_reserve",
+   "fieldtype": "Table",
+   "label": "Funds Reserve",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "related",
+   "fieldtype": "Table",
+   "label": "Related",
+   "options": "Related Child"
+  },
+  {
+   "description": "MedicationRequest\nVisionPrescription",
+   "fieldname": "prescription",
+   "fieldtype": "Table",
+   "label": "Prescription",
+   "options": "Dynamic Link"
+  },
+  {
+   "fieldname": "original_prescription",
+   "fieldtype": "Link",
+   "label": "Original Prescription",
+   "options": "Medication Request"
+  },
+  {
+   "fieldname": "payee",
+   "fieldtype": "Table",
+   "label": "Payee",
+   "options": "Payee Child"
+  },
+  {
+   "fieldname": "referral",
+   "fieldtype": "Link",
+   "label": "Referral",
+   "options": "Service Request"
+  },
+  {
+   "fieldname": "facility",
+   "fieldtype": "Link",
+   "label": "Facility",
+   "options": "Location FHIR"
+  },
+  {
+   "fieldname": "claim",
+   "fieldtype": "Link",
+   "label": "Claim",
+   "options": "Claims"
+  },
+  {
+   "fieldname": "claim_response",
+   "fieldtype": "Link",
+   "label": "Claim Response",
+   "options": "ClaimResponse"
+  },
+  {
+   "fieldname": "outcome",
+   "fieldtype": "Select",
+   "label": "Outcome",
+   "options": "queued\ncomplete\nerror\npartial",
+   "reqd": 1
+  },
+  {
+   "fieldname": "disposition",
+   "fieldtype": "Data",
+   "label": "Disposition"
+  },
+  {
+   "fieldname": "pre_auth_ref",
+   "fieldtype": "Data",
+   "label": "Pre Auth Ref"
+  },
+  {
+   "fieldname": "pre_auth_ref_period",
+   "fieldtype": "Data",
+   "label": "Pre Auth Ref Period"
+  },
+  {
+   "fieldname": "careteam",
+   "fieldtype": "Table",
+   "label": "Careteam",
+   "options": "CareTeam Child"
+  },
+  {
+   "fieldname": "supporting_info",
+   "fieldtype": "Table",
+   "label": "Supporting Info",
+   "options": "SupportingInfo Child"
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Table",
+   "label": "Diagnosis",
+   "options": "Diagnosis Child"
+  },
+  {
+   "fieldname": "procedure",
+   "fieldtype": "Table",
+   "label": "Procedure",
+   "options": "Procedure Child"
+  },
+  {
+   "fieldname": "precedence",
+   "fieldtype": "Data",
+   "label": "Precedence"
+  },
+  {
+   "fieldname": "insurance",
+   "fieldtype": "Table",
+   "label": "Insurance",
+   "options": "Insurance",
+   "reqd": 1
+  },
+  {
+   "fieldname": "accident",
+   "fieldtype": "Table",
+   "label": "Accident",
+   "options": "Accident Child"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Table",
+   "label": "Item",
+   "options": "Explanation Of Benefit Item"
+  },
+  {
+   "fieldname": "add_item",
+   "fieldtype": "Table",
+   "label": "Add Item",
+   "options": "Add Item Child"
+  },
+  {
+   "fieldname": "adjudication",
+   "fieldtype": "Table",
+   "label": "Adjudication",
+   "options": "Adjudication"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Table",
+   "label": "Total",
+   "options": "Total Child"
+  },
+  {
+   "fieldname": "payment",
+   "fieldtype": "Table",
+   "label": "Payment",
+   "options": "Payment Child"
+  },
+  {
+   "fieldname": "form_code",
+   "fieldtype": "Table",
+   "label": "Form Code",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "form",
+   "fieldtype": "Data",
+   "label": "Form"
+  },
+  {
+   "fieldname": "process_note",
+   "fieldtype": "Table",
+   "label": "Process Note",
+   "options": "Process Note_child"
+  },
+  {
+   "fieldname": "benefit_period",
+   "fieldtype": "Data",
+   "label": "Benefit Period"
+  },
+  {
+   "fieldname": "benefit_balance",
+   "fieldtype": "Table",
+   "label": "Benefit Balance",
+   "options": "Benefit Balance"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-12-01 00:19:01.848890",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Explanation of Benefit",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

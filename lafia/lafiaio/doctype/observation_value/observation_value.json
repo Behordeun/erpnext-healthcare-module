@@ -1,0 +1,96 @@
+{
+ "actions": [],
+ "creation": "2021-06-02 14:44:13.771595",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "value_quantity",
+  "value_codeable_concept",
+  "value_string",
+  "value_boolean",
+  "value_integer",
+  "value_range",
+  "value_ratio",
+  "value_sampled_data",
+  "value_time",
+  "value_datetime",
+  "value_period"
+ ],
+ "fields": [
+  {
+   "fieldname": "value_quantity",
+   "fieldtype": "Table",
+   "label": "Value Quantity",
+   "options": "Quantity"
+  },
+  {
+   "fieldname": "value_codeable_concept",
+   "fieldtype": "Table",
+   "label": "Value Codeable Concept",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "value_string",
+   "fieldtype": "Data",
+   "label": "Value String"
+  },
+  {
+   "default": "0",
+   "fieldname": "value_boolean",
+   "fieldtype": "Check",
+   "label": "Value Boolean"
+  },
+  {
+   "fieldname": "value_integer",
+   "fieldtype": "Data",
+   "label": "Value Integer"
+  },
+  {
+   "fieldname": "value_range",
+   "fieldtype": "Table",
+   "label": "Value Range",
+   "options": "Range"
+  },
+  {
+   "fieldname": "value_ratio",
+   "fieldtype": "Table",
+   "label": "Value Ratio",
+   "options": "Ratio"
+  },
+  {
+   "fieldname": "value_sampled_data",
+   "fieldtype": "Table",
+   "label": "Value Sampled Data",
+   "options": "Sampled Data"
+  },
+  {
+   "fieldname": "value_time",
+   "fieldtype": "Data",
+   "label": "Value Time"
+  },
+  {
+   "fieldname": "value_datetime",
+   "fieldtype": "Data",
+   "label": "Value DateTime"
+  },
+  {
+   "fieldname": "value_period",
+   "fieldtype": "Table",
+   "label": "Value Period",
+   "options": "Period"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-06-11 19:49:08.837722",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Observation Value",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

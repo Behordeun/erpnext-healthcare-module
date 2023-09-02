@@ -1,0 +1,286 @@
+{
+ "actions": [],
+ "autoname": "format:FMH-{fhir_serverid}",
+ "creation": "2022-11-13 20:35:07.249671",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "status",
+  "column_break_3",
+  "date",
+  "absent_reason",
+  "identifier_section",
+  "identifier",
+  "member_details_section",
+  "member_name",
+  "relationship",
+  "born_date",
+  "age",
+  "column_break_13",
+  "sex",
+  "deceased",
+  "deceased_date",
+  "participants_section",
+  "participants",
+  "instantiates_canonical",
+  "instantiates_uri",
+  "section_break_31",
+  "reason_code",
+  "note",
+  "condition_section",
+  "condition",
+  "procedure_section",
+  "procedure",
+  "section_break_25",
+  "fhir_serverid"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "instantiates_canonical",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Instantiates Canonical"
+  },
+  {
+   "fieldname": "instantiates_uri",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Instantiates Uri"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Partial\nCompleted\nEntered-in-error\nHealth-unknown",
+   "reqd": 1
+  },
+  {
+   "fieldname": "absent_reason",
+   "fieldtype": "Link",
+   "label": "Data Absent Reason",
+   "options": "FamilyHistory Absent Reason"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Datetime",
+   "label": "Date"
+  },
+  {
+   "description": "The family member described",
+   "fieldname": "member_name",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "relationship",
+   "fieldtype": "Link",
+   "label": "Relationship",
+   "options": "Relationship Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sex",
+   "fieldtype": "Link",
+   "label": "Sex",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "born_date",
+   "fieldtype": "Date",
+   "label": "Date of birth"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "HTML",
+   "label": "Age",
+   "no_copy": 1,
+   "print_hide": 1,
+   "read_only": 1,
+   "report_hide": 1
+  },
+  {
+   "depends_on": "eval:doc.deceased == 1",
+   "fieldname": "deceased_date",
+   "fieldtype": "Date",
+   "label": "Deceased Date"
+  },
+  {
+   "fieldname": "section_break_31",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "reason_code",
+   "fieldtype": "Table MultiSelect",
+   "label": "Reason",
+   "options": "Clinical Findings Multi"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Small Text",
+   "label": "Note"
+  },
+  {
+   "fieldname": "condition",
+   "fieldtype": "Table",
+   "label": "Condition",
+   "options": "Condition Table"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "label": "FHIR Serverid",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "identifier_section",
+   "fieldtype": "Section Break",
+   "label": "Identifier"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "member_details_section",
+   "fieldtype": "Section Break",
+   "label": "Member Details"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "deceased",
+   "fieldtype": "Check",
+   "label": "Deceased"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "participants_section",
+   "fieldtype": "Section Break",
+   "label": "Participants"
+  },
+  {
+   "fieldname": "participants",
+   "fieldtype": "Table",
+   "label": "Participants",
+   "options": "Condition Participant"
+  },
+  {
+   "fieldname": "section_break_25",
+   "fieldtype": "Section Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "condition_section",
+   "fieldtype": "Section Break",
+   "label": "Condition"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "procedure_section",
+   "fieldtype": "Section Break",
+   "label": "Procedure"
+  },
+  {
+   "fieldname": "procedure",
+   "fieldtype": "Table",
+   "label": "Procedure",
+   "options": "Procedure Table"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-11-14 15:32:57.638294",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Family Member History",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Nursing User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

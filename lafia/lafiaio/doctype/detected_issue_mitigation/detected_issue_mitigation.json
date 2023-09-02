@@ -1,0 +1,56 @@
+{
+ "actions": [],
+ "creation": "2021-06-01 16:16:55.142046",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "action",
+  "author_type",
+  "author",
+  "date"
+ ],
+ "fields": [
+  {
+   "fieldname": "action",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Action",
+   "options": "Detected Issue Mitigation Action Code"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "description": "This links to the following Doctypes:\n- Practitioner\n- PractitionerRole",
+   "fieldname": "author",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "label": "Author",
+   "options": "author_type"
+  },
+  {
+   "fieldname": "author_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Author type",
+   "options": "DocType"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-11-14 16:31:23.989011",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Detected Issue Mitigation",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

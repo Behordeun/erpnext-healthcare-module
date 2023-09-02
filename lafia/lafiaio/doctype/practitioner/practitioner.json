@@ -1,0 +1,222 @@
+{
+ "actions": [],
+ "autoname": "format:PRA-LIO-{fhir_serverid}",
+ "creation": "2021-06-08 12:48:54.064212",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "active",
+  "section_break_2",
+  "identifier",
+  "fullname",
+  "firstname",
+  "lastname",
+  "other_name",
+  "birthdate",
+  "communication",
+  "column_break_7",
+  "gender",
+  "email",
+  "phone",
+  "photo",
+  "telecom",
+  "section_break_14",
+  "address",
+  "qualification",
+  "section_break_18",
+  "user_id",
+  "column_break_19",
+  "fhir_serverid"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "default": "0",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "label": "Active",
+   "options": "boolean"
+  },
+  {
+   "fieldname": "telecom",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Telecom",
+   "options": "Contact Point"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Table",
+   "label": "Address",
+   "options": "Addresses"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "male\nfemale\nother\nunknown"
+  },
+  {
+   "fieldname": "birthdate",
+   "fieldtype": "Datetime",
+   "label": "Birthdate"
+  },
+  {
+   "fieldname": "qualification",
+   "fieldtype": "Table",
+   "label": "Qualification",
+   "options": "Qualification Table"
+  },
+  {
+   "fieldname": "communication",
+   "fieldtype": "Table MultiSelect",
+   "label": "Languages",
+   "options": "Language Code Multi"
+  },
+  {
+   "fieldname": "user_id",
+   "fieldtype": "Link",
+   "label": "User Id",
+   "options": "User",
+   "unique": 1
+  },
+  {
+   "fieldname": "fullname",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Name",
+   "options": "Human Name"
+  },
+  {
+   "fieldname": "photo",
+   "fieldtype": "Attach Image",
+   "label": "Photo"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "label": "FHIR Server ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "firstname",
+   "fieldtype": "Data",
+   "label": "Firstname",
+   "options": "Name"
+  },
+  {
+   "fieldname": "lastname",
+   "fieldtype": "Data",
+   "label": "Lastname",
+   "options": "Name"
+  },
+  {
+   "fieldname": "other_name",
+   "fieldtype": "Data",
+   "label": "Other Name"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break",
+   "label": "Personal Information"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_18",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "icon": "person-fill",
+ "image_field": "photo",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-01-07 17:45:38.151505",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Practitioner",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Nursing User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

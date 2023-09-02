@@ -1,0 +1,101 @@
+{
+ "actions": [],
+ "creation": "2021-06-09 13:47:20.206822",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "vaccine_code",
+  "target_disease",
+  "contradicted_vaccine_code",
+  "forecast_status",
+  "forecast_reason",
+  "date_criterion",
+  "date",
+  "description",
+  "series",
+  "dose_number",
+  "series_doses"
+ ],
+ "fields": [
+  {
+   "fieldname": "vaccine_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Vaccine Code",
+   "options": "Vaccine Code"
+  },
+  {
+   "fieldname": "target_disease",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Target Disease",
+   "options": "Immunization Recommendation Target Disease"
+  },
+  {
+   "fieldname": "contradicted_vaccine_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Contradicted Vaccine Code",
+   "options": "Vaccine Code"
+  },
+  {
+   "fieldname": "forecast_status",
+   "fieldtype": "Link",
+   "label": "Forecast Status",
+   "options": "Immunization Recommendation Status",
+   "reqd": 1
+  },
+  {
+   "fieldname": "forecast_reason",
+   "fieldtype": "Link",
+   "label": "Forecast Reason",
+   "options": "Immunization Recommendation Reason"
+  },
+  {
+   "fieldname": "date_criterion",
+   "fieldtype": "Link",
+   "label": "Type of Date",
+   "options": "Immunization Recommendation Date Criterion"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description"
+  },
+  {
+   "fieldname": "series",
+   "fieldtype": "Data",
+   "label": "Series"
+  },
+  {
+   "fieldname": "dose_number",
+   "fieldtype": "Int",
+   "label": "Dose Number"
+  },
+  {
+   "fieldname": "series_doses",
+   "fieldtype": "Data",
+   "label": "Series Doses"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-01-29 20:49:26.083836",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Recommendation",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

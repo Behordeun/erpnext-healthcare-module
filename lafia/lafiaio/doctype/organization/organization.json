@@ -1,0 +1,227 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:name1",
+ "creation": "2021-05-18 12:17:58.257620",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "alias",
+  "type",
+  "column_break_4",
+  "uid",
+  "active",
+  "section_break_4",
+  "identifier",
+  "contact_point_section",
+  "phone",
+  "email",
+  "column_break_12",
+  "fax",
+  "telecom",
+  "address_section",
+  "address",
+  "section_break_13",
+  "partof",
+  "fhir_serverid",
+  "contact",
+  "endpoint",
+  "user_id"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "default": "1",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "label": "Active"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "label": "Type",
+   "options": "Organization Type"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "alias",
+   "fieldtype": "Data",
+   "label": "Alias"
+  },
+  {
+   "fieldname": "telecom",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Telecom",
+   "options": "Contact Point"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Table",
+   "label": "Address",
+   "options": "Addresses"
+  },
+  {
+   "fieldname": "partof",
+   "fieldtype": "Data",
+   "label": "PartOf"
+  },
+  {
+   "fieldname": "contact",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Contact",
+   "options": "Contact Table"
+  },
+  {
+   "fieldname": "endpoint",
+   "fieldtype": "Table MultiSelect",
+   "hidden": 1,
+   "label": "Endpoint",
+   "options": "Endpoint Table"
+  },
+  {
+   "fieldname": "user_id",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "User Id",
+   "options": "User",
+   "unique": 1
+  },
+  {
+   "fieldname": "uid",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "UID"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Identification"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "contact_point_section",
+   "fieldtype": "Section Break",
+   "label": "Contact Point"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "address_section",
+   "fieldtype": "Section Break",
+   "label": "Address"
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fax",
+   "fieldtype": "Data",
+   "label": "Fax"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "label": "Fhir ServerID"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-03-30 14:59:16.496429",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Organization",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Nursing User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

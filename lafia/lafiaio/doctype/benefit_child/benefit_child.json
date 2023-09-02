@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "creation": "2021-06-07 14:18:24.287598",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "allowed_unsigned_int",
+  "allowed_string",
+  "allowed_money",
+  "used_unsigned_int",
+  "used_string",
+  "used_money",
+  "type"
+ ],
+ "fields": [
+  {
+   "fieldname": "allowed_unsigned_int",
+   "fieldtype": "Data",
+   "label": "Allowed Unsigned Int"
+  },
+  {
+   "fieldname": "allowed_string",
+   "fieldtype": "Data",
+   "label": "Allowed String"
+  },
+  {
+   "fieldname": "allowed_money",
+   "fieldtype": "Table",
+   "label": "Allowed Money",
+   "options": "Money"
+  },
+  {
+   "fieldname": "used_unsigned_int",
+   "fieldtype": "Data",
+   "label": "Used Unsigned Int"
+  },
+  {
+   "fieldname": "used_string",
+   "fieldtype": "Data",
+   "label": "Used String"
+  },
+  {
+   "fieldname": "used_money",
+   "fieldtype": "Table",
+   "label": "Used Money",
+   "options": "Money"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Table",
+   "label": "Type",
+   "options": "Codable Concept"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-06-11 19:48:44.591181",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Benefit Child",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,79 @@
+{
+ "actions": [],
+ "creation": "2021-06-08 15:12:57.218264",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "category",
+  "excluded",
+  "name1",
+  "description",
+  "network",
+  "unit",
+  "term",
+  "financial"
+ ],
+ "fields": [
+  {
+   "fieldname": "category",
+   "fieldtype": "Table",
+   "label": "Category",
+   "options": "Codable Concept",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "excluded",
+   "fieldtype": "Check",
+   "label": "Excluded",
+   "options": "boolean"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description"
+  },
+  {
+   "fieldname": "network",
+   "fieldtype": "Table",
+   "label": "Network",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Table",
+   "label": "Unit",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "term",
+   "fieldtype": "Table",
+   "label": "Term",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "financial",
+   "fieldtype": "Table",
+   "label": "Financial",
+   "options": "Financial Child"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-11-30 23:34:05.821790",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Benefit Balance",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,59 @@
+{
+ "actions": [],
+ "creation": "2021-06-14 14:39:27.691576",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "timing_timing",
+  "timing_datetime",
+  "timing_age",
+  "timing_period",
+  "timing_range",
+  "timing_duration"
+ ],
+ "fields": [
+  {
+   "fieldname": "timing_timing",
+   "fieldtype": "Data",
+   "label": "Timing Timing"
+  },
+  {
+   "fieldname": "timing_datetime",
+   "fieldtype": "Data",
+   "label": "Timing Datetime"
+  },
+  {
+   "fieldname": "timing_age",
+   "fieldtype": "Data",
+   "label": "Timing Age"
+  },
+  {
+   "fieldname": "timing_period",
+   "fieldtype": "Data",
+   "label": "Timing Period"
+  },
+  {
+   "fieldname": "timing_range",
+   "fieldtype": "Data",
+   "label": "Timing Range"
+  },
+  {
+   "fieldname": "timing_duration",
+   "fieldtype": "Data",
+   "label": "Timing Duration"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-07-10 12:07:17.701947",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Activity Definition Timing",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

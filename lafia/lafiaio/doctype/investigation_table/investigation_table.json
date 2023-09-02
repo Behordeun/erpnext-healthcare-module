@@ -1,0 +1,47 @@
+{
+ "actions": [],
+ "creation": "2021-06-02 18:19:58.653454",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_type",
+  "item",
+  "basis"
+ ],
+ "fields": [
+  {
+   "fieldname": "item",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "item_type"
+  },
+  {
+   "fieldname": "item_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "basis",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Basis"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-11-13 22:35:12.086109",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Investigation Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

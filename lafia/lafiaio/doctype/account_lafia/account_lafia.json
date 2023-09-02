@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "creation": "2021-06-07 13:05:47.752566",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "identifier",
+  "status",
+  "type",
+  "subject",
+  "service_period",
+  "coverage",
+  "owner",
+  "description",
+  "guarantor",
+  "part_of"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "active\ninactive\nentered-in-error\non-hold\nunknown",
+   "reqd": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Table",
+   "label": "Type",
+   "options": "Codable Concept"
+  },
+  {
+   "description": "This leads to the following doctypes:\n- Patient\n- Device\n- Practitioner\n- PractitionerRole\n- Location\n- HealthcareService\n- Organization",
+   "fieldname": "subject",
+   "fieldtype": "Table",
+   "label": "Subject",
+   "options": "Dynamic Link"
+  },
+  {
+   "fieldname": "service_period",
+   "fieldtype": "Table",
+   "label": "Service Period",
+   "options": "Period"
+  },
+  {
+   "fieldname": "coverage",
+   "fieldtype": "Table",
+   "label": "Coverage",
+   "options": "Coverage Child"
+  },
+  {
+   "fieldname": "owner",
+   "fieldtype": "Link",
+   "label": "Owner",
+   "options": "Organization"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description"
+  },
+  {
+   "fieldname": "guarantor",
+   "fieldtype": "Table",
+   "label": "Guarantor",
+   "options": "Guarantor Child"
+  },
+  {
+   "fieldname": "part_of",
+   "fieldtype": "Link",
+   "label": "Part Of",
+   "options": "Account Lafia"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-11-30 22:16:16.957853",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Account Lafia",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

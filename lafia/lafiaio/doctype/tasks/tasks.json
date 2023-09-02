@@ -1,0 +1,264 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:TSK-LIO-{fhir_serverid}",
+ "creation": "2022-09-21 01:28:28.497102",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "owner_ref",
+  "owner1",
+  "beneficiary_ref",
+  "beneficiary",
+  "column_break_5",
+  "status",
+  "type",
+  "intent",
+  "priority",
+  "description_section",
+  "description",
+  "reason",
+  "identifier_section",
+  "identifier",
+  "group_identifier",
+  "based_on_section",
+  "based_on",
+  "part_of_section",
+  "part_of",
+  "section_break_19",
+  "encounter",
+  "encounter_name",
+  "start",
+  "end",
+  "creation_date",
+  "column_break_25",
+  "requester_ref",
+  "requester",
+  "performer_type",
+  "location",
+  "insurance",
+  "section_break_31",
+  "fhir_serverid"
+ ],
+ "fields": [
+  {
+   "fieldname": "owner_ref",
+   "fieldtype": "Link",
+   "label": "Owner ref",
+   "options": "DocType"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "identifier_section",
+   "fieldtype": "Section Break",
+   "label": "Identifier"
+  },
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "group_identifier",
+   "fieldtype": "Table",
+   "label": "Group Identifier",
+   "options": "Identifier"
+  },
+  {
+   "collapsible": 1,
+   "description": "Request fulfilled by this task",
+   "fieldname": "based_on_section",
+   "fieldtype": "Section Break",
+   "label": "Based On"
+  },
+  {
+   "fieldname": "based_on",
+   "fieldtype": "Table",
+   "label": "Based On",
+   "options": "Reference Table"
+  },
+  {
+   "collapsible": 1,
+   "description": "Composite task",
+   "fieldname": "part_of_section",
+   "fieldtype": "Section Break",
+   "label": "Part Of"
+  },
+  {
+   "fieldname": "part_of",
+   "fieldtype": "Table",
+   "label": "Part Of",
+   "options": "Reference Table"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nRequested\nReceived\nAccepted",
+   "reqd": 1
+  },
+  {
+   "fieldname": "intent",
+   "fieldtype": "Select",
+   "label": "Intent",
+   "options": "Unknown\nProposal\nPlan\nOrder\nOriginal-order\nReflex-order\nFiller-order\nInstance-order\nOption"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Routine\nUrgent\nAsap\nStat"
+  },
+  {
+   "fieldname": "beneficiary_ref",
+   "fieldtype": "Link",
+   "label": "Beneficiary ref",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "beneficiary",
+   "fieldtype": "Dynamic Link",
+   "label": "Beneficiary",
+   "options": "beneficiary_ref"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "label": "Type",
+   "options": "Task Type Code"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "description_section",
+   "fieldtype": "Section Break",
+   "label": "Description"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Long Text",
+   "label": "Description"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_19",
+   "fieldtype": "Section Break",
+   "label": "Other Information"
+  },
+  {
+   "fieldname": "encounter",
+   "fieldtype": "Link",
+   "label": "Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "fieldname": "start",
+   "fieldtype": "Datetime",
+   "label": "Execution start time"
+  },
+  {
+   "fieldname": "end",
+   "fieldtype": "Datetime",
+   "label": "Execution end time"
+  },
+  {
+   "fieldname": "creation_date",
+   "fieldtype": "Datetime",
+   "label": "Creation date"
+  },
+  {
+   "fieldname": "requester_ref",
+   "fieldtype": "Link",
+   "label": "Requester ref",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "requester",
+   "fieldtype": "Dynamic Link",
+   "label": "Requester",
+   "options": "requester_ref"
+  },
+  {
+   "fieldname": "performer_type",
+   "fieldtype": "Table MultiSelect",
+   "label": "Performer type",
+   "options": "Task Performer"
+  },
+  {
+   "description": "Why task is needed",
+   "fieldname": "reason",
+   "fieldtype": "Small Text",
+   "label": "Reason"
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "label": "Location",
+   "options": "Locations"
+  },
+  {
+   "fieldname": "insurance",
+   "fieldtype": "Link",
+   "label": "Insurance",
+   "options": "Coverage"
+  },
+  {
+   "fieldname": "section_break_31",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "encounter.title",
+   "fieldname": "encounter_name",
+   "fieldtype": "Data",
+   "label": "Encounter name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "owner1",
+   "fieldtype": "Dynamic Link",
+   "label": "Owner",
+   "options": "owner_ref"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "label": "Fhir ServerID",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-09-23 01:05:56.242301",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Tasks",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

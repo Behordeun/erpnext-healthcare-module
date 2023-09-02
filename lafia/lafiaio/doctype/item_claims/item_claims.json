@@ -1,0 +1,184 @@
+{
+ "actions": [],
+ "creation": "2021-06-04 17:07:13.502960",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sequence",
+  "careteam_sequence",
+  "diagnosis_sequence",
+  "procedure_sequence",
+  "information_sequence",
+  "revenue",
+  "category",
+  "product_or_service",
+  "modifier",
+  "program_code",
+  "serviced_date",
+  "serviced_period",
+  "location_codeable_concept",
+  "location_address",
+  "location_reference",
+  "quantity",
+  "unit_price",
+  "factor",
+  "net",
+  "udi",
+  "body_site",
+  "sub_site",
+  "encounter",
+  "detail"
+ ],
+ "fields": [
+  {
+   "fieldname": "sequence",
+   "fieldtype": "Data",
+   "label": "Sequence"
+  },
+  {
+   "fieldname": "careteam_sequence",
+   "fieldtype": "Data",
+   "label": "CareTeam Sequence"
+  },
+  {
+   "fieldname": "diagnosis_sequence",
+   "fieldtype": "Data",
+   "label": "Diagnosis Sequence"
+  },
+  {
+   "fieldname": "procedure_sequence",
+   "fieldtype": "Data",
+   "label": "Procedure Sequence"
+  },
+  {
+   "fieldname": "information_sequence",
+   "fieldtype": "Data",
+   "label": "Information Sequence"
+  },
+  {
+   "fieldname": "revenue",
+   "fieldtype": "Table",
+   "label": "Revenue",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Table",
+   "label": "Category",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "product_or_service",
+   "fieldtype": "Table",
+   "label": "Product or Service",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "modifier",
+   "fieldtype": "Table",
+   "label": "Modifier",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "program_code",
+   "fieldtype": "Table",
+   "label": "Program Code",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "serviced_date",
+   "fieldtype": "Data",
+   "label": "Serviced Date"
+  },
+  {
+   "fieldname": "serviced_period",
+   "fieldtype": "Table",
+   "label": "Serviced Period",
+   "options": "Period"
+  },
+  {
+   "fieldname": "location_codeable_concept",
+   "fieldtype": "Table",
+   "label": "Location Codeable Concept",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "location_address",
+   "fieldtype": "Table",
+   "label": "Location Address",
+   "options": "Addresses"
+  },
+  {
+   "fieldname": "location_reference",
+   "fieldtype": "Link",
+   "label": "Location Reference",
+   "options": "Location"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Table",
+   "label": "Quantity",
+   "options": "Quantity"
+  },
+  {
+   "fieldname": "unit_price",
+   "fieldtype": "Table",
+   "label": "Unit Price",
+   "options": "Money"
+  },
+  {
+   "fieldname": "factor",
+   "fieldtype": "Data",
+   "label": "Factor"
+  },
+  {
+   "fieldname": "net",
+   "fieldtype": "Table",
+   "label": "Net",
+   "options": "Money"
+  },
+  {
+   "fieldname": "udi",
+   "fieldtype": "Link",
+   "label": "Udi",
+   "options": "Device"
+  },
+  {
+   "fieldname": "body_site",
+   "fieldtype": "Table",
+   "label": "Body Site",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "sub_site",
+   "fieldtype": "Table",
+   "label": "Sub Site",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "encounter",
+   "fieldtype": "Link",
+   "label": "Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "fieldname": "detail",
+   "fieldtype": "Table",
+   "label": "Detail",
+   "options": "Detail_claim"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-06-11 19:48:46.871888",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Item Claims",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

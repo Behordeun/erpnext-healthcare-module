@@ -1,0 +1,21 @@
+{
+ "action": "Create Entry",
+ "action_label": "Create",
+ "creation": "2021-07-07 12:55:38.144088",
+ "description": "",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "idx": 0,
+ "is_complete": 0,
+ "is_single": 0,
+ "is_skipped": 0,
+ "modified": "2022-09-06 00:31:57.364895",
+ "modified_by": "Administrator",
+ "name": "Create encounter",
+ "owner": "Administrator",
+ "reference_document": "Patient Encounter",
+ "show_form_tour": 0,
+ "show_full_form": 0,
+ "title": "Create new Patient Encounter",
+ "validate_action": 1
+}

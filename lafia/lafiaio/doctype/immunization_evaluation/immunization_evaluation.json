@@ -1,0 +1,230 @@
+{
+ "actions": [],
+ "autoname": "format:IMM-EVN-{fhir_serverid}",
+ "creation": "2021-06-09 14:06:16.262510",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "status",
+  "date",
+  "column_break_4",
+  "authority",
+  "target_disease",
+  "immunization_event",
+  "identifier",
+  "dose_status_section",
+  "dose_status",
+  "column_break_11",
+  "dose_status_reason",
+  "description_section",
+  "description",
+  "section_break_15",
+  "series",
+  "dose_number_positive_int",
+  "dose_number_string",
+  "column_break_19",
+  "series_doses_positive_int",
+  "series_doses_string",
+  "section_break_22",
+  "fhir_serverid"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Completed\nEntered-in-error",
+   "reqd": 1
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Data",
+   "label": "Date"
+  },
+  {
+   "fieldname": "authority",
+   "fieldtype": "Link",
+   "label": "Authority",
+   "options": "Organization"
+  },
+  {
+   "fieldname": "target_disease",
+   "fieldtype": "Link",
+   "label": "Target Disease",
+   "options": "Immunization Evaluation Target Disease",
+   "reqd": 1
+  },
+  {
+   "fieldname": "immunization_event",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Immunization Event",
+   "options": "Immunization",
+   "reqd": 1
+  },
+  {
+   "fieldname": "dose_status",
+   "fieldtype": "Link",
+   "label": "Dose Status",
+   "options": "Immunization Evaluation Dose Status",
+   "reqd": 1
+  },
+  {
+   "fieldname": "dose_status_reason",
+   "fieldtype": "Table MultiSelect",
+   "label": "Dose Status Reason",
+   "options": "Immunization Evaluation Dose Status Reason Multi"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "series",
+   "fieldtype": "Data",
+   "label": "Series"
+  },
+  {
+   "fieldname": "dose_number_positive_int",
+   "fieldtype": "Data",
+   "label": "Dose Number Positive Int"
+  },
+  {
+   "fieldname": "dose_number_string",
+   "fieldtype": "Data",
+   "label": "Dose Number String"
+  },
+  {
+   "fieldname": "series_doses_positive_int",
+   "fieldtype": "Data",
+   "label": "Series Doses Positive Int"
+  },
+  {
+   "fieldname": "series_doses_string",
+   "fieldtype": "Data",
+   "label": "Series Doses String"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "description": "Status of the dose relative to published recommendations",
+   "fieldname": "dose_status_section",
+   "fieldtype": "Section Break",
+   "label": "Dose Status"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "description": "Evaluation notes",
+   "fieldname": "description_section",
+   "fieldtype": "Section Break",
+   "label": "Description"
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_22",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Fhir ServerID",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-01-29 20:29:49.078207",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Immunization Evaluation",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Nursing User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

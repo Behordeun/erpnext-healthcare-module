@@ -1,0 +1,55 @@
+{
+ "actions": [],
+ "creation": "2021-06-01 18:08:19.612547",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "value_codeable_concept",
+  "value_boolean",
+  "value_quantity",
+  "value_range",
+  "value_reference"
+ ],
+ "fields": [
+  {
+   "fieldname": "value_codeable_concept",
+   "fieldtype": "Table",
+   "label": "Value Codeable Concept",
+   "options": "Codable Concept"
+  },
+  {
+   "default": "0",
+   "fieldname": "value_boolean",
+   "fieldtype": "Check",
+   "label": "Value Boolean"
+  },
+  {
+   "fieldname": "value_quantity",
+   "fieldtype": "Data",
+   "label": "Value Quantity"
+  },
+  {
+   "fieldname": "value_range",
+   "fieldtype": "Data",
+   "label": "Value Range"
+  },
+  {
+   "fieldname": "value_reference",
+   "fieldtype": "Data",
+   "label": "Value Reference"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-06-11 19:49:14.368830",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Value",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

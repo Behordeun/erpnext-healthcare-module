@@ -1,0 +1,142 @@
+{
+ "actions": [],
+ "creation": "2021-06-08 13:37:28.034342",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "identifier",
+  "status",
+  "period",
+  "created",
+  "payment_issuer",
+  "request",
+  "requestor",
+  "outcome",
+  "disposition",
+  "payment_date",
+  "payment_amount",
+  "payment_identifier",
+  "detail",
+  "form_code",
+  "process_note"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "active\ncancelled\ndraft\nentered-in-error",
+   "reqd": 1
+  },
+  {
+   "fieldname": "period",
+   "fieldtype": "Data",
+   "label": "Period"
+  },
+  {
+   "fieldname": "created",
+   "fieldtype": "Data",
+   "label": "Created"
+  },
+  {
+   "fieldname": "payment_issuer",
+   "fieldtype": "Link",
+   "label": "Payment Issuer",
+   "options": "Organization"
+  },
+  {
+   "fieldname": "request",
+   "fieldtype": "Link",
+   "label": "Request",
+   "options": "Task"
+  },
+  {
+   "description": "Practitioner\nPractitionerRole\nOrganization",
+   "fieldname": "requestor",
+   "fieldtype": "Table",
+   "label": "Requestor",
+   "options": "Dynamic Link"
+  },
+  {
+   "fieldname": "outcome",
+   "fieldtype": "Select",
+   "label": "Outcome",
+   "options": "queued\ncomplete\nerror\npartial"
+  },
+  {
+   "fieldname": "disposition",
+   "fieldtype": "Data",
+   "label": "Disposition"
+  },
+  {
+   "fieldname": "payment_date",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Payment Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_amount",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Payment Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_identifier",
+   "fieldtype": "Table",
+   "label": "Payment Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "detail",
+   "fieldtype": "Table",
+   "label": "Detail",
+   "options": "Payment_reconciliation_detail"
+  },
+  {
+   "fieldname": "form_code",
+   "fieldtype": "Table",
+   "label": "Form Code",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "process_note",
+   "fieldtype": "Table",
+   "label": "Process Note",
+   "options": "Process Note_child"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-06-11 19:48:34.865180",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Payment Reconciliation FHIR",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

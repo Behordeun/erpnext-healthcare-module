@@ -1,0 +1,336 @@
+{
+ "actions": [],
+ "creation": "2021-06-14 13:09:07.092747",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "url",
+  "identifier",
+  "version",
+  "name1",
+  "title",
+  "subtitle",
+  "status",
+  "experimental",
+  "subject",
+  "date",
+  "publisher",
+  "contact",
+  "description",
+  "use_context",
+  "jurisdiction",
+  "purpose",
+  "usage",
+  "copyright",
+  "approval_date",
+  "last_review_date",
+  "effective_period",
+  "topic",
+  "author",
+  "editor",
+  "reviewer",
+  "endorser",
+  "related_artifact",
+  "library",
+  "kind",
+  "profile",
+  "code",
+  "intent",
+  "priority",
+  "do_not_peform",
+  "timing",
+  "location",
+  "participant",
+  "product",
+  "quantity",
+  "dosage",
+  "body_site",
+  "specimen_requirement",
+  "observation_requirement",
+  "observation_result_requirement",
+  "transform",
+  "dynamic_value"
+ ],
+ "fields": [
+  {
+   "fieldname": "url",
+   "fieldtype": "Data",
+   "label": "URL"
+  },
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "version",
+   "fieldtype": "Data",
+   "label": "Version"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "fieldname": "subtitle",
+   "fieldtype": "Data",
+   "label": "Subtitle"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "draft\nactive\nretired\nunknown",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "experimental",
+   "fieldtype": "Check",
+   "label": "Experimental",
+   "options": "boolean"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Table",
+   "label": "Subject",
+   "options": "Subject"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Data",
+   "label": "Date"
+  },
+  {
+   "fieldname": "publisher",
+   "fieldtype": "Data",
+   "label": "Publisher"
+  },
+  {
+   "fieldname": "contact",
+   "fieldtype": "Data",
+   "label": "Contact"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description"
+  },
+  {
+   "fieldname": "use_context",
+   "fieldtype": "Data",
+   "label": "Use Context"
+  },
+  {
+   "fieldname": "jurisdiction",
+   "fieldtype": "Table",
+   "label": "Jurisdiction",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "purpose",
+   "fieldtype": "Data",
+   "label": "Purpose"
+  },
+  {
+   "fieldname": "usage",
+   "fieldtype": "Data",
+   "label": "Usage"
+  },
+  {
+   "fieldname": "copyright",
+   "fieldtype": "Data",
+   "label": "Copyright"
+  },
+  {
+   "fieldname": "approval_date",
+   "fieldtype": "Data",
+   "label": "Approval Date"
+  },
+  {
+   "fieldname": "last_review_date",
+   "fieldtype": "Data",
+   "label": "Last Review Date"
+  },
+  {
+   "fieldname": "effective_period",
+   "fieldtype": "Data",
+   "label": "Effective Period"
+  },
+  {
+   "fieldname": "topic",
+   "fieldtype": "Table",
+   "label": "Topic",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "author",
+   "fieldtype": "Data",
+   "label": "Author"
+  },
+  {
+   "fieldname": "editor",
+   "fieldtype": "Data",
+   "label": "Editor"
+  },
+  {
+   "fieldname": "reviewer",
+   "fieldtype": "Data",
+   "label": "Reviewer"
+  },
+  {
+   "fieldname": "endorser",
+   "fieldtype": "Data",
+   "label": "Endorser"
+  },
+  {
+   "fieldname": "related_artifact",
+   "fieldtype": "Data",
+   "label": "Related Artifact"
+  },
+  {
+   "fieldname": "library",
+   "fieldtype": "Data",
+   "label": "Library"
+  },
+  {
+   "fieldname": "kind",
+   "fieldtype": "Data",
+   "label": "Kind"
+  },
+  {
+   "fieldname": "profile",
+   "fieldtype": "Data",
+   "label": "Profile"
+  },
+  {
+   "fieldname": "code",
+   "fieldtype": "Table",
+   "label": "Code",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "intent",
+   "fieldtype": "Select",
+   "label": "Intent",
+   "options": "proposal\nplan\ndirective\norder\noriginal-order\nreflex-order\nfiller-order\ninstance-order\noption"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "routine\nurgent\nasap\nstat"
+  },
+  {
+   "default": "0",
+   "fieldname": "do_not_peform",
+   "fieldtype": "Check",
+   "label": "Do Not Peform",
+   "options": "boolean"
+  },
+  {
+   "fieldname": "timing",
+   "fieldtype": "Table",
+   "label": "Timing",
+   "options": "Activity Definition Timing"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "label": "Location",
+   "options": "Locations"
+  },
+  {
+   "fieldname": "participant",
+   "fieldtype": "Table",
+   "label": "Participant",
+   "options": "Participant"
+  },
+  {
+   "fieldname": "product",
+   "fieldtype": "Table",
+   "label": "Product",
+   "options": "Product"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Table",
+   "label": "Quantity",
+   "options": "Quantity"
+  },
+  {
+   "fieldname": "dosage",
+   "fieldtype": "Data",
+   "label": "Dosage"
+  },
+  {
+   "fieldname": "body_site",
+   "fieldtype": "Table",
+   "label": "Body Site",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "specimen_requirement",
+   "fieldtype": "Link",
+   "label": "Specimen Requirement",
+   "options": "Specimen Definition"
+  },
+  {
+   "fieldname": "observation_requirement",
+   "fieldtype": "Link",
+   "label": "Observation Requirement",
+   "options": "Observation Definition"
+  },
+  {
+   "fieldname": "observation_result_requirement",
+   "fieldtype": "Link",
+   "label": "Observation Result Requirement",
+   "options": "Observation Definition"
+  },
+  {
+   "fieldname": "transform",
+   "fieldtype": "Data",
+   "label": "Transform"
+  },
+  {
+   "fieldname": "dynamic_value",
+   "fieldtype": "Table",
+   "label": "Dynamic Value",
+   "options": "Dynamic Value"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-08-22 14:17:59.412273",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Activity Definition",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

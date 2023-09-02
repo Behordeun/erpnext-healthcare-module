@@ -1,0 +1,43 @@
+{
+ "category": "Modules",
+ "charts": [],
+ "creation": "2021-07-08 13:16:43.535886",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends_another_page": 0,
+ "hide_custom": 0,
+ "icon": "appointment",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "Appointment",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Create New Appointment",
+   "link_to": "Appointment_FHIR",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2021-07-08 13:19:24.111078",
+ "modified_by": "m.faseun@parallelscore.com",
+ "module": "LafiaIO",
+ "name": "Appointment",
+ "onboarding": "Create Appointment",
+ "owner": "m.faseun@parallelscore.com",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "shortcuts": [
+  {
+   "doc_view": "List",
+   "label": "Appointment List",
+   "link_to": "Appointment_FHIR",
+   "type": "DocType"
+  }
+ ]
+}

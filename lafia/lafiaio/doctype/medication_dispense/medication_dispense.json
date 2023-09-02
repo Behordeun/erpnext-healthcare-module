@@ -1,0 +1,333 @@
+{
+ "actions": [],
+ "autoname": "format:MED-DPE-{fhir_serverid}",
+ "creation": "2021-06-09 13:25:40.706008",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "encounter",
+  "encounter_name",
+  "status",
+  "status_reason_reference",
+  "column_break_5",
+  "category",
+  "medication_reference",
+  "location",
+  "part_of",
+  "identifier_section",
+  "identifier",
+  "supporting_information_section",
+  "supporting_information",
+  "performer_section",
+  "performer",
+  "section_break_16",
+  "authorizing_prescription",
+  "type",
+  "quantity",
+  "days_supply",
+  "column_break_21",
+  "when_prepared",
+  "when_handed_over",
+  "destination",
+  "receiver_section",
+  "receiver",
+  "section_break_27",
+  "dosage_instruction",
+  "substitution_section",
+  "substituted",
+  "substitution_reason",
+  "column_break_32",
+  "substitution_type",
+  "practitioner_responsible",
+  "section_break_35",
+  "detected_issue",
+  "column_break_37",
+  "event_history",
+  "note_section",
+  "note",
+  "section_break_41",
+  "fhir_serverid"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "preparation\nin-progress\ncancelled\non-hold\ncompleted\nentered-in-error\nstopped\ndeclined\nunknown",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status_reason_reference",
+   "fieldtype": "Link",
+   "label": "Status Reason",
+   "options": "Detected Issue"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "\nInpatient\nOutpatient\nCommunity\nDischarge"
+  },
+  {
+   "fieldname": "medication_reference",
+   "fieldtype": "Link",
+   "label": "Medication",
+   "options": "Medication"
+  },
+  {
+   "fieldname": "supporting_information",
+   "fieldtype": "Table",
+   "label": "Supporting Information",
+   "options": "Reference Table"
+  },
+  {
+   "fieldname": "performer",
+   "fieldtype": "Table",
+   "label": "Performer",
+   "options": "Medication Administration Performer"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "label": "Location",
+   "options": "Locations"
+  },
+  {
+   "fieldname": "authorizing_prescription",
+   "fieldtype": "Table MultiSelect",
+   "label": "Authorizing Prescription",
+   "options": "Medication Request Multi"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "label": "Type",
+   "options": "Supply Type"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Float",
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "days_supply",
+   "fieldtype": "Float",
+   "label": "Days Supply"
+  },
+  {
+   "fieldname": "when_prepared",
+   "fieldtype": "Datetime",
+   "label": "When Prepared"
+  },
+  {
+   "fieldname": "when_handed_over",
+   "fieldtype": "Datetime",
+   "label": "When Handed over"
+  },
+  {
+   "fieldname": "destination",
+   "fieldtype": "Link",
+   "label": "Destination",
+   "options": "Locations"
+  },
+  {
+   "description": "This leads to the following doctypes:\n- Patient\n- Practitioner",
+   "fieldname": "receiver",
+   "fieldtype": "Table",
+   "label": "Receiver",
+   "options": "Reference Table"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Table",
+   "label": "Note",
+   "options": "Annotation"
+  },
+  {
+   "fieldname": "dosage_instruction",
+   "fieldtype": "Data",
+   "label": "Dosage Instruction"
+  },
+  {
+   "fieldname": "detected_issue",
+   "fieldtype": "Table MultiSelect",
+   "label": "Detected Issue",
+   "options": "Detected Issue Multi"
+  },
+  {
+   "fieldname": "event_history",
+   "fieldtype": "Table MultiSelect",
+   "label": "Event History",
+   "options": "Provenance Multi"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "encounter",
+   "fieldtype": "Link",
+   "label": "Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "encounter.title",
+   "fieldname": "encounter_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Encounter name",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "identifier_section",
+   "fieldtype": "Section Break",
+   "label": "Identifier"
+  },
+  {
+   "collapsible": 1,
+   "description": "Information that supports the dispensing of the medication",
+   "fieldname": "supporting_information_section",
+   "fieldtype": "Section Break",
+   "label": "Supporting Information"
+  },
+  {
+   "collapsible": 1,
+   "description": "Who performed event",
+   "fieldname": "performer_section",
+   "fieldtype": "Section Break",
+   "label": "Performer"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break",
+   "label": "Dispense Information"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "description": "Who collected the medication",
+   "fieldname": "receiver_section",
+   "fieldtype": "Section Break",
+   "label": "Receiver"
+  },
+  {
+   "fieldname": "section_break_27",
+   "fieldtype": "Section Break"
+  },
+  {
+   "collapsible": 1,
+   "description": "Whether a substitution was performed on the dispense",
+   "fieldname": "substitution_section",
+   "fieldtype": "Section Break",
+   "label": "Substitution"
+  },
+  {
+   "default": "0",
+   "fieldname": "substituted",
+   "fieldtype": "Check",
+   "label": "Substituted?",
+   "reqd": 1
+  },
+  {
+   "fieldname": "substitution_type",
+   "fieldtype": "Link",
+   "label": "Substitution type",
+   "options": "Medication Substitution Type"
+  },
+  {
+   "fieldname": "column_break_32",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "substitution_reason",
+   "fieldtype": "Small Text",
+   "label": "Substitution reason"
+  },
+  {
+   "fieldname": "practitioner_responsible",
+   "fieldtype": "Link",
+   "label": "Practitioner responsible",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "section_break_35",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_37",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "description": "Information about the dispense",
+   "fieldname": "note_section",
+   "fieldtype": "Section Break",
+   "label": "Note"
+  },
+  {
+   "fieldname": "section_break_41",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Fhir ServerID",
+   "read_only": 1
+  },
+  {
+   "description": "Event that dispense is part of",
+   "fieldname": "part_of",
+   "fieldtype": "Table MultiSelect",
+   "label": "Part Of",
+   "options": "Procedure Multi"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-01-19 13:53:26.156440",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Medication Dispense",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

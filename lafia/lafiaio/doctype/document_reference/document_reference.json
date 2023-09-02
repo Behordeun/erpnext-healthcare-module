@@ -1,0 +1,331 @@
+{
+ "actions": [],
+ "creation": "2021-06-01 16:54:51.578509",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "subject_type",
+  "subject",
+  "status",
+  "doc_status",
+  "column_break_5",
+  "type",
+  "category",
+  "event",
+  "author_section",
+  "authors",
+  "period_section",
+  "start_date",
+  "end_date",
+  "column_break_12",
+  "date",
+  "master_identifier",
+  "identifier",
+  "reference_section",
+  "based_on",
+  "context",
+  "section_break_19",
+  "facility_type",
+  "practice_setting",
+  "column_break_24",
+  "custodian",
+  "security_label",
+  "attester_section",
+  "attester",
+  "section_break_26",
+  "relates_to",
+  "section_break_31",
+  "description",
+  "content_section",
+  "content",
+  "section_break_35",
+  "fhir_serverid"
+ ],
+ "fields": [
+  {
+   "collapsible": 1,
+   "fieldname": "master_identifier",
+   "fieldtype": "Section Break",
+   "label": "Identifier"
+  },
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Current\nSuperseded\nEntered-in-error",
+   "reqd": 1
+  },
+  {
+   "fieldname": "doc_status",
+   "fieldtype": "Select",
+   "label": "Doc Status",
+   "options": "Registered\nPartial\nPreliminary\nFinal\nAmended\nCorrected\nAppended\nCancelled\nEntered-in-error\nDeprecated\nUnknown"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "label": "Type",
+   "options": "Document Type"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Table MultiSelect",
+   "label": "Category",
+   "options": "Document Category Multi"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Dynamic Link",
+   "label": "Subject",
+   "options": "subject_type",
+   "reqd": 1
+  },
+  {
+   "description": "When this document reference was created",
+   "fieldname": "date",
+   "fieldtype": "Datetime",
+   "label": "Date"
+  },
+  {
+   "description": "Organization which maintains the document",
+   "fieldname": "custodian",
+   "fieldtype": "Link",
+   "label": "Custodian",
+   "options": "Organization"
+  },
+  {
+   "fieldname": "relates_to",
+   "fieldtype": "Table",
+   "label": "Relates To",
+   "options": "Relates To"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "security_label",
+   "fieldtype": "Table MultiSelect",
+   "label": "Security Label",
+   "options": "Security Label Multi"
+  },
+  {
+   "fieldname": "content",
+   "fieldtype": "Table",
+   "label": "Content",
+   "options": "Content",
+   "reqd": 1
+  },
+  {
+   "fieldname": "context",
+   "fieldtype": "Table",
+   "label": "Context",
+   "options": "Reference Table"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "based_on",
+   "fieldtype": "Table",
+   "label": "Based on",
+   "options": "Reference Table"
+  },
+  {
+   "description": "Patient\nPractitioner\nGroup\nDevice",
+   "fieldname": "subject_type",
+   "fieldtype": "Link",
+   "label": "Subject Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "event",
+   "fieldtype": "Table MultiSelect",
+   "label": "Event",
+   "options": "Act Code Multi"
+  },
+  {
+   "collapsible": 1,
+   "description": "Time of service that is being documented",
+   "fieldname": "period_section",
+   "fieldtype": "Section Break",
+   "label": "Period"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Datetime",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Datetime",
+   "label": "End date"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_19",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "facility_type",
+   "fieldtype": "Link",
+   "label": "Facility Type",
+   "options": "Facility Type"
+  },
+  {
+   "fieldname": "practice_setting",
+   "fieldtype": "Link",
+   "label": "Practice Setting",
+   "options": "Healthcare Service Specialty"
+  },
+  {
+   "collapsible": 1,
+   "description": "Who and/or what authored the document",
+   "fieldname": "author_section",
+   "fieldtype": "Section Break",
+   "label": "Author"
+  },
+  {
+   "fieldname": "authors",
+   "fieldtype": "Table",
+   "label": "Authors",
+   "options": "Reference Table"
+  },
+  {
+   "description": "Practitioner\nPractitionerRole\nOrganization",
+   "fieldname": "attester",
+   "fieldtype": "Table",
+   "label": "Attester",
+   "options": "Document Attester"
+  },
+  {
+   "collapsible": 1,
+   "description": "Who attested the document",
+   "fieldname": "attester_section",
+   "fieldtype": "Section Break",
+   "label": "Attester"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_26",
+   "fieldtype": "Section Break",
+   "label": "Related Documents"
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_31",
+   "fieldtype": "Section Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "content_section",
+   "fieldtype": "Section Break",
+   "label": "Content"
+  },
+  {
+   "fieldname": "section_break_35",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "label": "Fhir ServerID",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-11-17 13:29:42.012232",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Document Reference",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Nursing User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,41 @@
+{
+ "actions": [],
+ "creation": "2021-06-08 15:10:53.391673",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "unsigned_int",
+  "allowed_string",
+  "allowed_money"
+ ],
+ "fields": [
+  {
+   "fieldname": "unsigned_int",
+   "fieldtype": "Data",
+   "label": "Allowed Unsigned Int"
+  },
+  {
+   "fieldname": "allowed_string",
+   "fieldtype": "Data",
+   "label": "Allowed String"
+  },
+  {
+   "fieldname": "allowed_money",
+   "fieldtype": "Data",
+   "label": "Allowed Money"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-06-11 19:48:32.447735",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Allowed_child",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

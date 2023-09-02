@@ -1,0 +1,86 @@
+{
+ "actions": [],
+ "creation": "2021-06-03 17:23:04.604679",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "chromosome",
+  "genome_build",
+  "orientation",
+  "reference_sq_id",
+  "reference_sq_pointer",
+  "reference_sq_string",
+  "strand",
+  "windows_start",
+  "windows_end"
+ ],
+ "fields": [
+  {
+   "fieldname": "chromosome",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Chromosome",
+   "options": "Chromosome"
+  },
+  {
+   "fieldname": "genome_build",
+   "fieldtype": "Data",
+   "label": "Genome Build"
+  },
+  {
+   "fieldname": "orientation",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Orientation",
+   "options": "Sense\nAntisense"
+  },
+  {
+   "fieldname": "reference_sq_id",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Reference Sq Id",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "reference_sq_pointer",
+   "fieldtype": "Link",
+   "label": "Reference Sq Pointer",
+   "options": "MolecularSequence"
+  },
+  {
+   "fieldname": "reference_sq_string",
+   "fieldtype": "Data",
+   "label": "Reference Sq String"
+  },
+  {
+   "fieldname": "strand",
+   "fieldtype": "Select",
+   "label": "Strand",
+   "options": "watson\ncrick"
+  },
+  {
+   "fieldname": "windows_start",
+   "fieldtype": "Data",
+   "label": "Windows Start"
+  },
+  {
+   "fieldname": "windows_end",
+   "fieldtype": "Data",
+   "label": "Windows End"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-11-20 20:58:39.021242",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "ReferenceSeq Child",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

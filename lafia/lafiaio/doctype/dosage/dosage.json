@@ -1,0 +1,119 @@
+{
+ "actions": [],
+ "creation": "2021-06-09 07:56:51.110230",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sequence",
+  "text",
+  "additionalinstruction",
+  "patientinstruction",
+  "timing",
+  "asneededboolean",
+  "asneededcodeableconcept",
+  "site",
+  "route",
+  "method",
+  "maxdoseperperiod",
+  "maxdoseperadministration",
+  "maxdoseperlifetime",
+  "doseandrate"
+ ],
+ "fields": [
+  {
+   "fieldname": "sequence",
+   "fieldtype": "Int",
+   "label": "Sequence"
+  },
+  {
+   "fieldname": "text",
+   "fieldtype": "Text",
+   "label": "Text"
+  },
+  {
+   "fieldname": "additionalinstruction",
+   "fieldtype": "Link",
+   "label": "Additional Instruction",
+   "options": "Additional Instruction"
+  },
+  {
+   "fieldname": "patientinstruction",
+   "fieldtype": "Text",
+   "label": "Patient Instruction"
+  },
+  {
+   "fieldname": "timing",
+   "fieldtype": "Table",
+   "label": "timing",
+   "options": "Timing"
+  },
+  {
+   "default": "0",
+   "fieldname": "asneededboolean",
+   "fieldtype": "Check",
+   "label": "asNeededBoolean"
+  },
+  {
+   "fieldname": "asneededcodeableconcept",
+   "fieldtype": "Table",
+   "label": "asNeededCodeableConcept",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "site",
+   "fieldtype": "Table",
+   "label": "site",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Table",
+   "label": "route",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "method",
+   "fieldtype": "Table",
+   "label": "method",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "maxdoseperperiod",
+   "fieldtype": "Table",
+   "label": "maxDosePerPeriod",
+   "options": "Ratio"
+  },
+  {
+   "fieldname": "maxdoseperadministration",
+   "fieldtype": "Table",
+   "label": "maxDosePerAdministration",
+   "options": "Quantity"
+  },
+  {
+   "fieldname": "maxdoseperlifetime",
+   "fieldtype": "Table",
+   "label": "maxDosePerLifetime",
+   "options": "Quantity"
+  },
+  {
+   "fieldname": "doseandrate",
+   "fieldtype": "Table",
+   "label": "doseAndRate",
+   "options": "Dose And Rate Child"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-01-17 13:50:27.146942",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Dosage",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

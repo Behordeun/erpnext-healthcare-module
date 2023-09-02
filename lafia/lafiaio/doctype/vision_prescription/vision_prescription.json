@@ -1,0 +1,99 @@
+{
+ "actions": [],
+ "creation": "2021-06-08 12:09:13.038211",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "identifier",
+  "status",
+  "created",
+  "encounter",
+  "patient",
+  "date_written",
+  "prescriber",
+  "lens_specification"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "active\ncancelled\ndraft\nentered-in-error",
+   "reqd": 1
+  },
+  {
+   "fieldname": "created",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Created",
+   "reqd": 1
+  },
+  {
+   "fieldname": "encounter",
+   "fieldtype": "Link",
+   "label": "Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_written",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Date Written",
+   "reqd": 1
+  },
+  {
+   "description": "This leads to the following to doctypes:\n- Practitioner\n- PractitionerRole",
+   "fieldname": "prescriber",
+   "fieldtype": "Table",
+   "label": "Prescriber",
+   "options": "Dynamic Link",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lens_specification",
+   "fieldtype": "Table",
+   "label": "Lens Specification",
+   "options": "Lens Specification"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-06-11 19:48:33.916404",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Vision Prescription",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

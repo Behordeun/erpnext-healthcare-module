@@ -1,0 +1,33 @@
+{
+ "actions": [],
+ "creation": "2021-10-07 14:02:49.511228",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "condition"
+ ],
+ "fields": [
+  {
+   "fieldname": "condition",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Condition",
+   "options": "Condition Code",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-01-17 10:41:26.151290",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Condition Code Multi",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

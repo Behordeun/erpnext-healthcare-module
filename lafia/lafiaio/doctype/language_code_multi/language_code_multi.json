@@ -1,0 +1,31 @@
+{
+ "actions": [],
+ "creation": "2021-07-23 13:42:35.829720",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "language"
+ ],
+ "fields": [
+  {
+   "fieldname": "language",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Language Code",
+   "options": "Language Code"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-07-23 13:42:35.829720",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Language Code Multi",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

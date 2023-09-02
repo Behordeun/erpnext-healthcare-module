@@ -1,0 +1,34 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2022-11-15 15:24:49.440014",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "category"
+ ],
+ "fields": [
+  {
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "category",
+   "options": "Diagnostic Report Category"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-11-15 15:24:49.440014",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Diagnostic Report Category Multi",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

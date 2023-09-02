@@ -1,0 +1,497 @@
+{
+ "actions": [],
+ "autoname": "format:HLC-CLM-{fhir_serverid}",
+ "creation": "2021-06-04 14:08:30.929197",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "code",
+  "use",
+  "column_break_4",
+  "type",
+  "sub_type",
+  "created",
+  "identifier_section",
+  "identifier",
+  "section_break_12",
+  "author",
+  "enterer_name",
+  "priority",
+  "column_break_16",
+  "insurer",
+  "provider",
+  "provider_name",
+  "section_break_9",
+  "billable_start",
+  "column_break_12",
+  "billable_end",
+  "payee_section",
+  "payee_type",
+  "column_break_23",
+  "recipient",
+  "section_break_44",
+  "insurance",
+  "section_break_26",
+  "funds_reserve",
+  "section_break_27",
+  "related",
+  "section_break_29",
+  "care_team",
+  "section_break_31",
+  "prescription",
+  "original_prescription",
+  "section_break_34",
+  "referral",
+  "column_break_36",
+  "facility",
+  "section_break_33",
+  "supporting_info",
+  "section_break_40",
+  "diagnosis",
+  "section_break_42",
+  "procedure",
+  "section_break_46",
+  "accident",
+  "section_break_48",
+  "item",
+  "section_break_50",
+  "total",
+  "section_break_52",
+  "fhir_serverid",
+  "column_break_54",
+  "company",
+  "uid",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "code",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Active\nCancelled\nDraft\nEntered-in-error",
+   "reqd": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Type ",
+   "options": "Claim Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sub_type",
+   "fieldtype": "Link",
+   "label": "Sub Type",
+   "options": "Claim Subtype"
+  },
+  {
+   "fieldname": "use",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Use",
+   "options": "\nClaim\nPreauthorization\nPredetermination",
+   "reqd": 1
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "created",
+   "fieldtype": "Datetime",
+   "label": "Creation date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "insurer",
+   "fieldtype": "Link",
+   "label": "Insurer",
+   "options": "Organization"
+  },
+  {
+   "fieldname": "provider",
+   "fieldtype": "Link",
+   "label": "Provider",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Link",
+   "label": "Priority",
+   "options": "Process Priority",
+   "reqd": 1
+  },
+  {
+   "fieldname": "funds_reserve",
+   "fieldtype": "Select",
+   "label": "Funds Reserve",
+   "options": "\nPatient\nProvider\nNone"
+  },
+  {
+   "fieldname": "related",
+   "fieldtype": "Table",
+   "label": "Related",
+   "options": "Related Child"
+  },
+  {
+   "description": "This leads to the following Doctypes:\n- DeviceRequest\n- MedicationRequest\n- VisionPrescription",
+   "fieldname": "prescription",
+   "fieldtype": "Table",
+   "label": "Prescription",
+   "options": "Reference Table"
+  },
+  {
+   "description": "This leads to the following Doctypes:\n- DeviceRequest\n- MedicationRequest\n- VisionPrescription",
+   "fieldname": "original_prescription",
+   "fieldtype": "Table",
+   "label": "Original Prescription",
+   "options": "Reference Table"
+  },
+  {
+   "fieldname": "referral",
+   "fieldtype": "Link",
+   "label": "Referral",
+   "options": "Service Request"
+  },
+  {
+   "fieldname": "facility",
+   "fieldtype": "Link",
+   "label": "Facility",
+   "options": "Locations"
+  },
+  {
+   "fieldname": "care_team",
+   "fieldtype": "Table",
+   "label": "Care Team",
+   "options": "CareTeam Child"
+  },
+  {
+   "fieldname": "supporting_info",
+   "fieldtype": "Table",
+   "label": "Supporting Info",
+   "options": "SupportingInfo Child"
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Table",
+   "label": "Diagnosis",
+   "options": "Diagnosis Child"
+  },
+  {
+   "fieldname": "procedure",
+   "fieldtype": "Table",
+   "label": "Procedure",
+   "options": "Procedure Child"
+  },
+  {
+   "fieldname": "insurance",
+   "fieldtype": "Table",
+   "label": "Insurance",
+   "options": "Insurance"
+  },
+  {
+   "fieldname": "accident",
+   "fieldtype": "Table",
+   "label": "Accident",
+   "options": "Accident Child"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Item",
+   "options": "Item Claims"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Table",
+   "label": "Total",
+   "options": "Money"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "identifier_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Identifier"
+  },
+  {
+   "bold": 1,
+   "collapsible": 1,
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break",
+   "label": "Billable Period"
+  },
+  {
+   "bold": 1,
+   "collapsible": 1,
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Author of the claim",
+   "fieldname": "author",
+   "fieldtype": "Link",
+   "label": "Enterer",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "collapsible": 1,
+   "fieldname": "payee_section",
+   "fieldtype": "Section Break",
+   "label": "Payee"
+  },
+  {
+   "fieldname": "payee_type",
+   "fieldtype": "Link",
+   "label": "Type",
+   "options": "Payee Type"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "recipient",
+   "fieldtype": "Link",
+   "label": "Recipient",
+   "options": "Company"
+  },
+  {
+   "bold": 1,
+   "collapsible": 1,
+   "fieldname": "section_break_26",
+   "fieldtype": "Section Break",
+   "label": "Funds Reserve"
+  },
+  {
+   "bold": 1,
+   "collapsible": 1,
+   "fieldname": "section_break_33",
+   "fieldtype": "Section Break",
+   "label": "Supporting Information"
+  },
+  {
+   "bold": 1,
+   "collapsible": 1,
+   "fieldname": "section_break_27",
+   "fieldtype": "Section Break",
+   "label": "Prior Claims"
+  },
+  {
+   "bold": 1,
+   "collapsible": 1,
+   "fieldname": "section_break_31",
+   "fieldtype": "Section Break",
+   "label": "Prescription"
+  },
+  {
+   "bold": 1,
+   "collapsible": 1,
+   "fieldname": "section_break_29",
+   "fieldtype": "Section Break",
+   "label": "Care Team"
+  },
+  {
+   "fieldname": "section_break_34",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_36",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "section_break_40",
+   "fieldtype": "Section Break",
+   "label": "Diagnosis"
+  },
+  {
+   "bold": 1,
+   "collapsible": 1,
+   "fieldname": "section_break_42",
+   "fieldtype": "Section Break",
+   "label": "Procedure"
+  },
+  {
+   "bold": 1,
+   "collapsible": 1,
+   "fieldname": "section_break_44",
+   "fieldtype": "Section Break",
+   "label": "Insurance"
+  },
+  {
+   "bold": 1,
+   "collapsible": 1,
+   "fieldname": "section_break_46",
+   "fieldtype": "Section Break",
+   "label": "Accident"
+  },
+  {
+   "bold": 1,
+   "collapsible": 1,
+   "fieldname": "section_break_48",
+   "fieldtype": "Section Break",
+   "label": "Item"
+  },
+  {
+   "bold": 1,
+   "collapsible": 1,
+   "fieldname": "section_break_50",
+   "fieldtype": "Section Break",
+   "label": "Total"
+  },
+  {
+   "fieldname": "section_break_52",
+   "fieldtype": "Section Break",
+   "read_only": 1
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "label": "Fhir ServerID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_54",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "uid",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "UID"
+  },
+  {
+   "fetch_from": "author.practitioner_name",
+   "fieldname": "enterer_name",
+   "fieldtype": "Data",
+   "label": "Enterer name",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "description": "Relevant time frame for the claim",
+   "fieldname": "billable_start",
+   "fieldtype": "Datetime",
+   "label": "Billable Period Start Date"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "billable_end",
+   "fieldtype": "Datetime",
+   "label": "Billable Period End date"
+  },
+  {
+   "fetch_from": "provider.practitioner_name",
+   "fieldname": "provider_name",
+   "fieldtype": "Data",
+   "label": "Provider name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Claims",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-05-30 15:55:21.219168",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Claims",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Nursing User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

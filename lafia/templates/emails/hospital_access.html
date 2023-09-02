@@ -1,0 +1,19 @@
+<p>
+	{{_("Hello")}} {{ name }},
+</p>
+<p>{{_("Welcome to Lafia!")}}.</p>
+<p>{{_("We have granted you access to patient {0}'s health records as requested by the patient").format(patient)}}.</p>
+<p>{{_("A new account has been created for you at {0}").format(site_url)}}.</p>
+<p>{{_("Your login id is")}}: <b>{{ user }}</b> </p>
+<p>{{_("Your password is")}}: <b>{{ password }}</b> </p>
+<p>{{_("Kindly know that this account expires after {0} minutes").format(expiry)}}.</p>
+
+<p style="margin: 15px 0px;">
+	<a href="{{ site_url }}" rel="nofollow" class="btn btn-primary">{{ _("Open Link") }}</a>
+</p>
+<br>
+<br>
+<p style="margin-top: 15px">
+	{{_("Thanks")}},<br>
+	{{ created_by }}
+</p>

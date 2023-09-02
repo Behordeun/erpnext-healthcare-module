@@ -1,0 +1,33 @@
+{
+ "actions": [],
+ "creation": "2022-11-09 00:30:21.296756",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "outcome"
+ ],
+ "fields": [
+  {
+   "fieldname": "outcome",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Outcome",
+   "options": "Adverse Event Outcome",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-11-09 00:30:21.296756",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Adverse Event Outcome Multi",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

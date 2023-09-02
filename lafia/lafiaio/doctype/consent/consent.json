@@ -1,0 +1,206 @@
+{
+ "actions": [],
+ "autoname": "format:CNST-LIO-{fhir_serverid}",
+ "creation": "2021-08-12 17:42:48.846045",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "status",
+  "scope",
+  "column_break_4",
+  "category",
+  "datetime",
+  "section_break_2",
+  "identifier",
+  "section_break_9",
+  "performer_type",
+  "performer",
+  "column_break_12",
+  "organization",
+  "source_section",
+  "source_ref_type",
+  "column_break_16",
+  "source_ref",
+  "verification_section",
+  "verification",
+  "section_break_20",
+  "fhir_serverid"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nProposed\nActive\nRejected\nInactive\nEntered-in-error",
+   "reqd": 1
+  },
+  {
+   "fieldname": "scope",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Scope",
+   "options": "Consent Scope Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Table MultiSelect",
+   "label": "Category",
+   "options": "Consent Category Code Multi"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "datetime",
+   "fieldtype": "Datetime",
+   "label": "DateTime"
+  },
+  {
+   "fieldname": "performer_type",
+   "fieldtype": "Link",
+   "label": "Performer Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "performer",
+   "fieldtype": "Dynamic Link",
+   "label": "Performer",
+   "options": "performer_type"
+  },
+  {
+   "fieldname": "organization",
+   "fieldtype": "Link",
+   "label": "Organization",
+   "options": "Organization"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break",
+   "label": "Identifier"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "label": "FHIR Serverid",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "description": "Source from which this consent is taken",
+   "fieldname": "source_section",
+   "fieldtype": "Section Break",
+   "label": "Source"
+  },
+  {
+   "fieldname": "source_ref_type",
+   "fieldtype": "Link",
+   "label": "Source Ref Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "source_ref",
+   "fieldtype": "Dynamic Link",
+   "label": "Source Ref",
+   "options": "source_ref_type"
+  },
+  {
+   "collapsible": 1,
+   "description": "Consent Verified by patient or family",
+   "fieldname": "verification_section",
+   "fieldtype": "Section Break",
+   "label": "Verification"
+  },
+  {
+   "fieldname": "verification",
+   "fieldtype": "Table",
+   "label": "Verification",
+   "options": "Consent Verification"
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-02-17 11:47:27.885576",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Consent",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "patient",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

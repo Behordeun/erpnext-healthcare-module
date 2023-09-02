@@ -1,0 +1,39 @@
+{
+ "actions": [],
+ "creation": "2021-06-15 19:05:17.970431",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "deceasedboolean",
+  "deceaseddatetime"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "deceasedboolean",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "DeceasedBoolean",
+   "options": "boolean"
+  },
+  {
+   "fieldname": "deceaseddatetime",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "DeceasedDateTime"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-07-10 12:06:56.802829",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Deceased",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

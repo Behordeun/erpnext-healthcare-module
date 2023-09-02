@@ -1,0 +1,37 @@
+{
+ "actions": [],
+ "creation": "2021-06-07 20:05:48.243402",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "legally_binding_attachment",
+  "legally_binding_reference"
+ ],
+ "fields": [
+  {
+   "fieldname": "legally_binding_attachment",
+   "fieldtype": "Data",
+   "label": "Legally Binding Attachment"
+  },
+  {
+   "description": "Composition\nDocumentReference\nQuestionnaireResponse\nContract",
+   "fieldname": "legally_binding_reference",
+   "fieldtype": "Table",
+   "label": "Legally Binding Reference",
+   "options": "Dynamic Link"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-06-11 19:48:38.563621",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Legally Binding",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

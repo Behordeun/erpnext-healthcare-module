@@ -1,0 +1,218 @@
+{
+ "actions": [],
+ "autoname": "format:RSKA-LIO-{fhir_serverid}",
+ "creation": "2021-06-02 13:30:07.816054",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "identifier",
+  "section_break_2",
+  "based_on",
+  "parent1",
+  "status",
+  "method",
+  "column_break_7",
+  "code",
+  "subject_type",
+  "subject",
+  "encounter",
+  "occurrence_section",
+  "occurrence_datetime",
+  "occurrence_period",
+  "section_break_15",
+  "condition",
+  "performer_type",
+  "performer",
+  "reason_code",
+  "column_break_22",
+  "reason_reference_type",
+  "reason_reference",
+  "basis_type",
+  "basis",
+  "section_break_25",
+  "mitigation",
+  "note",
+  "fhir_serverid"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "parent1",
+   "fieldtype": "Table MultiSelect",
+   "label": "Parent",
+   "options": "RiskAssessment Multi"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "registered\npreliminary\nfinal\namended"
+  },
+  {
+   "fieldname": "method",
+   "fieldtype": "Link",
+   "label": "Method",
+   "options": "RiskAssessment Method Code"
+  },
+  {
+   "fieldname": "code",
+   "fieldtype": "Link",
+   "label": "Code",
+   "options": "RiskAssessment Code"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Dynamic Link",
+   "label": "Subject",
+   "options": "subject_type"
+  },
+  {
+   "fieldname": "encounter",
+   "fieldtype": "Link",
+   "label": "Encounter",
+   "options": "Encounter"
+  },
+  {
+   "fieldname": "condition",
+   "fieldtype": "Link",
+   "label": "Condition",
+   "options": "Condition"
+  },
+  {
+   "fieldname": "performer",
+   "fieldtype": "Dynamic Link",
+   "label": "Performer",
+   "options": "performer_type"
+  },
+  {
+   "fieldname": "basis",
+   "fieldtype": "Dynamic Link",
+   "label": "Basis",
+   "options": "basis_type"
+  },
+  {
+   "fieldname": "mitigation",
+   "fieldtype": "Data",
+   "label": "Mitigation"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Table",
+   "label": "Note",
+   "options": "Annotation"
+  },
+  {
+   "fieldname": "based_on",
+   "fieldtype": "Table MultiSelect",
+   "label": "Based On",
+   "options": "RiskAssessment Multi"
+  },
+  {
+   "fieldname": "subject_type",
+   "fieldtype": "Link",
+   "label": "Subject Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "occurrence_datetime",
+   "fieldtype": "Data",
+   "label": "Occurrence Date Time"
+  },
+  {
+   "fieldname": "occurrence_period",
+   "fieldtype": "Table",
+   "label": "Occurrence Period",
+   "options": "Period"
+  },
+  {
+   "fieldname": "performer_type",
+   "fieldtype": "Link",
+   "label": "Performer Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "reason_code",
+   "fieldtype": "Table MultiSelect",
+   "label": "Reason Code",
+   "options": "RiskAssessment Reason Code Multi"
+  },
+  {
+   "fieldname": "reason_reference_type",
+   "fieldtype": "Link",
+   "label": "Reason Reference Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "reason_reference",
+   "fieldtype": "Dynamic Link",
+   "label": "Reason Reference",
+   "options": "reason_reference_type"
+  },
+  {
+   "fieldname": "basis_type",
+   "fieldtype": "Link",
+   "label": "Basis Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "label": "FHIR Serverid"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "occurrence_section",
+   "fieldtype": "Section Break",
+   "label": "Occurrence"
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_25",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-11-09 20:55:50.115704",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "RiskAssessment",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

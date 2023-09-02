@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "creation": "2021-05-18 14:18:32.344604",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "weeks",
+  "days",
+  "openingtime",
+  "closingtime"
+ ],
+ "fields": [
+  {
+   "fieldname": "weeks",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Days of week",
+   "options": "mon\ntue\nwed\nthu\nfri\nsat\nsun"
+  },
+  {
+   "default": "0",
+   "fieldname": "days",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "All day"
+  },
+  {
+   "fieldname": "openingtime",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Opening time"
+  },
+  {
+   "fieldname": "closingtime",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Closing time"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-08-22 15:20:33.823992",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Hours Of Operation 2",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

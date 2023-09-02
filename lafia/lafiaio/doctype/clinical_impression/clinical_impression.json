@@ -1,0 +1,78 @@
+{
+ "actions": [],
+ "creation": "2021-06-01 14:07:44.659886",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "id",
+  "status",
+  "statusreason",
+  "code",
+  "description",
+  "subject"
+ ],
+ "fields": [
+  {
+   "fieldname": "id",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "default": "0",
+   "fieldname": "status",
+   "fieldtype": "Check",
+   "label": "Status",
+   "options": "in-progress\ncompleted\nentered-in-error"
+  },
+  {
+   "fieldname": "statusreason",
+   "fieldtype": "Table",
+   "label": "Status Reason",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "code",
+   "fieldtype": "Table",
+   "label": "Code",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Table",
+   "label": "Subject",
+   "options": "Dynamic Link",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-06-11 19:49:17.212173",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Clinical Impression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

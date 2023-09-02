@@ -1,0 +1,84 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2023-01-06 14:14:25.397496",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "source_type",
+  "source",
+  "type",
+  "communication_method",
+  "validation_status",
+  "validation_date",
+  "can_push_updates",
+  "push_type_available"
+ ],
+ "fields": [
+  {
+   "fieldname": "source_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Primary source type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "label": "Primary Source",
+   "options": "source_type"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "Primary Source Type"
+  },
+  {
+   "fieldname": "communication_method",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Communication Method",
+   "options": "\nManual\nPortal\nPull\nPush"
+  },
+  {
+   "fieldname": "validation_status",
+   "fieldtype": "Select",
+   "label": "Validation status",
+   "options": "Successful\nFailed\nUnknown"
+  },
+  {
+   "fieldname": "validation_date",
+   "fieldtype": "Datetime",
+   "label": "Validation Date"
+  },
+  {
+   "fieldname": "can_push_updates",
+   "fieldtype": "Select",
+   "label": "Can Push updates",
+   "options": "\nYes\nNo\nUndetermined"
+  },
+  {
+   "fieldname": "push_type_available",
+   "fieldtype": "Select",
+   "label": "Push Type Available",
+   "options": "\nSpecific requested changes\nAny changes\nAs defined by source"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-01-06 14:16:03.012195",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Primary Source",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

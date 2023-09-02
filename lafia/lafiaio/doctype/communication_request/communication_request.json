@@ -1,0 +1,200 @@
+{
+ "actions": [],
+ "creation": "2021-06-04 16:36:52.565234",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "identifier",
+  "based_on",
+  "replaces",
+  "group_identifier",
+  "status",
+  "status_reason",
+  "category",
+  "priority",
+  "do_not_perform",
+  "medium",
+  "subject",
+  "about",
+  "encounter",
+  "pay_load",
+  "occurrence_datetime",
+  "occurrence_period",
+  "authored_on",
+  "requester",
+  "recipient",
+  "sender",
+  "reason_code",
+  "reason_reference",
+  "note"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "based_on",
+   "fieldtype": "Link",
+   "label": "Based On",
+   "options": "Coding"
+  },
+  {
+   "fieldname": "replaces",
+   "fieldtype": "Link",
+   "label": "Replaces",
+   "options": "Communication Request"
+  },
+  {
+   "fieldname": "group_identifier",
+   "fieldtype": "Table",
+   "label": "Group Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "draft\nactive\non-hold\nrevoked\ncompleted\nentered-in-error\nunknown"
+  },
+  {
+   "fieldname": "status_reason",
+   "fieldtype": "Table",
+   "label": "Status Reason",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Table",
+   "label": "Category",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "routine\nurgent\nasap\nstat"
+  },
+  {
+   "default": "0",
+   "fieldname": "do_not_perform",
+   "fieldtype": "Check",
+   "label": "Do not Perform",
+   "options": "True\nFalse"
+  },
+  {
+   "fieldname": "medium",
+   "fieldtype": "Table",
+   "label": "Medium",
+   "options": "Codable Concept"
+  },
+  {
+   "description": "This leads to the following doctypes:\n- Patient\n- Group",
+   "fieldname": "subject",
+   "fieldtype": "Table",
+   "label": "Subject",
+   "options": "Dynamic Link"
+  },
+  {
+   "fieldname": "about",
+   "fieldtype": "Link",
+   "label": "About",
+   "options": "Coding"
+  },
+  {
+   "fieldname": "encounter",
+   "fieldtype": "Link",
+   "label": "Encounter",
+   "options": "Encounter"
+  },
+  {
+   "fieldname": "pay_load",
+   "fieldtype": "Table",
+   "label": "Pay Load",
+   "options": "PayLoad Child"
+  },
+  {
+   "fieldname": "occurrence_datetime",
+   "fieldtype": "Data",
+   "label": "Occurrence DateTime"
+  },
+  {
+   "fieldname": "occurrence_period",
+   "fieldtype": "Table",
+   "label": "Occurrence Period",
+   "options": "Period"
+  },
+  {
+   "fieldname": "authored_on",
+   "fieldtype": "Data",
+   "label": "Authored On"
+  },
+  {
+   "description": "This leads to the following doctypes:\n- Practitioner\n- PractitionerRole\n- Organization\n- Patient\n- RelatedPerson\n- Device",
+   "fieldname": "requester",
+   "fieldtype": "Table",
+   "label": "Requester",
+   "options": "Dynamic Link"
+  },
+  {
+   "description": "This leads to the following Doctypes:\n- Device\n- Organization\n- Patient\n- Practitioner\n- PractitionerRole\n- RelatedPerson\n- Group\n- CareTeam\n- HealthcareService",
+   "fieldname": "recipient",
+   "fieldtype": "Table",
+   "label": "Recipient",
+   "options": "Dynamic Link"
+  },
+  {
+   "description": "This leads to the following doctypes:\n- Device\n- Organization\n- Patient\n- Practitioner|\n- PractitionerRole\n- RelatedPerson\n- HealthcareService",
+   "fieldname": "sender",
+   "fieldtype": "Table",
+   "label": "Sender",
+   "options": "Dynamic Link"
+  },
+  {
+   "fieldname": "reason_code",
+   "fieldtype": "Table",
+   "label": "Reason Code",
+   "options": "Codable Concept"
+  },
+  {
+   "description": "This leads to the following doctypes:\n- Condition\n- Observation\n- DiagnosticReport|\n- DocumentReference",
+   "fieldname": "reason_reference",
+   "fieldtype": "Table",
+   "label": "Reason Reference",
+   "options": "Dynamic Link"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Table",
+   "label": "Note",
+   "options": "Annotation"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-11-30 23:55:02.609077",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Communication Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

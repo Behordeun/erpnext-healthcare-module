@@ -1,0 +1,65 @@
+{
+ "actions": [],
+ "creation": "2021-06-03 19:15:21.714036",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "score",
+  "num_tp",
+  "num_fp",
+  "num_fn",
+  "precision",
+  "sensitivity",
+  "f_measure"
+ ],
+ "fields": [
+  {
+   "fieldname": "score",
+   "fieldtype": "Data",
+   "label": "Score"
+  },
+  {
+   "fieldname": "num_tp",
+   "fieldtype": "Data",
+   "label": "Num Tp"
+  },
+  {
+   "fieldname": "num_fp",
+   "fieldtype": "Data",
+   "label": "Num Fp"
+  },
+  {
+   "fieldname": "num_fn",
+   "fieldtype": "Data",
+   "label": "Num Fn"
+  },
+  {
+   "fieldname": "precision",
+   "fieldtype": "Data",
+   "label": "Precision"
+  },
+  {
+   "fieldname": "sensitivity",
+   "fieldtype": "Data",
+   "label": "Sensitivity"
+  },
+  {
+   "fieldname": "f_measure",
+   "fieldtype": "Data",
+   "label": "F Measure"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-06-11 19:48:57.957519",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "ROC_child",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

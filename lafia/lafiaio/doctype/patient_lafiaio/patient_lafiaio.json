@@ -1,0 +1,268 @@
+{
+ "actions": [],
+ "autoname": "format:PAT-LIO-{fhir_serverid}",
+ "creation": "2021-06-15 19:18:35.326516",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "identifier",
+  "text",
+  "active",
+  "personal_details_section",
+  "fullname",
+  "firstname",
+  "lastname",
+  "other_name",
+  "email",
+  "column_break_9",
+  "phone",
+  "gender",
+  "birthdate",
+  "marital_status",
+  "telecom",
+  "section_break_7",
+  "address",
+  "section_break_18",
+  "communication",
+  "general_practitioner",
+  "contact",
+  "column_break_14",
+  "photo",
+  "managing_organization",
+  "user_id",
+  "route",
+  "fhir_serverid",
+  "multiple_birth_section",
+  "multiple_birth",
+  "deceased_section",
+  "deceased_boolean",
+  "column_break_23",
+  "deceased_datetime"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "description": "Whether this patient's record is in active use",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "label": "Active",
+   "options": "boolean"
+  },
+  {
+   "description": "A contact detail for the individual",
+   "fieldname": "telecom",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Telecom",
+   "options": "Contact Point"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "male\nfemale\nother\nunknown"
+  },
+  {
+   "description": "\tThe date of birth for the individual",
+   "fieldname": "birthdate",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Birthdate"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Table",
+   "label": "Address",
+   "options": "Addresses"
+  },
+  {
+   "description": "Marital (civil) status of a patient",
+   "fieldname": "marital_status",
+   "fieldtype": "Select",
+   "label": "Marital Status",
+   "options": "Single\nMarried\nDivorced\nSeparated"
+  },
+  {
+   "fieldname": "multiple_birth",
+   "fieldtype": "Table",
+   "label": "Multiple Birth",
+   "options": "Multiple Birth"
+  },
+  {
+   "fieldname": "photo",
+   "fieldtype": "Attach Image",
+   "label": "Photo"
+  },
+  {
+   "fieldname": "contact",
+   "fieldtype": "Table MultiSelect",
+   "label": "Next Of Kin",
+   "options": "Patient Contact Multi"
+  },
+  {
+   "fieldname": "communication",
+   "fieldtype": "Select",
+   "label": "Language Spoken",
+   "options": "English\nYoruba\nIgbo\nHausa"
+  },
+  {
+   "description": "Organization\nPractitioner\nPractitionerRole",
+   "fieldname": "general_practitioner",
+   "fieldtype": "Link",
+   "label": "Private Doctor",
+   "options": "Practitioner"
+  },
+  {
+   "fieldname": "managing_organization",
+   "fieldtype": "Link",
+   "label": "Managing Organization",
+   "options": "Organization"
+  },
+  {
+   "fetch_from": "doc.name",
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Route"
+  },
+  {
+   "fieldname": "user_id",
+   "fieldtype": "Link",
+   "label": "User Id",
+   "options": "User"
+  },
+  {
+   "fieldname": "personal_details_section",
+   "fieldtype": "Section Break",
+   "label": "Personal Information"
+  },
+  {
+   "fieldname": "text",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Text",
+   "options": "Text HTML"
+  },
+  {
+   "description": "A name associated with the patient",
+   "fieldname": "fullname",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Name",
+   "options": "Human Name"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "label": "FHIR ServerID"
+  },
+  {
+   "collapsible": 1,
+   "description": "Indicates if the individual is deceased or not. ",
+   "fieldname": "deceased_section",
+   "fieldtype": "Section Break",
+   "label": "Deceased",
+   "options": "Deceased"
+  },
+  {
+   "default": "0",
+   "fieldname": "deceased_boolean",
+   "fieldtype": "Check",
+   "label": "Is Deceased"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "deceased_datetime",
+   "fieldtype": "Datetime",
+   "label": "Date and Time of Death"
+  },
+  {
+   "collapsible": 1,
+   "description": "Whether patient is part of a multiple birth",
+   "fieldname": "multiple_birth_section",
+   "fieldtype": "Section Break",
+   "label": "Multiple Birth"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "firstname",
+   "fieldtype": "Data",
+   "label": "Firstname",
+   "options": "Name"
+  },
+  {
+   "fieldname": "lastname",
+   "fieldtype": "Data",
+   "label": "Lastname",
+   "options": "Name"
+  },
+  {
+   "fieldname": "other_name",
+   "fieldtype": "Data",
+   "label": "Other Name",
+   "options": "Name"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "section_break_18",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-06-02 14:31:19.919109",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Patient_LafiaIO",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "route": "patient-lafia",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

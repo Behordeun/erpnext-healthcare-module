@@ -1,0 +1,80 @@
+{
+ "actions": [],
+ "creation": "2021-06-14 15:07:04.478367",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "is_derived",
+  "type",
+  "preference",
+  "container",
+  "requirement",
+  "retention_time",
+  "rejection_criterion",
+  "handling"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "is_derived",
+   "fieldtype": "Check",
+   "label": "Is Derived",
+   "options": "boolean"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Table",
+   "label": "Type",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "preference",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Preference",
+   "options": "preferred\nalternate",
+   "reqd": 1
+  },
+  {
+   "fieldname": "container",
+   "fieldtype": "Table",
+   "label": "Container",
+   "options": "Specimen Definition Container"
+  },
+  {
+   "fieldname": "requirement",
+   "fieldtype": "Data",
+   "label": "Requirement"
+  },
+  {
+   "fieldname": "retention_time",
+   "fieldtype": "Data",
+   "label": "Retention Time"
+  },
+  {
+   "fieldname": "rejection_criterion",
+   "fieldtype": "Table",
+   "label": "Rejection Criterion",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "handling",
+   "fieldtype": "Table",
+   "label": "Handling",
+   "options": "Handling"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-12-01 00:15:02.547198",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Type Tested",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

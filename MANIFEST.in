@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include lafia *.css
+recursive-include lafia *.csv
+recursive-include lafia *.html
+recursive-include lafia *.ico
+recursive-include lafia *.js
+recursive-include lafia *.json
+recursive-include lafia *.md
+recursive-include lafia *.png
+recursive-include lafia *.py
+recursive-include lafia *.svg
+recursive-include lafia *.txt
+recursive-exclude lafia *.pyc

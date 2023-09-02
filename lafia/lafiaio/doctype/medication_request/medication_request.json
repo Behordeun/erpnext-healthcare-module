@@ -1,0 +1,447 @@
+{
+ "actions": [],
+ "autoname": "format:PAT-MDR-{fhir_serverid}",
+ "creation": "2021-06-08 15:19:50.829832",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "subject",
+  "encounter",
+  "encounter_name",
+  "status",
+  "status_reason",
+  "intent",
+  "column_break_6",
+  "medication",
+  "category",
+  "priority",
+  "do_not_perform",
+  "date",
+  "identifier_section",
+  "identifier",
+  "section_break_14",
+  "supporting_information",
+  "section_break_17",
+  "requester_ref",
+  "requester",
+  "column_break_20",
+  "performer_ref",
+  "performer",
+  "column_break_24",
+  "recorder",
+  "recorder_name",
+  "course_of_therapy_type",
+  "reason_section",
+  "reason_code",
+  "reason_reference",
+  "section_break_29",
+  "instantiates_canonical",
+  "instantiates_uri",
+  "based_on_section",
+  "based_on",
+  "group_identifier",
+  "insurance_section",
+  "insurance",
+  "note_section",
+  "note",
+  "section_break_41",
+  "dosage_instruction",
+  "section_break_43",
+  "dispense_request",
+  "substitution",
+  "prior_prescription",
+  "detected_issue",
+  "event_history",
+  "section_break_49",
+  "fhir_serverid",
+  "notification_sent",
+  "provider"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Active\nOn-hold\nCancelled\nCompleted\nEntered-in-error\nStopped\nDraft\nUnknown",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status_reason",
+   "fieldtype": "Link",
+   "label": "Status Reason",
+   "options": "Medication Request Status Reason"
+  },
+  {
+   "fieldname": "intent",
+   "fieldtype": "Select",
+   "label": "Intent",
+   "options": "Proposal\nPlan\nOrder\nOriginal-order\nReflex-order\nFiller-order\nInstance-order\nOption",
+   "reqd": 1
+  },
+  {
+   "description": "Type of medication usage",
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "Inpatient\nOutpatient\nCommunity\nDischarge"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "\nRoutine\nUrgent\nAsap\nStat"
+  },
+  {
+   "default": "0",
+   "fieldname": "do_not_perform",
+   "fieldtype": "Check",
+   "label": "Do not perform"
+  },
+  {
+   "fieldname": "medication",
+   "fieldtype": "Link",
+   "label": "Medication",
+   "options": "Medication Code"
+  },
+  {
+   "description": "Patient\nGroup",
+   "fieldname": "subject",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "encounter",
+   "fieldtype": "Link",
+   "label": "Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "fieldname": "supporting_information",
+   "fieldtype": "Table",
+   "label": "Supporting Information",
+   "options": "Reference Table"
+  },
+  {
+   "fieldname": "requester",
+   "fieldtype": "Dynamic Link",
+   "label": "Requester",
+   "options": "requester_ref"
+  },
+  {
+   "fieldname": "performer",
+   "fieldtype": "Dynamic Link",
+   "label": "Performer",
+   "options": "performer_ref"
+  },
+  {
+   "fieldname": "recorder",
+   "fieldtype": "Link",
+   "label": "Recorder",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "reason_code",
+   "fieldtype": "Table MultiSelect",
+   "label": "Reason Code",
+   "options": "Condition Code Multi"
+  },
+  {
+   "description": "Condition\nObservation",
+   "fieldname": "reason_reference",
+   "fieldtype": "Table",
+   "label": "Reason Reference",
+   "options": "Reference Table"
+  },
+  {
+   "fieldname": "instantiates_uri",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Instantiates URI"
+  },
+  {
+   "description": "CarePlan\nMedicationRequest\nServiceRequest\nImmunizationRecommendation",
+   "fieldname": "based_on",
+   "fieldtype": "Table",
+   "label": "Based On",
+   "options": "Reference Table"
+  },
+  {
+   "fieldname": "group_identifier",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Group Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "course_of_therapy_type",
+   "fieldtype": "Select",
+   "label": "Course of Therapy Type",
+   "options": "\nContinuous long term therapy\nShort course (acute) therapy\nSeasonal"
+  },
+  {
+   "description": "Coverage\nClaimResponse",
+   "fieldname": "insurance",
+   "fieldtype": "Table",
+   "label": "Insurance",
+   "options": "Reference Table"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Link",
+   "label": "Note",
+   "options": "Annotation"
+  },
+  {
+   "fieldname": "dosage_instruction",
+   "fieldtype": "Table",
+   "label": "Dosage Instruction",
+   "options": "Text Table"
+  },
+  {
+   "fieldname": "dispense_request",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Dispense Request",
+   "options": "Dispense Request"
+  },
+  {
+   "fieldname": "substitution",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Substitution",
+   "options": "Substitution"
+  },
+  {
+   "fieldname": "prior_prescription",
+   "fieldtype": "Link",
+   "label": "Prior Prescription",
+   "options": "Medication Request"
+  },
+  {
+   "fieldname": "detected_issue",
+   "fieldtype": "Table MultiSelect",
+   "label": "Detected Issue",
+   "options": "Detected Issue Multi"
+  },
+  {
+   "fieldname": "event_history",
+   "fieldtype": "Link",
+   "label": "Event History",
+   "options": "Provenance"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "identifier_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Identifier"
+  },
+  {
+   "fetch_from": "encounter.title",
+   "fieldname": "encounter_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Encounter name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Datetime",
+   "label": "Date"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break",
+   "label": "Supporting Information"
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "requester_ref",
+   "fieldtype": "Link",
+   "label": "Requester Ref",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "performer_ref",
+   "fieldtype": "Link",
+   "label": "Performer Ref",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "description": "Reason or indication for ordering or not ordering the medication",
+   "fieldname": "reason_section",
+   "fieldtype": "Section Break",
+   "label": "Reason"
+  },
+  {
+   "fieldname": "section_break_29",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "recorder.practitioner_name",
+   "fieldname": "recorder_name",
+   "fieldtype": "Data",
+   "label": "Recorder name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "instantiates_canonical",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Instantiates Canonical"
+  },
+  {
+   "collapsible": 1,
+   "description": "What request fulfills",
+   "fieldname": "based_on_section",
+   "fieldtype": "Section Break",
+   "label": "Based On"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "insurance_section",
+   "fieldtype": "Section Break",
+   "label": "Insurance"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "note_section",
+   "fieldtype": "Section Break",
+   "label": "Note"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_41",
+   "fieldtype": "Section Break",
+   "label": "Dosage Instruction"
+  },
+  {
+   "fieldname": "section_break_43",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_49",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Fhir ServerID",
+   "read_only": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "notification_sent",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Notification sent"
+  },
+  {
+   "fieldname": "provider",
+   "fieldtype": "Data",
+   "label": "Provider"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-08-24 15:36:48.970870",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Medication Request",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Nursing User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

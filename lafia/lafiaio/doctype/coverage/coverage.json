@@ -1,0 +1,348 @@
+{
+ "actions": [],
+ "autoname": "format:HLC-COV-{fhir_serverid}",
+ "creation": "2021-06-04 15:00:51.874705",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "subscriber",
+  "beneficiary",
+  "title",
+  "relationship",
+  "status",
+  "column_break_4",
+  "company",
+  "start_date",
+  "end_date",
+  "section_break_8",
+  "type",
+  "kind",
+  "column_break_11",
+  "insurer",
+  "dependent",
+  "subsciber_id_section",
+  "subscriberid",
+  "payment_by_section",
+  "payment_by",
+  "identification_section",
+  "identifier",
+  "policy_holder_section",
+  "policy_holder_type",
+  "column_break_14",
+  "policy_holder",
+  "section_break_14",
+  "payor",
+  "coverage_classification_section",
+  "class",
+  "section_break_25",
+  "cost_to_beneficiary",
+  "section_break_19",
+  "order",
+  "network",
+  "column_break_23",
+  "subrogation",
+  "contract",
+  "fhir_serverid",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nCancelled\nDraft\nEntered-in-error"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "label": "Type ",
+   "options": "Coverage Type"
+  },
+  {
+   "fieldname": "beneficiary",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Beneficiary",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "dependent",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Dependent"
+  },
+  {
+   "description": "Beneficiary relationship to the subscriber",
+   "fieldname": "relationship",
+   "fieldtype": "Link",
+   "label": "Relationship",
+   "options": "Subscriber Relationship"
+  },
+  {
+   "description": "This leads to the following doctypes:\n- Patient\n- RelatedPerson\n- Organization",
+   "fieldname": "payor",
+   "fieldtype": "Table",
+   "label": "Payor/Issuer of Policy",
+   "options": "Reference Table"
+  },
+  {
+   "fieldname": "class",
+   "fieldtype": "Table",
+   "label": "Class",
+   "options": "Class Child"
+  },
+  {
+   "fieldname": "order",
+   "fieldtype": "Data",
+   "label": "Order"
+  },
+  {
+   "fieldname": "network",
+   "fieldtype": "Data",
+   "label": "Network"
+  },
+  {
+   "fieldname": "cost_to_beneficiary",
+   "fieldtype": "Table",
+   "label": "Cost to Beneficiary",
+   "options": "Cost To Beneficiary Child"
+  },
+  {
+   "fieldname": "subrogation",
+   "fieldtype": "Data",
+   "label": "Subrogation"
+  },
+  {
+   "fieldname": "contract",
+   "fieldtype": "Link",
+   "label": "Contract",
+   "options": "Contract Lafia"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "identification_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Identification"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "policy_holder_section",
+   "fieldtype": "Section Break",
+   "label": "Policy Holder"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Datetime",
+   "label": "Start date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Datetime",
+   "label": "End Date"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break",
+   "label": "Payor"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "coverage_classification_section",
+   "fieldtype": "Section Break",
+   "label": "Coverage Class"
+  },
+  {
+   "fieldname": "section_break_19",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_25",
+   "fieldtype": "Section Break",
+   "label": "Cost to Beneficiary"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "label": "Fhir ServerID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "policy_holder_type",
+   "fieldtype": "Link",
+   "label": "Policy Holder Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "policy_holder",
+   "fieldtype": "Dynamic Link",
+   "label": "Policy Holder",
+   "options": "policy_holder_type"
+  },
+  {
+   "description": "This leads to the following doctypes:\n- Patient \n- RelatedPerson",
+   "fieldname": "subscriber",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Subscriber",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "kind",
+   "fieldtype": "Select",
+   "label": "Kind",
+   "options": "Insurance\nSelf-pay\nOther"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "payment_by_section",
+   "fieldtype": "Section Break",
+   "label": "Payment By"
+  },
+  {
+   "fieldname": "payment_by",
+   "fieldtype": "Table",
+   "label": "Payment By",
+   "options": "Coverage Payment"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "subsciber_id_section",
+   "fieldtype": "Section Break",
+   "label": "Subsciber ID"
+  },
+  {
+   "fieldname": "subscriberid",
+   "fieldtype": "Table",
+   "label": "SubscriberID",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "insurer",
+   "fieldtype": "Link",
+   "label": "Insurer",
+   "options": "Organization"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Title",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Coverage",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-05-30 16:09:33.798531",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Coverage",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Nursing User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "title",
+ "track_changes": 1
+}

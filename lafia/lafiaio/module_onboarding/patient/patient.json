@@ -1,0 +1,29 @@
+{
+ "allow_roles": [
+  {
+   "role": "All"
+  }
+ ],
+ "creation": "2021-07-07 12:11:44.281014",
+ "docstatus": 0,
+ "doctype": "Module Onboarding",
+ "documentation_url": "https://app.lafia.io",
+ "idx": 0,
+ "is_complete": 0,
+ "modified": "2021-07-21 19:05:25.162913",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Patient",
+ "owner": "Administrator",
+ "steps": [
+  {
+   "step": "Add New Patient"
+  },
+  {
+   "step": "View Patients"
+  }
+ ],
+ "subtitle": "Take a ride",
+ "success_message": "You are ready to be a Patient",
+ "title": "Getting Started with Patients"
+}

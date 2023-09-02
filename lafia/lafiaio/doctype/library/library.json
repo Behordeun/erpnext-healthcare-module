@@ -1,0 +1,355 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:title",
+ "creation": "2023-01-11 15:02:51.704462",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "subtitle",
+  "version",
+  "status",
+  "experimental",
+  "column_break_7",
+  "type",
+  "subject",
+  "date",
+  "identifier_section",
+  "identifier",
+  "publisher_details_section",
+  "publisher",
+  "contact",
+  "section_break_15",
+  "description",
+  "jurisdiction",
+  "purpose",
+  "usage",
+  "copyright",
+  "column_break_21",
+  "approval_date",
+  "last_review_date",
+  "start",
+  "end",
+  "topic",
+  "author_details_section",
+  "author",
+  "author_contact",
+  "editor_details_section",
+  "editor",
+  "editor_contact",
+  "reviewer_details_section",
+  "reviewer",
+  "reviewer_contact",
+  "endorser_details_section",
+  "endoser",
+  "endoser_contact",
+  "section_break_38",
+  "fhir_serverid"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "subtitle",
+   "fieldtype": "Data",
+   "label": "Subtitle"
+  },
+  {
+   "fieldname": "version",
+   "fieldtype": "Data",
+   "label": "Version"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "identifier_section",
+   "fieldtype": "Section Break",
+   "label": "Identifier"
+  },
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nActive\nRetired\nUnknown",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "experimental",
+   "fieldtype": "Check",
+   "label": "Experimental"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Type",
+   "options": "Logic Library\nModel Definition\nAsset Collection\nModule Definition",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Link",
+   "label": "Subject",
+   "options": "Group"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Datetime",
+   "label": "Date"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "publisher_details_section",
+   "fieldtype": "Section Break",
+   "label": "Publisher Details"
+  },
+  {
+   "fieldname": "publisher",
+   "fieldtype": "Data",
+   "label": "Publisher"
+  },
+  {
+   "fieldname": "contact",
+   "fieldtype": "Table",
+   "label": "Contact",
+   "options": "Contact Point"
+  },
+  {
+   "collapsible": 1,
+   "description": "Description of the library",
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break",
+   "label": "Description"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "jurisdiction",
+   "fieldtype": "Table MultiSelect",
+   "label": "Jurisdiction",
+   "options": "Jurisdiction Multi"
+  },
+  {
+   "fieldname": "purpose",
+   "fieldtype": "Small Text",
+   "label": "Purpose"
+  },
+  {
+   "fieldname": "usage",
+   "fieldtype": "Data",
+   "label": "Usage"
+  },
+  {
+   "fieldname": "copyright",
+   "fieldtype": "Data",
+   "label": "Copyright"
+  },
+  {
+   "fieldname": "approval_date",
+   "fieldtype": "Date",
+   "label": "Approval date"
+  },
+  {
+   "fieldname": "last_review_date",
+   "fieldtype": "Date",
+   "label": "Last review date"
+  },
+  {
+   "description": "When the library is expected to be used",
+   "fieldname": "start",
+   "fieldtype": "Datetime",
+   "label": "Start"
+  },
+  {
+   "fieldname": "end",
+   "fieldtype": "Datetime",
+   "label": "End"
+  },
+  {
+   "fieldname": "topic",
+   "fieldtype": "Table MultiSelect",
+   "label": "Topic",
+   "options": "Definition Topic Multi"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "author_details_section",
+   "fieldtype": "Section Break",
+   "label": "Author Details"
+  },
+  {
+   "fieldname": "author",
+   "fieldtype": "Data",
+   "label": "Author"
+  },
+  {
+   "fieldname": "author_contact",
+   "fieldtype": "Table",
+   "label": "Author Contact",
+   "options": "Contact Point"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "editor_details_section",
+   "fieldtype": "Section Break",
+   "label": "Editor Details"
+  },
+  {
+   "fieldname": "editor",
+   "fieldtype": "Data",
+   "label": "Editor"
+  },
+  {
+   "fieldname": "editor_contact",
+   "fieldtype": "Table",
+   "label": "Editor contact",
+   "options": "Contact Point"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "reviewer_details_section",
+   "fieldtype": "Section Break",
+   "label": "Reviewer Details"
+  },
+  {
+   "fieldname": "reviewer",
+   "fieldtype": "Data",
+   "label": "Reviewer"
+  },
+  {
+   "fieldname": "reviewer_contact",
+   "fieldtype": "Table",
+   "label": "Reviewer contact",
+   "options": "Contact Point"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "endorser_details_section",
+   "fieldtype": "Section Break",
+   "label": "Endorser Details"
+  },
+  {
+   "fieldname": "endoser",
+   "fieldtype": "Data",
+   "label": "Endoser"
+  },
+  {
+   "fieldname": "endoser_contact",
+   "fieldtype": "Table",
+   "label": "Endoser Contact",
+   "options": "Contact Point"
+  },
+  {
+   "fieldname": "section_break_38",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fhir ServerID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-01-13 00:49:46.990386",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "LIbrary",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Nursing User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

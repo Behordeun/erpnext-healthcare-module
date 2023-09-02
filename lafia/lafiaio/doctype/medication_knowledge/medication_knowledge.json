@@ -1,0 +1,321 @@
+{
+ "actions": [],
+ "autoname": "format:MED-KWL-{fhir_serverid}",
+ "creation": "2021-06-08 19:56:19.839450",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "manufacturer",
+  "status",
+  "code",
+  "doseform",
+  "column_break_5",
+  "amount",
+  "synonym",
+  "producttype",
+  "related_medication_knowledge_section",
+  "relatedmedicationknowledge",
+  "associated_medication_section",
+  "associatedmedication",
+  "section_break_12",
+  "monograph",
+  "ingredient_section",
+  "ingredient",
+  "section_break_17",
+  "preparationinstruction",
+  "column_break_19",
+  "intendedroute",
+  "cost_section",
+  "cost",
+  "monitoring_program_section",
+  "monitoringprogram",
+  "administrationguidelines",
+  "medicineclassification",
+  "packaging",
+  "drugcharacteristic",
+  "contraindication",
+  "regulatory",
+  "kinetics",
+  "section_break_32",
+  "fhir_serverid"
+ ],
+ "fields": [
+  {
+   "fieldname": "code",
+   "fieldtype": "Link",
+   "label": "Code",
+   "options": "Medication Code"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Active\nInactive\nEntered-in-error",
+   "reqd": 1
+  },
+  {
+   "fieldname": "manufacturer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Manufacturer",
+   "options": "Organization",
+   "reqd": 1
+  },
+  {
+   "fieldname": "doseform",
+   "fieldtype": "Link",
+   "label": "Dose form",
+   "options": "Medication Form"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Int",
+   "label": "Amount"
+  },
+  {
+   "description": "Additional names for a medication",
+   "fieldname": "synonym",
+   "fieldtype": "Data",
+   "label": "Synonym"
+  },
+  {
+   "fieldname": "relatedmedicationknowledge",
+   "fieldtype": "Table",
+   "label": "Related Medication Knowledge",
+   "options": "RelatedMedicationKnowledge Child"
+  },
+  {
+   "fieldname": "associatedmedication",
+   "fieldtype": "Table",
+   "label": "Associated Medication",
+   "options": "Medication Multi"
+  },
+  {
+   "fieldname": "producttype",
+   "fieldtype": "Data",
+   "label": "Product type"
+  },
+  {
+   "fieldname": "monograph",
+   "fieldtype": "Table",
+   "label": "Monograph",
+   "options": "Monograph Child"
+  },
+  {
+   "fieldname": "ingredient",
+   "fieldtype": "Table",
+   "label": "ingredient",
+   "options": "Ingredient Medication Child"
+  },
+  {
+   "fieldname": "preparationinstruction",
+   "fieldtype": "Small Text",
+   "label": "Preparation Instruction"
+  },
+  {
+   "fieldname": "intendedroute",
+   "fieldtype": "Table MultiSelect",
+   "label": "Intended route",
+   "options": "Exposure Route Multi"
+  },
+  {
+   "fieldname": "cost",
+   "fieldtype": "Table",
+   "label": "Cost",
+   "options": "Cost Child"
+  },
+  {
+   "fieldname": "monitoringprogram",
+   "fieldtype": "Table",
+   "label": "Monitoring Program",
+   "options": "MonitoringProgram Child"
+  },
+  {
+   "fieldname": "administrationguidelines",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "administrationGuidelines",
+   "options": "AdministrationGuidelines_Child"
+  },
+  {
+   "fieldname": "medicineclassification",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "medicineClassification",
+   "options": "MedicineClassification Child"
+  },
+  {
+   "fieldname": "packaging",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "packaging",
+   "options": "Packaging Child"
+  },
+  {
+   "fieldname": "drugcharacteristic",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "drugCharacteristic",
+   "options": "Drug Characteristic Child"
+  },
+  {
+   "fieldname": "contraindication",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "contraindication",
+   "options": "Dynamic Link"
+  },
+  {
+   "fieldname": "regulatory",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "regulatory",
+   "options": "Regulatory Child"
+  },
+  {
+   "fieldname": "kinetics",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "kinetics",
+   "options": "Kinetics Child"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "related_medication_knowledge_section",
+   "fieldtype": "Section Break",
+   "label": "Related Medication Knowledge"
+  },
+  {
+   "collapsible": 1,
+   "description": "A medication resource that is associated with this medication",
+   "fieldname": "associated_medication_section",
+   "fieldtype": "Section Break",
+   "label": "Associated Medication"
+  },
+  {
+   "description": "Associated documentation about the medication",
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break",
+   "label": "Monograph"
+  },
+  {
+   "collapsible": 1,
+   "description": " Active or inactive ingredient",
+   "fieldname": "ingredient_section",
+   "fieldtype": "Section Break",
+   "label": "Ingredient"
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break"
+  },
+  {
+   "collapsible": 1,
+   "description": "The pricing of the medication",
+   "fieldname": "cost_section",
+   "fieldtype": "Section Break",
+   "label": "Cost"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "description": "Program under which a medication is reviewed",
+   "fieldname": "monitoring_program_section",
+   "fieldtype": "Section Break",
+   "label": "Monitoring Program"
+  },
+  {
+   "fieldname": "section_break_32",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "label": "Fhir ServerID",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-01-26 22:21:50.789191",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Medication Knowledge",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Nursing User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,21 @@
+{
+ "action": "Go to Page",
+ "creation": "2021-07-07 12:38:18.049077",
+ "description": "",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "idx": 0,
+ "is_complete": 0,
+ "is_single": 0,
+ "is_skipped": 0,
+ "modified": "2022-09-06 00:12:58.495953",
+ "modified_by": "Administrator",
+ "name": "View Patients",
+ "owner": "Administrator",
+ "path": "/app/patient",
+ "reference_document": "Patient_LafiaIO",
+ "show_form_tour": 0,
+ "show_full_form": 0,
+ "title": "View created Patients",
+ "validate_action": 1
+}

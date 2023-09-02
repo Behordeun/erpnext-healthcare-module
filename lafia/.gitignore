@@ -1,0 +1,7 @@
+# created by virtualenv automatically
+bin
+lib
+pyvenv
+**/node_modules/
+public/node_modules/
+public/node_modules

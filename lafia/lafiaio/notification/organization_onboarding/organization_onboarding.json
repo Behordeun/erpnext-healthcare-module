@@ -1,0 +1,28 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "condition": "",
+ "creation": "2023-05-10 22:19:20.846644",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Organization Onboarding",
+ "enabled": 1,
+ "event": "New",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "<p> Hello {{ doc.hospital_name }}, </p>\n\n<p> Thanks for choosing Lafia. </p>\n\n<p> We are pleased to confirm receipt of your onboarding details.</p>\n\n<p> Our customer service would contact you shortly. </p>\n\n<p> You can also click on the link below book a demo </p>\n\n<p>\n\n<a href=\"https://calendly.com/adawodu/lafia_demo?back=1&month={{ frappe.utils.now_datetime().strftime(\"%Y-%m\") }}\" rel=\"nofollow\" style=\"padding: 8px 20px; background-color: #7575ff; color: #fff; border-radius: 4px; text-decoration: none; line-height: 1; border-bottom: 3px solid rgba(0, 0, 0, 0.2); font-size: 14px; font-weight: 200;\">{{ _(\"Book Demo\") }}</a>\n\n\n</p>",
+ "modified": "2023-05-11 20:58:05.686613",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Organization Onboarding",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_document_field": "email"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "subject": "Welcome to Lafia IO"
+}

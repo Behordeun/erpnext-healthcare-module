@@ -1,0 +1,72 @@
+{
+ "actions": [],
+ "autoname": "field:display",
+ "creation": "2021-06-30 13:26:07.354526",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "system",
+  "version",
+  "code",
+  "display",
+  "user_selected"
+ ],
+ "fields": [
+  {
+   "fieldname": "system",
+   "fieldtype": "Data",
+   "label": "System"
+  },
+  {
+   "fieldname": "version",
+   "fieldtype": "Data",
+   "label": "Version"
+  },
+  {
+   "fieldname": "code",
+   "fieldtype": "Data",
+   "label": "Code"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "display",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Display",
+   "unique": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "user_selected",
+   "fieldtype": "Check",
+   "label": "User Selected"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-06-30 13:29:07.563249",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Coding Duplicate",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

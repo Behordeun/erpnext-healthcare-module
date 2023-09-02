@@ -1,0 +1,273 @@
+{
+ "actions": [],
+ "autoname": "format:MED-SMT-{fhir_serverid}",
+ "creation": "2021-06-08 19:37:42.348865",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "encounter",
+  "encounter_name",
+  "medication",
+  "date",
+  "column_break_5",
+  "status",
+  "statusreason",
+  "category",
+  "identifier_section",
+  "identifier",
+  "reference_section",
+  "basedon",
+  "partof",
+  "derivedfrom",
+  "section_break_16",
+  "informationsource",
+  "column_break_18",
+  "information_source",
+  "reasons_section",
+  "reasoncode",
+  "reasonreference",
+  "section_break_23",
+  "note",
+  "dosage",
+  "section_break_26",
+  "fhir_serverid"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "basedon",
+   "fieldtype": "Table",
+   "label": "Based On",
+   "options": "Reference Table"
+  },
+  {
+   "fieldname": "partof",
+   "fieldtype": "Table",
+   "label": "Part Of",
+   "options": "Reference Table"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nCompleted\nEntered-in-error\nIntended\nStopped\nOn-hold\nUnknown\nNot-taken"
+  },
+  {
+   "fieldname": "statusreason",
+   "fieldtype": "Table MultiSelect",
+   "label": "Status reason",
+   "options": "Medication Status Reason Multi"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "\nInpatient\nOutpatient\nCommunity\nPatient Specified"
+  },
+  {
+   "fieldname": "informationsource",
+   "fieldtype": "Link",
+   "label": "Information Source Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "derivedfrom",
+   "fieldtype": "Table",
+   "label": "Derived From",
+   "options": "Reference Table"
+  },
+  {
+   "fieldname": "reasoncode",
+   "fieldtype": "Table MultiSelect",
+   "label": "Reason",
+   "options": "Condition Code Multi"
+  },
+  {
+   "fieldname": "reasonreference",
+   "fieldtype": "Table",
+   "label": "Reason reference",
+   "options": "Reference Table"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Table",
+   "label": "Note",
+   "options": "Annotation"
+  },
+  {
+   "fieldname": "dosage",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "dosage",
+   "options": "Dosage"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "encounter",
+   "fieldtype": "Link",
+   "label": "Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "fetch_from": "encounter.title",
+   "fieldname": "encounter_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Encounter name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "medication",
+   "fieldtype": "Link",
+   "label": "Medication",
+   "options": "Medication"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Datetime",
+   "label": "Date"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "identifier_section",
+   "fieldtype": "Section Break",
+   "label": "Identifier"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "information_source",
+   "fieldtype": "Dynamic Link",
+   "label": "Information Source",
+   "options": "informationsource"
+  },
+  {
+   "collapsible": 1,
+   "description": " Reason for why the medication is being/was taken",
+   "fieldname": "reasons_section",
+   "fieldtype": "Section Break",
+   "label": "Reasons"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_23",
+   "fieldtype": "Section Break",
+   "label": "Note"
+  },
+  {
+   "fieldname": "section_break_26",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Fhir ServerID",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-01-24 00:01:27.670211",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Medication Statement",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Nursing User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

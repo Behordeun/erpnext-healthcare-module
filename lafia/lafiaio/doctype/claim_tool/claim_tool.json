@@ -1,0 +1,145 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "creation": "2022-07-13 22:08:28.759736",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "uid",
+  "p_uid",
+  "patient",
+  "column_break_4",
+  "bill_start",
+  "bill_stop",
+  "time",
+  "section_break_10",
+  "org_id",
+  "organization",
+  "column_break_13",
+  "prov_id",
+  "provider",
+  "section_break_16",
+  "reason",
+  "reason_code",
+  "section_break_17",
+  "diagnosis"
+ ],
+ "fields": [
+  {
+   "fieldname": "uid",
+   "fieldtype": "Data",
+   "label": "Claim UID"
+  },
+  {
+   "fieldname": "p_uid",
+   "fieldtype": "Data",
+   "label": "Patient ID"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bill_start",
+   "fieldtype": "Data",
+   "label": "Billable Start Date"
+  },
+  {
+   "fieldname": "bill_stop",
+   "fieldtype": "Data",
+   "label": "Billable end Date"
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Data",
+   "label": "Created"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "org_id",
+   "fieldtype": "Data",
+   "label": "Organization ID"
+  },
+  {
+   "fieldname": "organization",
+   "fieldtype": "Link",
+   "label": "Organization",
+   "options": "Organization"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "prov_id",
+   "fieldtype": "Data",
+   "label": "Provider_id"
+  },
+  {
+   "fieldname": "provider",
+   "fieldtype": "Link",
+   "label": "Provider",
+   "options": "Organization"
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Data",
+   "label": "Reason"
+  },
+  {
+   "fieldname": "reason_code",
+   "fieldtype": "Link",
+   "label": "Reason Code",
+   "options": "Encounter Reason Code"
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Table",
+   "label": "Diagnosis",
+   "options": "Diagnosis Child"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-07-13 22:23:55.908236",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Claim Tool",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

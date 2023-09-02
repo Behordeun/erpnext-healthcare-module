@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "creation": "2021-06-07 13:54:23.495185",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "supporting_info_sequence",
+  "category",
+  "product_or_service",
+  "modifier",
+  "provider",
+  "quantity",
+  "unit_price",
+  "facility",
+  "diagnosis"
+ ],
+ "fields": [
+  {
+   "fieldname": "supporting_info_sequence",
+   "fieldtype": "Data",
+   "label": "Supporting Info Sequence"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Table",
+   "label": "Category",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "product_or_service",
+   "fieldtype": "Table",
+   "label": "Product or Service",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "modifier",
+   "fieldtype": "Table",
+   "label": "Modifier",
+   "options": "Codable Concept"
+  },
+  {
+   "description": "This leads to the following doctypes:\n- Practitioner\n- PractitionerRole",
+   "fieldname": "provider",
+   "fieldtype": "Table",
+   "label": "Provider",
+   "options": "Dynamic Link"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Table",
+   "label": "Quantity",
+   "options": "Quantity"
+  },
+  {
+   "fieldname": "unit_price",
+   "fieldtype": "Table",
+   "label": "Unit Price",
+   "options": "Money"
+  },
+  {
+   "description": "This leads to following doctypes:\n- Location\n- Organization",
+   "fieldname": "facility",
+   "fieldtype": "Table",
+   "label": "Facility",
+   "options": "Dynamic Link"
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Table",
+   "label": "Diagnosis",
+   "options": "Diagnosis Child"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-11-30 23:13:49.718623",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Item Eligibility Request",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

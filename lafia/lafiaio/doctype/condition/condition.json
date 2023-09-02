@@ -1,0 +1,372 @@
+{
+ "actions": [],
+ "autoname": "format:LIO-CNDT-{fhir_serverid}",
+ "creation": "2021-05-24 08:51:04.068411",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "encounter",
+  "encounter_name",
+  "status",
+  "verification_status",
+  "column_break_3",
+  "company",
+  "category",
+  "severity",
+  "code",
+  "body_site",
+  "onset_section",
+  "start",
+  "column_break_13",
+  "stop",
+  "identifier_section",
+  "identifier",
+  "abatement_section",
+  "abatement_datetime",
+  "column_break_18",
+  "abatement_string",
+  "section_break_20",
+  "recorder_ref",
+  "recorder",
+  "column_break_24",
+  "recorded_date",
+  "section_break_29",
+  "participant",
+  "stage_section",
+  "stage",
+  "evidence_section",
+  "evidence",
+  "section_break_33",
+  "note",
+  "section_break_32",
+  "fhir_serverid",
+  "column_break_34",
+  "notification_sent",
+  "uid",
+  "amended_from",
+  "subject"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "verification_status",
+   "fieldtype": "Link",
+   "label": "Verification Status",
+   "options": "Condition Verification Status"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "label": "Category",
+   "options": "Condition Category"
+  },
+  {
+   "description": "Identification of the condition, problem or diagnosis",
+   "fieldname": "code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Diagnosis",
+   "options": "Condition Code"
+  },
+  {
+   "description": "Anatomical location, if relevant",
+   "fieldname": "body_site",
+   "fieldtype": "Table MultiSelect",
+   "label": "Body Site",
+   "options": "Body Site Multi"
+  },
+  {
+   "description": "The Encounter during which this Condition was created",
+   "fieldname": "encounter",
+   "fieldtype": "Link",
+   "label": "Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "description": "Date condition was first recorded",
+   "fieldname": "recorded_date",
+   "fieldtype": "Datetime",
+   "label": "Recorded Date"
+  },
+  {
+   "fieldname": "stage",
+   "fieldtype": "Table",
+   "label": "Stage",
+   "options": "Condition Stage"
+  },
+  {
+   "fieldname": "evidence",
+   "fieldtype": "Table",
+   "label": "Evidence",
+   "options": "Condition Evidence"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Table",
+   "label": "Note",
+   "options": "Annotation"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "onset_section",
+   "fieldtype": "Section Break",
+   "label": "Onset"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "abatement_section",
+   "fieldtype": "Section Break",
+   "label": "Abatement"
+  },
+  {
+   "fieldname": "abatement_datetime",
+   "fieldtype": "Datetime",
+   "label": "Abatement Date and Time"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "abatement_string",
+   "fieldtype": "Data",
+   "label": "Abatement String"
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_29",
+   "fieldtype": "Section Break",
+   "label": "Participant"
+  },
+  {
+   "bold": 1,
+   "collapsible": 1,
+   "fieldname": "section_break_33",
+   "fieldtype": "Section Break",
+   "label": "Note"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "label": "FHIR Serverid",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "collapsible": 1,
+   "fieldname": "identifier_section",
+   "fieldtype": "Section Break",
+   "label": "Identifier"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "participant",
+   "fieldtype": "Table",
+   "label": "Participant",
+   "options": "Condition Participant"
+  },
+  {
+   "bold": 1,
+   "collapsible": 1,
+   "fieldname": "stage_section",
+   "fieldtype": "Section Break",
+   "label": "Stage"
+  },
+  {
+   "bold": 1,
+   "collapsible": 1,
+   "fieldname": "evidence_section",
+   "fieldtype": "Section Break",
+   "label": "Evidence"
+  },
+  {
+   "fieldname": "section_break_32",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_34",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "uid",
+   "fieldtype": "Data",
+   "label": "UID",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "encounter.title",
+   "fieldname": "encounter_name",
+   "fieldtype": "Data",
+   "label": "Encounter name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "start",
+   "fieldtype": "Date",
+   "label": "Onset Start Date"
+  },
+  {
+   "fieldname": "stop",
+   "fieldtype": "Date",
+   "label": "Onset End Date"
+  },
+  {
+   "fieldname": "recorder_ref",
+   "fieldtype": "Link",
+   "label": "Recorder Ref",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "recorder",
+   "fieldtype": "Dynamic Link",
+   "label": "Recorder",
+   "options": "recorder_ref"
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "notification_sent",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Notification sent"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Link",
+   "label": "Clinical Status",
+   "options": "Condition Clinical Status",
+   "reqd": 1
+  },
+  {
+   "fieldname": "severity",
+   "fieldtype": "Link",
+   "label": "Severity",
+   "options": "Condition Severity"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Condition",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Subject"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-06-01 16:00:48.018718",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Condition",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Administrator",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Nursing User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "patient",
+ "track_changes": 1
+}

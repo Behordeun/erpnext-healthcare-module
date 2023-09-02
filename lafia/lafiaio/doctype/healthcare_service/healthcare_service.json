@@ -1,0 +1,302 @@
+{
+ "actions": [],
+ "autoname": "field:name1",
+ "creation": "2021-05-19 14:23:06.523098",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "type",
+  "provider",
+  "active",
+  "column_break_5",
+  "category",
+  "specialty",
+  "location",
+  "photo",
+  "description_section",
+  "comment",
+  "identifier_section",
+  "identilfier",
+  "telecom",
+  "email",
+  "phone",
+  "column_break_17",
+  "fax",
+  "section_break_13",
+  "coveragearea",
+  "serviceprovisioncode",
+  "program",
+  "appointmentrequired",
+  "column_break_24",
+  "characteristic",
+  "communication",
+  "referralmethod",
+  "eligibility",
+  "availability_section",
+  "availabletime",
+  "notavailable",
+  "section_break_31",
+  "endpoint",
+  "fhir_serverid"
+ ],
+ "fields": [
+  {
+   "fieldname": "identilfier",
+   "fieldtype": "Table",
+   "label": "Identilfier",
+   "options": "Identifier"
+  },
+  {
+   "default": "0",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "label": "Active"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Table MultiSelect",
+   "label": "Category",
+   "options": "Service Category"
+  },
+  {
+   "fieldname": "specialty",
+   "fieldtype": "Table MultiSelect",
+   "label": "Specialty",
+   "options": "Service Specialty"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Table MultiSelect",
+   "label": "Location",
+   "options": "Service Location"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "comment",
+   "fieldtype": "Long Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "photo",
+   "fieldtype": "Attach Image",
+   "label": "Photo"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "telecom",
+   "fieldtype": "Section Break",
+   "label": "Contact Point"
+  },
+  {
+   "fieldname": "coveragearea",
+   "fieldtype": "Table MultiSelect",
+   "label": "CoverageArea",
+   "options": "Service Location"
+  },
+  {
+   "fieldname": "serviceprovisioncode",
+   "fieldtype": "Table MultiSelect",
+   "label": "Service Provision",
+   "options": "Service Provision"
+  },
+  {
+   "fieldname": "eligibility",
+   "fieldtype": "Data",
+   "label": "Eligibility"
+  },
+  {
+   "fieldname": "program",
+   "fieldtype": "Table MultiSelect",
+   "label": "Program",
+   "options": "Service Program"
+  },
+  {
+   "fieldname": "characteristic",
+   "fieldtype": "Table MultiSelect",
+   "label": "Characteristic",
+   "options": "Service Characteristics"
+  },
+  {
+   "fieldname": "communication",
+   "fieldtype": "Table MultiSelect",
+   "label": "Languages",
+   "options": "Language Code Multi"
+  },
+  {
+   "fieldname": "referralmethod",
+   "fieldtype": "Select",
+   "label": "Referral Method",
+   "options": "\nFax\nPhone\nSecure Messaging\nSecure Email\nMail"
+  },
+  {
+   "default": "0",
+   "fieldname": "appointmentrequired",
+   "fieldtype": "Check",
+   "label": "Appointment Required"
+  },
+  {
+   "fieldname": "availabletime",
+   "fieldtype": "Table",
+   "label": "Available Time",
+   "options": "Hours Of Operation 2"
+  },
+  {
+   "fieldname": "notavailable",
+   "fieldtype": "Table",
+   "label": "Unavailable Time",
+   "options": "Unavailability"
+  },
+  {
+   "fieldname": "endpoint",
+   "fieldtype": "Table MultiSelect",
+   "label": "Endpoint",
+   "options": "Service Endpoint"
+  },
+  {
+   "fieldname": "provider",
+   "fieldtype": "Link",
+   "label": "Provider",
+   "options": "Organization"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Table MultiSelect",
+   "label": "Type",
+   "options": "Service Type"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "description_section",
+   "fieldtype": "Section Break",
+   "label": "Description"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "identifier_section",
+   "fieldtype": "Section Break",
+   "label": "Identifier"
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fax",
+   "fieldtype": "Data",
+   "label": "Fax"
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "availability_section",
+   "fieldtype": "Section Break",
+   "label": "Availability"
+  },
+  {
+   "fieldname": "section_break_31",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "label": "Fhir ServerID"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-08-31 00:09:54.034341",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Healthcare Service",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Nursing User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

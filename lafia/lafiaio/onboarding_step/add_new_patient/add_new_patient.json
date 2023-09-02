@@ -1,0 +1,21 @@
+{
+ "action": "Create Entry",
+ "action_label": "Add",
+ "creation": "2021-07-08 13:34:49.343797",
+ "description": "Let your healthcare providers know you by filling in your details",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "idx": 0,
+ "is_complete": 0,
+ "is_single": 0,
+ "is_skipped": 0,
+ "modified": "2022-09-06 00:10:56.199192",
+ "modified_by": "Administrator",
+ "name": "Add New Patient",
+ "owner": "v.emas@parallelscore.com",
+ "reference_document": "Patient",
+ "show_form_tour": 0,
+ "show_full_form": 1,
+ "title": "New Patient",
+ "validate_action": 1
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "url": "https://github.com/frappe/payments",
+    "branch": "develop" 
+  },
+  {
+    "url": "https://github.com/frappe/health",
+    "branch": "develop" 
+  },
+  {
+    "url": "https://github.com/frappe/chat",
+    "branch": "main" 
+  },
+  {
+    "url": "https://github.com/frappe/erpnext.git",
+    "branch": "v14.14.0"
+  },
+  {
+    "url": "https://github.com/parallelscore/Lafia-WebApp-ERPNext-",
+    "branch": "dev",
+    "name": "lafia"
+  }
+]

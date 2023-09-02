@@ -1,0 +1,303 @@
+{
+ "actions": [],
+ "autoname": "field:namefhir",
+ "creation": "2022-11-02 23:01:06.432800",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "namefhir",
+  "alias",
+  "status",
+  "column_break_4",
+  "type",
+  "mode",
+  "physical_type",
+  "description_section",
+  "description",
+  "identifier_section",
+  "identifier",
+  "operationalstatus",
+  "section_break_12",
+  "phone",
+  "email",
+  "column_break_16",
+  "fax",
+  "address_section",
+  "address",
+  "geographical_location_section",
+  "longitude",
+  "latitude",
+  "column_break_20",
+  "altitude",
+  "section_break_22",
+  "hoursofoperation",
+  "section_break_24",
+  "organization",
+  "partof",
+  "column_break_27",
+  "avail",
+  "endpoint",
+  "fhir_serverid"
+ ],
+ "fields": [
+  {
+   "fieldname": "namefhir",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "alias",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Alias"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "active\nsuspended\ninactive"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Table MultiSelect",
+   "label": "Type",
+   "options": "Location Role Types"
+  },
+  {
+   "fieldname": "mode",
+   "fieldtype": "Select",
+   "label": "Mode",
+   "options": "instance\nkind"
+  },
+  {
+   "fieldname": "physical_type",
+   "fieldtype": "Link",
+   "label": "Physical Type",
+   "options": "Location Type"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "description_section",
+   "fieldtype": "Section Break",
+   "label": "Description"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Long Text",
+   "label": "Description"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "identifier_section",
+   "fieldtype": "Section Break",
+   "label": "Identifier"
+  },
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "operationalstatus",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Operational Status",
+   "options": "Coding"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break",
+   "label": "Contact Point"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fax",
+   "fieldtype": "Data",
+   "label": "Fax"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "address_section",
+   "fieldtype": "Section Break",
+   "label": "Address"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Table",
+   "label": "Address ",
+   "options": "Addresses"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "geographical_location_section",
+   "fieldtype": "Section Break",
+   "label": "Geographical Location"
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Float",
+   "label": "Longitude"
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Float",
+   "label": "Latitude"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "altitude",
+   "fieldtype": "Float",
+   "label": "Altitude"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_22",
+   "fieldtype": "Section Break",
+   "label": "Hours of Operation"
+  },
+  {
+   "fieldname": "hoursofoperation",
+   "fieldtype": "Table",
+   "label": "Hours of Operation",
+   "options": "Hours Of Operation 2"
+  },
+  {
+   "fieldname": "section_break_24",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "organization",
+   "fieldtype": "Link",
+   "label": "Managing Organization",
+   "options": "Organization"
+  },
+  {
+   "fieldname": "partof",
+   "fieldtype": "Link",
+   "label": "A part of",
+   "options": "Locations"
+  },
+  {
+   "fieldname": "column_break_27",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "avail",
+   "fieldtype": "Data",
+   "label": "Availability Exception "
+  },
+  {
+   "fieldname": "endpoint",
+   "fieldtype": "Link",
+   "label": "Endpoint",
+   "options": "Endpoint"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "label": "Fhir ServerID"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-11-02 23:01:06.432800",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Locations",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Nursing User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

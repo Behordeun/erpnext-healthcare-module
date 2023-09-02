@@ -1,0 +1,240 @@
+{
+ "actions": [],
+ "autoname": "format:EPC-{fhir_serverid}",
+ "creation": "2021-06-16 12:35:34.102904",
+ "description": "An association of a Patient with an Organization and Healthcare Provider(s) for a period of time that the Organization assumes some level of responsibility",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "status",
+  "type",
+  "practitioner",
+  "practitioner_name",
+  "column_break_2",
+  "managing_organization",
+  "start_date",
+  "end_date",
+  "identifier_section",
+  "identifier",
+  "status_history_section",
+  "status_history",
+  "diagnosis_section",
+  "diagnosis",
+  "section_break_15",
+  "referral_request",
+  "team",
+  "column_break_19",
+  "account",
+  "section_break_21",
+  "fhir_serverid"
+ ],
+ "fields": [
+  {
+   "description": "Business Identifier(s) relevant for this EpisodeOfCare",
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Planned\nWaitlist\nActive\nOnhold\nFinished\nCancelled\nEntered-in-error",
+   "reqd": 1
+  },
+  {
+   "description": "Past list of status codes (the current status may be included to cover the start date of the status)",
+   "fieldname": "status_history",
+   "fieldtype": "Table",
+   "label": "Status History",
+   "options": "Status History"
+  },
+  {
+   "description": "Type/class - e.g. specialist referral, disease management",
+   "fieldname": "type",
+   "fieldtype": "Table MultiSelect",
+   "label": "Type",
+   "options": "Episode Of Care Type Multi"
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Table",
+   "label": "Diagnosis",
+   "options": "Episode Of Care Diagnosis Child"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "managing_organization",
+   "fieldtype": "Link",
+   "label": "Managing Organization",
+   "options": "Organization"
+  },
+  {
+   "fieldname": "referral_request",
+   "fieldtype": "Table MultiSelect",
+   "label": "Referral Request",
+   "options": "Service Request Multi"
+  },
+  {
+   "fieldname": "team",
+   "fieldtype": "Table MultiSelect",
+   "label": "Team",
+   "options": "Care Team Multi"
+  },
+  {
+   "fieldname": "account",
+   "fieldtype": "Link",
+   "label": "Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "identifier_section",
+   "fieldtype": "Section Break",
+   "label": "Identifier"
+  },
+  {
+   "collapsible": 1,
+   "description": "Past list of status codes (the current status may be included to cover the start date of the status",
+   "fieldname": "status_history_section",
+   "fieldtype": "Section Break",
+   "label": "Status History"
+  },
+  {
+   "fieldname": "practitioner",
+   "fieldtype": "Link",
+   "label": "Practitioner",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Datetime",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Datetime",
+   "label": "End Date"
+  },
+  {
+   "collapsible": 1,
+   "description": "The list of diagnosis relevant to this episode of care",
+   "fieldname": "diagnosis_section",
+   "fieldtype": "Section Break",
+   "label": "Diagnosis"
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "practitioner.practitioner_name",
+   "fieldname": "practitioner_name",
+   "fieldtype": "Data",
+   "label": "Practitioner name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_21",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "label": "Fhir ServerID",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-01-12 17:05:41.100002",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Episode Of Care",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Nursing User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

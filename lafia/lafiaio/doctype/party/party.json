@@ -1,0 +1,40 @@
+{
+ "actions": [],
+ "creation": "2021-06-07 17:17:16.074481",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "reference",
+  "role"
+ ],
+ "fields": [
+  {
+   "description": "Patient\nRelatedPerson\nPractitioner\nPractitionerRole\nDevice\nGroup\nOrganization",
+   "fieldname": "reference",
+   "fieldtype": "Table",
+   "label": "Reference",
+   "options": "Dynamic Link",
+   "reqd": 1
+  },
+  {
+   "fieldname": "role",
+   "fieldtype": "Table",
+   "label": "Role",
+   "options": "Codable Concept",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-06-11 19:48:42.785498",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Party",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

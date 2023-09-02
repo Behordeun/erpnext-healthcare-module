@@ -1,0 +1,96 @@
+{
+ "actions": [],
+ "creation": "2021-06-16 14:58:49.508048",
+ "description": "Details about the admission to a healthcare service",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pre_admission_identifier",
+  "origin",
+  "admit_source",
+  "readmission",
+  "diet_preference",
+  "special_courtesy",
+  "special_arrangemnt",
+  "destination",
+  "discharge_disposition"
+ ],
+ "fields": [
+  {
+   "description": "Pre-admission identifier",
+   "fieldname": "pre_admission_identifier",
+   "fieldtype": "Table",
+   "label": "Pre Admission Identifier",
+   "options": "Identifier"
+  },
+  {
+   "description": "The location/organization from which the patient came before admission",
+   "fieldname": "origin",
+   "fieldtype": "Table",
+   "label": "Origin",
+   "options": "Dynamic Link"
+  },
+  {
+   "description": "From where patient was admitted (physician referral, transfer)",
+   "fieldname": "admit_source",
+   "fieldtype": "Table",
+   "label": "Admit Source",
+   "options": "Codable Concept"
+  },
+  {
+   "description": "The type of hospital re-admission that has occurred (if any). If the value is absent, then this is not identified as a readmission",
+   "fieldname": "readmission",
+   "fieldtype": "Table",
+   "label": "ReAdmission",
+   "options": "Codable Concept"
+  },
+  {
+   "description": "Diet preferences reported by the patient",
+   "fieldname": "diet_preference",
+   "fieldtype": "Table",
+   "label": "Diet Preference",
+   "options": "Codable Concept"
+  },
+  {
+   "description": "Special courtesies (VIP, board member)",
+   "fieldname": "special_courtesy",
+   "fieldtype": "Table",
+   "label": "Special Courtesy",
+   "options": "Codable Concept"
+  },
+  {
+   "description": "Wheelchair, translator, stretcher, etc.",
+   "fieldname": "special_arrangemnt",
+   "fieldtype": "Table",
+   "label": "Special Arrangemnt",
+   "options": "Codable Concept"
+  },
+  {
+   "description": "Location/organization to which the patient is discharged",
+   "fieldname": "destination",
+   "fieldtype": "Table",
+   "label": "Destination",
+   "options": "Dynamic Link"
+  },
+  {
+   "description": "Category or kind of location after discharge",
+   "fieldname": "discharge_disposition",
+   "fieldtype": "Table",
+   "label": "Discharge Disposition",
+   "options": "Codable Concept"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-07-10 12:06:57.245269",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Hospitalization",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

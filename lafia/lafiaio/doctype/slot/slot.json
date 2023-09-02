@@ -1,0 +1,118 @@
+{
+ "actions": [],
+ "creation": "2021-06-16 14:34:54.350068",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "identifier",
+  "service_category",
+  "service_type",
+  "specialty",
+  "appointment_type",
+  "schedule",
+  "status",
+  "start",
+  "end",
+  "overbooked",
+  "comment"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "service_category",
+   "fieldtype": "Table",
+   "label": "Service Category",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "service_type",
+   "fieldtype": "Table",
+   "label": "Service Type",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "specialty",
+   "fieldtype": "Table",
+   "label": "Specialty",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "appointment_type",
+   "fieldtype": "Table",
+   "label": "Appointment Type",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "schedule",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Schedule",
+   "options": "Schedule",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "busy\nfree\nbusy-unavailable\nbusy-tentative\nentered-in-error",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Start",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "End",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "overbooked",
+   "fieldtype": "Check",
+   "label": "Overbooked",
+   "options": "boolean"
+  },
+  {
+   "fieldname": "comment",
+   "fieldtype": "Data",
+   "label": "Comment"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-07-10 12:06:57.841926",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Slot",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,48 @@
+{
+ "actions": [],
+ "creation": "2021-06-14 15:52:03.617131",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "property",
+  "op",
+  "value"
+ ],
+ "fields": [
+  {
+   "fieldname": "property",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Property",
+   "reqd": 1
+  },
+  {
+   "fieldname": "op",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Op",
+   "options": "=\nis-a\ndescendent-of\nis-not-a\nregex\nin\nnot-in\ngeneralizes\nexists",
+   "reqd": 1
+  },
+  {
+   "fieldname": "value",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Value",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-07-10 12:07:15.778796",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Filter",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

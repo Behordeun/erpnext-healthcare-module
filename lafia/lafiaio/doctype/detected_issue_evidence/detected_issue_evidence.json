@@ -1,0 +1,48 @@
+{
+ "actions": [],
+ "creation": "2021-06-01 16:07:41.204492",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "code",
+  "detail_type",
+  "detail"
+ ],
+ "fields": [
+  {
+   "fieldname": "code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Manifestation",
+   "options": "Clinical Findings"
+  },
+  {
+   "fieldname": "detail",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "label": "Detail",
+   "options": "detail_type"
+  },
+  {
+   "fieldname": "detail_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Detail Type",
+   "options": "DocType"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-11-14 16:35:54.028343",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Detected Issue Evidence",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

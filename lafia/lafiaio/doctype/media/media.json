@@ -1,0 +1,291 @@
+{
+ "actions": [],
+ "autoname": "format:MD-LIO-{fhir_serverid}",
+ "creation": "2021-06-03 13:41:00.024616",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "status",
+  "type",
+  "encounter",
+  "encounter_name",
+  "column_break_4",
+  "practitioner",
+  "practitioner_name",
+  "created",
+  "duration",
+  "section_break_10",
+  "video",
+  "section_break_13",
+  "content",
+  "section_break_15",
+  "based_on",
+  "part_of",
+  "modality",
+  "view",
+  "issued",
+  "reason_code",
+  "body_site",
+  "device_name",
+  "device",
+  "height",
+  "width",
+  "frames",
+  "note",
+  "section_break_28",
+  "fhir_serverid"
+ ],
+ "fields": [
+  {
+   "description": "ServiceRequest\nCarePlan",
+   "fieldname": "based_on",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Based On",
+   "options": "Dynamic Link"
+  },
+  {
+   "fieldname": "part_of",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Part Of"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Preparation\nIn-progress\nNot-done\nOn-hold\nStopped\nCompleted\nEntered-in-error\nUnknown",
+   "reqd": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "label": "Type",
+   "options": "Media Type Code"
+  },
+  {
+   "fieldname": "modality",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Modality",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "view",
+   "fieldtype": "Table",
+   "label": "View",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "encounter",
+   "fieldtype": "Link",
+   "label": "Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "fieldname": "created",
+   "fieldtype": "Datetime",
+   "label": "Date"
+  },
+  {
+   "fieldname": "issued",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Issued"
+  },
+  {
+   "fieldname": "reason_code",
+   "fieldtype": "Table",
+   "label": "Reason Code",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "body_site",
+   "fieldtype": "Table",
+   "label": "Body Site",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "device_name",
+   "fieldtype": "Data",
+   "label": "Device Name"
+  },
+  {
+   "description": "Device\nDeviceMetric\nDevice",
+   "fieldname": "device",
+   "fieldtype": "Table",
+   "label": "Device",
+   "options": "Dynamic Link"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Data",
+   "label": "Height"
+  },
+  {
+   "fieldname": "width",
+   "fieldtype": "Data",
+   "label": "Width"
+  },
+  {
+   "fieldname": "frames",
+   "fieldtype": "Data",
+   "label": "Frames"
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Int",
+   "label": "Duration"
+  },
+  {
+   "fieldname": "content",
+   "fieldtype": "Table",
+   "label": "Content",
+   "options": "Attachment Child",
+   "reqd": 1
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Table",
+   "label": "Note",
+   "options": "Annotation"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "label": "FHIR Serverid",
+   "read_only": 1
+  },
+  {
+   "fieldname": "video",
+   "fieldtype": "Long Text",
+   "label": "Video",
+   "read_only": 1
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "encounter.title",
+   "fieldname": "encounter_name",
+   "fieldtype": "Data",
+   "label": "Encounter name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_28",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "practitioner",
+   "fieldtype": "Link",
+   "label": "Practitioner",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "description": "Practitioner\nPractitionerRole\nOrganization\nCareTeam\nPatient\nDevice\nRelatedPerson",
+   "fetch_from": "practitioner.practitioner_name",
+   "fieldname": "practitioner_name",
+   "fieldtype": "Data",
+   "label": "Practitioner name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-02-22 15:04:04.145666",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Media",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Nursing User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,273 @@
+{
+ "actions": [],
+ "autoname": "format:ALG-LIO-{fhir_serverid}",
+ "creation": "2021-05-21 11:35:11.947353",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "details_section",
+  "patient",
+  "encounter",
+  "encounter_name",
+  "type",
+  "code",
+  "column_break_4",
+  "status",
+  "verificationstatus",
+  "category",
+  "criticality",
+  "section_break_12",
+  "recordeddate",
+  "column_break_14",
+  "lastoccurrence",
+  "identifier_section",
+  "identifier",
+  "onset",
+  "onset_datetime",
+  "onset_string",
+  "section_break_13",
+  "participants",
+  "section_break_19",
+  "reactions_section",
+  "reactions",
+  "note",
+  "section_break_24",
+  "fhir_serverid"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "verificationstatus",
+   "fieldtype": "Select",
+   "label": "Verification Status",
+   "options": "\nUnconfirmed\nPresumed\nConfirmed\nRefuted\nEntered-in-error"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Allergy\nIntolerance"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "Food\nMedication\nEnvironment\nBiologic"
+  },
+  {
+   "fieldname": "criticality",
+   "fieldtype": "Select",
+   "label": "Criticality",
+   "options": "Low\nHigh\nUnable-to-assess"
+  },
+  {
+   "fieldname": "code",
+   "fieldtype": "Link",
+   "label": "Code",
+   "options": "Allergy Code"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "encounter",
+   "fieldtype": "Link",
+   "label": "Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "fieldname": "onset",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Onset",
+   "options": "Onset"
+  },
+  {
+   "fieldname": "recordeddate",
+   "fieldtype": "Datetime",
+   "label": "Recorded Date"
+  },
+  {
+   "fieldname": "lastoccurrence",
+   "fieldtype": "Datetime",
+   "label": "Last Occurrence"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Long Text",
+   "label": "Note"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "label": "FHIR Serverid",
+   "read_only": 1
+  },
+  {
+   "fieldname": "onset_datetime",
+   "fieldtype": "Datetime",
+   "label": "Onset Datetime"
+  },
+  {
+   "fieldname": "onset_string",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Onset String"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break",
+   "label": "Paticipants"
+  },
+  {
+   "fieldname": "section_break_24",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Clinical Status",
+   "options": "Active\nInactive\nResolved"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "identifier_section",
+   "fieldtype": "Section Break",
+   "label": "Identifier"
+  },
+  {
+   "fetch_from": "encounter.title",
+   "fieldname": "encounter_name",
+   "fieldtype": "Data",
+   "label": "Encounter name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "participants",
+   "fieldtype": "Table",
+   "label": "Participants",
+   "options": "Condition Participant"
+  },
+  {
+   "fieldname": "section_break_19",
+   "fieldtype": "Section Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "reactions_section",
+   "fieldtype": "Section Break",
+   "label": "Reactions"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reactions",
+   "fieldtype": "Table",
+   "label": "Reaction",
+   "options": "Reaction"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-11-15 12:46:22.112991",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "AllergyIntolerance",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Nursing User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "patient",
+ "track_changes": 1
+}

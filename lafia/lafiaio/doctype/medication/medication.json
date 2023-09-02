@@ -1,0 +1,145 @@
+{
+ "actions": [],
+ "autoname": "format:MED-{fhir_serverid}",
+ "creation": "2021-06-04 12:27:30.501110",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "manufacturer",
+  "status",
+  "column_break_3",
+  "code",
+  "form",
+  "section_break_6",
+  "identifier",
+  "amount",
+  "ingredient_section",
+  "ingredient",
+  "batch_section",
+  "lot_number",
+  "column_break_13",
+  "expiration_date",
+  "section_break_15",
+  "fhir_serverid"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "code",
+   "fieldtype": "Link",
+   "label": "Code",
+   "options": "Medication Code"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nInactive\nEntered-in-error"
+  },
+  {
+   "fieldname": "manufacturer",
+   "fieldtype": "Link",
+   "label": "Manufacturer",
+   "options": "Organization"
+  },
+  {
+   "fieldname": "form",
+   "fieldtype": "Link",
+   "label": "Form",
+   "options": "Medication Form"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Amount",
+   "options": "Ratio"
+  },
+  {
+   "fieldname": "ingredient",
+   "fieldtype": "Table",
+   "label": "Ingredient",
+   "options": "Ingredient Medication Child"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "collapsible": 1,
+   "description": "Active or inactive ingredient",
+   "fieldname": "ingredient_section",
+   "fieldtype": "Section Break",
+   "label": "Ingredient"
+  },
+  {
+   "collapsible": 1,
+   "description": "Details about packaged medications",
+   "fieldname": "batch_section",
+   "fieldtype": "Section Break",
+   "label": "Batch"
+  },
+  {
+   "fieldname": "lot_number",
+   "fieldtype": "Data",
+   "label": "Lot Number"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "expiration_date",
+   "fieldtype": "Datetime",
+   "label": "Expiration date"
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Fhir ServerID",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-01-25 00:11:17.998007",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Medication",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,110 @@
+{
+ "actions": [],
+ "autoname": "Prompt",
+ "creation": "2021-04-22 19:31:28.666050",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "duration",
+  "video",
+  "trusted_contacts",
+  "links",
+  "video_url",
+  "section_break_7"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "video",
+   "fieldtype": "Long Text",
+   "label": "Video",
+   "read_only": 1
+  },
+  {
+   "fieldname": "trusted_contacts",
+   "fieldtype": "Section Break",
+   "label": "Shared With",
+   "options": "fa fa-pushpin"
+  },
+  {
+   "fieldname": "links",
+   "fieldtype": "Table",
+   "label": "Links",
+   "options": "Dynamic Link"
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Int",
+   "label": "Duration"
+  },
+  {
+   "fieldname": "video_url",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "label": "Video Url",
+   "unique": 1
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-06-01 21:59:58.933791",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Patient Video",
+ "naming_rule": "Set by user",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Guest",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "patient",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "patient",
+ "track_changes": 1
+}

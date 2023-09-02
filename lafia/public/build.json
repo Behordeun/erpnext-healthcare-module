@@ -1,0 +1,8 @@
+{
+    "js/toConsole.min.js": [
+        "public/js/toConsole.bundle.js"
+    ],
+    "js/video_conferencing.min.js": [
+        "public/js/video_conferencing/app.bundle.js"
+    ]
+}

@@ -1,0 +1,45 @@
+{
+ "actions": [],
+ "creation": "2021-05-18 15:35:55.333779",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "type",
+  "valuequantity",
+  "valuecode"
+ ],
+ "fields": [
+  {
+   "fieldname": "type",
+   "fieldtype": "Table",
+   "label": "type",
+   "options": "Codable Concept",
+   "reqd": 1
+  },
+  {
+   "fieldname": "valuequantity",
+   "fieldtype": "Table",
+   "label": "valueQuantity",
+   "options": "Quantity"
+  },
+  {
+   "fieldname": "valuecode",
+   "fieldtype": "Table",
+   "label": "valueCode",
+   "options": "Codable Concept"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-06-11 19:49:25.522656",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "property",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,9 @@
+.btn.btn-primary {
+  background-color: #6B48FF !important;
+}
+
+
+input[type=checkbox]:checked {
+    background-color: #6B48FF !important;
+    background-image: url("data:image/svg+xml, <svg viewBox='0 0 8 7' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M1 4.00001L2.66667 5.80001L7 1.20001' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg>"), linear-gradient(180deg, #6B48FF -124.51%, #6B48FF 100%);
+}

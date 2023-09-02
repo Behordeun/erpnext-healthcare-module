@@ -1,0 +1,94 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2023-01-06 14:40:37.368633",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "attester_ref",
+  "attester",
+  "behalf_ref",
+  "on_behalf",
+  "communication_method",
+  "date",
+  "source_identity_certificate",
+  "proxy_identity_certificate",
+  "proxy_signature",
+  "source_signature"
+ ],
+ "fields": [
+  {
+   "fieldname": "attester_ref",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Attester Ref",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "attester",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "label": "Attester",
+   "options": "attester_ref"
+  },
+  {
+   "fieldname": "behalf_ref",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "On behalf Of ref",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "on_behalf",
+   "fieldtype": "Dynamic Link",
+   "label": "On behalf",
+   "options": "behalf_ref"
+  },
+  {
+   "fieldname": "communication_method",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Communication method",
+   "options": "\nManual\nPortal\nPull\nPush"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "source_identity_certificate",
+   "fieldtype": "Data",
+   "label": "Source Identity Certificate"
+  },
+  {
+   "fieldname": "proxy_identity_certificate",
+   "fieldtype": "Data",
+   "label": "Proxy Identity Certificate"
+  },
+  {
+   "fieldname": "proxy_signature",
+   "fieldtype": "Signature",
+   "label": "Proxy Signature"
+  },
+  {
+   "fieldname": "source_signature",
+   "fieldtype": "Signature",
+   "label": "Source Signature"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-01-06 14:40:37.368633",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Verification Attestation",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

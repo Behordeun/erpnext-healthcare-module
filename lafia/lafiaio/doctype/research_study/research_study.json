@@ -1,0 +1,202 @@
+{
+ "actions": [],
+ "creation": "2021-06-01 18:29:01.312761",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "identifier",
+  "title",
+  "protocol",
+  "part_of",
+  "status",
+  "primary_purpose_type",
+  "phase",
+  "category",
+  "focus",
+  "condition",
+  "contact",
+  "related_artifact",
+  "keyword",
+  "location",
+  "descripton",
+  "enrollment",
+  "period",
+  "sponsor",
+  "principal_investigator",
+  "site",
+  "reason_stopped",
+  "note",
+  "arm",
+  "objective",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "fieldname": "protocol",
+   "fieldtype": "Link",
+   "label": "Protocol",
+   "options": "Plan Definition"
+  },
+  {
+   "fieldname": "part_of",
+   "fieldtype": "Link",
+   "label": "Part Of",
+   "options": "Research study"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "active\nadministratively-completed\napproved\nclosed-to-accrual\nclosed-to-accrual-and-intervention\ncompleted\ndisapproved\nin-review\ntemporarily-closed-to-accrual\ntemporarily-closed-to-accrual-and-intervention\nwithdrawn",
+   "reqd": 1
+  },
+  {
+   "fieldname": "primary_purpose_type",
+   "fieldtype": "Table",
+   "label": "Primary Purpose Type",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "phase",
+   "fieldtype": "Table",
+   "label": "Phase",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Table",
+   "label": "Category",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "focus",
+   "fieldtype": "Table",
+   "label": "Focus",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "condition",
+   "fieldtype": "Table",
+   "label": "Condition",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "contact",
+   "fieldtype": "Table",
+   "label": "Contact",
+   "options": "Contact Table"
+  },
+  {
+   "fieldname": "related_artifact",
+   "fieldtype": "Data",
+   "label": "Related Artifact"
+  },
+  {
+   "fieldname": "keyword",
+   "fieldtype": "Table",
+   "label": "Keyword",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Table",
+   "label": "Location",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "descripton",
+   "fieldtype": "Data",
+   "label": "Descripton"
+  },
+  {
+   "fieldname": "enrollment",
+   "fieldtype": "Link",
+   "label": "Enrollment",
+   "options": "Group"
+  },
+  {
+   "fieldname": "period",
+   "fieldtype": "Table",
+   "label": "Period",
+   "options": "Period"
+  },
+  {
+   "fieldname": "sponsor",
+   "fieldtype": "Link",
+   "label": "Sponsor",
+   "options": "Organization"
+  },
+  {
+   "description": "Practitioner\nPractitionerRole",
+   "fieldname": "principal_investigator",
+   "fieldtype": "Table",
+   "label": "Principal Investigator",
+   "options": "Dynamic Link"
+  },
+  {
+   "fieldname": "site",
+   "fieldtype": "Link",
+   "label": "Site",
+   "options": "Location"
+  },
+  {
+   "fieldname": "reason_stopped",
+   "fieldtype": "Table",
+   "label": "Reason Stopped",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Table",
+   "label": "Note",
+   "options": "Annotation"
+  },
+  {
+   "fieldname": "arm",
+   "fieldtype": "Table",
+   "label": "Arm",
+   "options": "Arm"
+  },
+  {
+   "fieldname": "objective",
+   "fieldtype": "Table",
+   "label": "Objective",
+   "options": "Objective"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Research study",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-11-09 00:37:01.639660",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Research study",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

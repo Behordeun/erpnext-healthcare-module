@@ -1,0 +1,63 @@
+{
+ "actions": [],
+ "creation": "2021-06-04 14:28:43.315872",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sequence",
+  "provider",
+  "provider_name",
+  "responsible",
+  "role"
+ ],
+ "fields": [
+  {
+   "fieldname": "sequence",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Sequence"
+  },
+  {
+   "description": "This leads to the following Doctypes:\n- Practitioner\n- PractitionerRole\n- Organization",
+   "fieldname": "provider",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Provider Type",
+   "options": "DocType"
+  },
+  {
+   "default": "0",
+   "fieldname": "responsible",
+   "fieldtype": "Check",
+   "label": "Responsible",
+   "options": "True\nFalse"
+  },
+  {
+   "fieldname": "role",
+   "fieldtype": "Select",
+   "label": "Role",
+   "options": "\nPrimary\nAssist\nSupervisor\nOther"
+  },
+  {
+   "fieldname": "provider_name",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "label": "Provider Name",
+   "options": "provider"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-06-27 14:41:06.933497",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "CareTeam Child",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

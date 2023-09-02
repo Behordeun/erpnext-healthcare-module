@@ -1,0 +1,185 @@
+{
+ "actions": [],
+ "creation": "2021-05-18 15:50:04.685104",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "identifier",
+  "udideviceidentifier",
+  "manufacture",
+  "devicename",
+  "modelnumber",
+  "type",
+  "specialization",
+  "version",
+  "safety",
+  "shelflifestorage",
+  "physicalcharacteristics",
+  "languagecode",
+  "capability",
+  "property",
+  "owner",
+  "contact",
+  "url",
+  "onlineinformation",
+  "note",
+  "quantity",
+  "parentdevice",
+  "material"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "udideviceidentifier",
+   "fieldtype": "Table",
+   "label": "UdiDeviceIdentifier",
+   "options": "UdiDeviceIdentifier"
+  },
+  {
+   "fieldname": "manufacture",
+   "fieldtype": "Table",
+   "label": "Manufacture",
+   "options": "Manufacture"
+  },
+  {
+   "fieldname": "devicename",
+   "fieldtype": "Table",
+   "label": "deviceName",
+   "options": "Device Name"
+  },
+  {
+   "fieldname": "modelnumber",
+   "fieldtype": "Data",
+   "label": "modelNumber"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Table",
+   "label": "Type",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "specialization",
+   "fieldtype": "Table",
+   "label": "specialization",
+   "options": "specialization"
+  },
+  {
+   "fieldname": "version",
+   "fieldtype": "Data",
+   "label": "version"
+  },
+  {
+   "fieldname": "safety",
+   "fieldtype": "Table",
+   "label": "Safety",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "shelflifestorage",
+   "fieldtype": "Table",
+   "label": "shelfLifeStorage",
+   "options": "ProductShelfLife"
+  },
+  {
+   "fieldname": "physicalcharacteristics",
+   "fieldtype": "Table",
+   "label": "physicalCharacteristics",
+   "options": "ProdCharacteristic"
+  },
+  {
+   "fieldname": "languagecode",
+   "fieldtype": "Table",
+   "label": "languageCode",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "capability",
+   "fieldtype": "Table",
+   "label": "Capability",
+   "options": "Capability"
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Table",
+   "label": "property",
+   "options": "property"
+  },
+  {
+   "fieldname": "owner",
+   "fieldtype": "Link",
+   "label": "owner",
+   "options": "Organization"
+  },
+  {
+   "fieldname": "contact",
+   "fieldtype": "Table",
+   "label": "contact",
+   "options": "Contact Point"
+  },
+  {
+   "fieldname": "url",
+   "fieldtype": "Data",
+   "label": "url"
+  },
+  {
+   "fieldname": "onlineinformation",
+   "fieldtype": "Data",
+   "label": "onlineInformation"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Table",
+   "label": "note",
+   "options": "Annotation"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Table",
+   "label": "quantity",
+   "options": "Quantity"
+  },
+  {
+   "fieldname": "parentdevice",
+   "fieldtype": "Link",
+   "label": "parentDevice",
+   "options": "DeviceDefinition"
+  },
+  {
+   "fieldname": "material",
+   "fieldtype": "Table",
+   "label": "material",
+   "options": "material"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-11-30 23:13:04.228173",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "DeviceDefinition",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

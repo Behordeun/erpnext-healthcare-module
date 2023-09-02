@@ -1,0 +1,47 @@
+{
+ "actions": [],
+ "creation": "2021-05-18 14:40:24.349507",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "deviceidentifier",
+  "issuer",
+  "jurisdiction"
+ ],
+ "fields": [
+  {
+   "fieldname": "deviceidentifier",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "deviceIdentifier",
+   "reqd": 1
+  },
+  {
+   "fieldname": "issuer",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "issuer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "jurisdiction",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "jurisdiction",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-06-11 19:49:26.976758",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "UdiDeviceIdentifier",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

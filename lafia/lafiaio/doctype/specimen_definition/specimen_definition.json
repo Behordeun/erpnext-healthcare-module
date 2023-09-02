@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "creation": "2021-06-14 14:47:19.456646",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "identifier",
+  "type_collected",
+  "patient_preparation",
+  "time_aspect",
+  "collection",
+  "type_tested"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "type_collected",
+   "fieldtype": "Data",
+   "label": "Type Collected"
+  },
+  {
+   "fieldname": "patient_preparation",
+   "fieldtype": "Data",
+   "label": "Patient Preparation"
+  },
+  {
+   "fieldname": "time_aspect",
+   "fieldtype": "Data",
+   "label": "Time Aspect"
+  },
+  {
+   "fieldname": "collection",
+   "fieldtype": "Data",
+   "label": "Collection"
+  },
+  {
+   "fieldname": "type_tested",
+   "fieldtype": "Table",
+   "label": "Type Tested",
+   "options": "Type Tested"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-07-10 12:07:04.486178",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Specimen Definition",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

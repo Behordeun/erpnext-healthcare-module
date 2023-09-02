@@ -1,0 +1,46 @@
+{
+ "actions": [],
+ "creation": "2021-06-09 15:59:25.335843",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "type",
+  "source_type",
+  "source"
+ ],
+ "fields": [
+  {
+   "fieldname": "type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Dynamic Link",
+   "label": "Source",
+   "options": "source_type"
+  },
+  {
+   "fieldname": "source_type",
+   "fieldtype": "Link",
+   "label": "Source type",
+   "options": "DocType"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-01-26 00:08:22.758715",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Monograph Child",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

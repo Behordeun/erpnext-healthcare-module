@@ -1,0 +1,39 @@
+{
+ "actions": [],
+ "creation": "2021-06-09 13:50:53.962934",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "code",
+  "value"
+ ],
+ "fields": [
+  {
+   "fieldname": "code",
+   "fieldtype": "Table",
+   "label": "Code",
+   "options": "Codable Concept",
+   "reqd": 1
+  },
+  {
+   "fieldname": "value",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Value",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-06-11 19:48:27.906253",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Date Criterion",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

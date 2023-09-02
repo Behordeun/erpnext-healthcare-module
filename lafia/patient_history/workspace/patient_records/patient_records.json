@@ -1,0 +1,34 @@
+{
+ "charts": [],
+ "content": "[{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Patient History\",\"col\":3}}]",
+ "creation": "2023-05-25 09:03:02.631830",
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "healthcare",
+ "idx": 0,
+ "label": "Patient Records",
+ "links": [],
+ "modified": "2023-05-25 11:21:23.934798",
+ "modified_by": "Administrator",
+ "module": "Patient History",
+ "name": "Patient Records",
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "restrict_to_domain": "",
+ "roles": [],
+ "sequence_id": 1.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Patient History",
+   "link_to": "patient_history",
+   "type": "Page"
+  }
+ ],
+ "title": "Patient Records"
+}

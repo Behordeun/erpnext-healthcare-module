@@ -1,0 +1,316 @@
+{
+ "actions": [],
+ "autoname": "format:IMN-{fhir_serverid}",
+ "creation": "2021-06-09 13:31:41.832772",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "encounter",
+  "encounter_name",
+  "status",
+  "status_reason",
+  "identifier",
+  "column_break_5",
+  "vaccine_code",
+  "occurrence",
+  "recorded",
+  "primary_source",
+  "section_break_12",
+  "report_origin",
+  "location",
+  "manufacturer",
+  "iot_number",
+  "column_break_17",
+  "expiration_date",
+  "site",
+  "route",
+  "dose_quantity",
+  "performer_section",
+  "performer",
+  "reason_section",
+  "reason_code",
+  "reason_reference",
+  "dose_potency_section",
+  "is_subpotent",
+  "subpotent_reason",
+  "education_section",
+  "education",
+  "section_break_32",
+  "program_eligibility",
+  "funding_source",
+  "reaction",
+  "protocol_applied",
+  "note_section",
+  "note",
+  "section_break_39",
+  "fhir_serverid"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Completed\nEntered-in-error\nNot-done",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status_reason",
+   "fieldtype": "Link",
+   "label": "Status Reason",
+   "options": "Immunization Status Reason"
+  },
+  {
+   "fieldname": "vaccine_code",
+   "fieldtype": "Link",
+   "label": "Vaccine Code",
+   "options": "Vaccine Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "encounter",
+   "fieldtype": "Link",
+   "label": "Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "fieldname": "occurrence",
+   "fieldtype": "Datetime",
+   "label": "Occurrence date"
+  },
+  {
+   "fieldname": "recorded",
+   "fieldtype": "Datetime",
+   "label": "Recorded date"
+  },
+  {
+   "default": "0",
+   "fieldname": "primary_source",
+   "fieldtype": "Check",
+   "label": "Primary Source"
+  },
+  {
+   "fieldname": "report_origin",
+   "fieldtype": "Link",
+   "label": "Report Origin",
+   "options": "Immunization Origin"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "label": "Location",
+   "options": "Locations"
+  },
+  {
+   "fieldname": "manufacturer",
+   "fieldtype": "Link",
+   "label": "Manufacturer",
+   "options": "Organization"
+  },
+  {
+   "fieldname": "iot_number",
+   "fieldtype": "Data",
+   "label": "Lot Number"
+  },
+  {
+   "fieldname": "expiration_date",
+   "fieldtype": "Date",
+   "label": "Expiration Date"
+  },
+  {
+   "fieldname": "site",
+   "fieldtype": "Select",
+   "label": "Site",
+   "options": "Left arm\nRight arm"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Link",
+   "label": "Route",
+   "options": "Immunization Route"
+  },
+  {
+   "fieldname": "dose_quantity",
+   "fieldtype": "Int",
+   "label": "Dose Quantity"
+  },
+  {
+   "fieldname": "performer",
+   "fieldtype": "Table",
+   "label": "Performer",
+   "options": "Medication Administration Performer"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Table",
+   "label": "Note",
+   "options": "Annotation"
+  },
+  {
+   "fieldname": "reason_code",
+   "fieldtype": "Table MultiSelect",
+   "label": "Reason Code",
+   "options": "Immunization Reason Multi"
+  },
+  {
+   "description": "Condition\nObservation\nDiagnosticReport",
+   "fieldname": "reason_reference",
+   "fieldtype": "Table",
+   "label": "Reason Reference",
+   "options": "Reference Table"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_subpotent",
+   "fieldtype": "Check",
+   "label": "Is Subpotent?"
+  },
+  {
+   "fieldname": "subpotent_reason",
+   "fieldtype": "Table MultiSelect",
+   "label": "Subpotent Reason",
+   "options": "Immunization Subpotent Reason Multi"
+  },
+  {
+   "fieldname": "education",
+   "fieldtype": "Table",
+   "label": "Education",
+   "options": "Education Child"
+  },
+  {
+   "fieldname": "program_eligibility",
+   "fieldtype": "Table MultiSelect",
+   "label": "Program Eligibility",
+   "options": "Immunization Program Eligibility Multi"
+  },
+  {
+   "fieldname": "funding_source",
+   "fieldtype": "Select",
+   "label": "Funding Source",
+   "options": "\nPrivate\nPublic"
+  },
+  {
+   "fieldname": "reaction",
+   "fieldtype": "Table",
+   "label": "Reaction",
+   "options": "Immunization Reaction Child"
+  },
+  {
+   "fieldname": "protocol_applied",
+   "fieldtype": "Table",
+   "label": "Protocol Applied",
+   "options": "Protocol Applied Child"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "encounter.title",
+   "fieldname": "encounter_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Encounter name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Who performed event",
+   "fieldname": "performer_section",
+   "fieldtype": "Section Break",
+   "label": "Performer"
+  },
+  {
+   "collapsible": 1,
+   "description": " Why immunization occurred",
+   "fieldname": "reason_section",
+   "fieldtype": "Section Break",
+   "label": "Reason"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "dose_potency_section",
+   "fieldtype": "Section Break",
+   "label": "Dose potency"
+  },
+  {
+   "collapsible": 1,
+   "description": "Educational material presented to patient",
+   "fieldname": "education_section",
+   "fieldtype": "Section Break",
+   "label": "Education"
+  },
+  {
+   "fieldname": "section_break_32",
+   "fieldtype": "Section Break"
+  },
+  {
+   "collapsible": 1,
+   "description": "Additional immunization notes",
+   "fieldname": "note_section",
+   "fieldtype": "Section Break",
+   "label": "Note"
+  },
+  {
+   "fieldname": "section_break_39",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "label": "Fhir ServerID",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-01-27 00:26:02.478779",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Immunization",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

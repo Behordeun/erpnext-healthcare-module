@@ -1,0 +1,180 @@
+{
+ "actions": [],
+ "autoname": "format:GOL-LIO-{fhir_serverid}",
+ "creation": "2021-06-02 16:29:24.931748",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "identifier",
+  "life_cycle_status",
+  "achievement_status",
+  "category",
+  "priority",
+  "description",
+  "subject_type",
+  "subject",
+  "start_date",
+  "target",
+  "status_date",
+  "status_reason",
+  "expressed_by_type",
+  "expressed_by",
+  "addresses_type",
+  "addresses",
+  "note",
+  "outcome_code",
+  "outcome_reference",
+  "fhir_serverid"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "life_cycle_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Life Cycle Status",
+   "options": "proposed\nplanned\naccepted\nactive\non-hold\ncompleted\ncancelled\nentered-in-error\nrejected",
+   "reqd": 1
+  },
+  {
+   "fieldname": "achievement_status",
+   "fieldtype": "Link",
+   "label": "Achievement Status",
+   "options": "Goal Achievement Status"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Table MultiSelect",
+   "label": "Category",
+   "options": "Goal Category Multi"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Link",
+   "label": "Priority",
+   "options": "Goal Priority"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Link",
+   "label": "Description",
+   "options": "Clinical Findings",
+   "reqd": 1
+  },
+  {
+   "description": "Patient\nGroup\nOrganization",
+   "fieldname": "subject",
+   "fieldtype": "Dynamic Link",
+   "label": "Subject",
+   "options": "subject_type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "target",
+   "fieldtype": "Table",
+   "label": "Target",
+   "options": "Target"
+  },
+  {
+   "fieldname": "status_date",
+   "fieldtype": "Date",
+   "label": "Status Date"
+  },
+  {
+   "fieldname": "status_reason",
+   "fieldtype": "Data",
+   "label": "Status Reason"
+  },
+  {
+   "description": "Patient\nPractitioner\nPractitionerRole\nRelatedPerson",
+   "fieldname": "expressed_by",
+   "fieldtype": "Dynamic Link",
+   "label": "Expressed By",
+   "options": "expressed_by_type"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Link",
+   "label": "Note",
+   "options": "Annotation"
+  },
+  {
+   "fieldname": "outcome_code",
+   "fieldtype": "Link",
+   "label": "Outcome Code",
+   "options": "Clinical Findings"
+  },
+  {
+   "fieldname": "outcome_reference",
+   "fieldtype": "Link",
+   "label": "Outcome Reference",
+   "options": "Observation"
+  },
+  {
+   "fieldname": "subject_type",
+   "fieldtype": "Link",
+   "label": "Subject Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "expressed_by_type",
+   "fieldtype": "Link",
+   "label": "Expressed By Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "addresses_type",
+   "fieldtype": "Link",
+   "label": "Addresses Type",
+   "options": "DocType"
+  },
+  {
+   "description": "Condition\nObservation\nMedicationStatement\nNutritionOrder\nServiceRequest\nRiskAssessment",
+   "fieldname": "addresses",
+   "fieldtype": "Dynamic Link",
+   "label": "Addresses",
+   "options": "addresses_type"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "label": "FHIR Serverid"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-11-08 01:24:13.781048",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Goal",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,58 @@
+{
+ "actions": [],
+ "creation": "2021-06-01 16:40:49.159724",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "assessment",
+  "product_relatedness",
+  "author_type",
+  "author",
+  "method"
+ ],
+ "fields": [
+  {
+   "fieldname": "assessment",
+   "fieldtype": "Link",
+   "label": "Assessment",
+   "options": "Adverse Event Causality Assessment"
+  },
+  {
+   "fieldname": "product_relatedness",
+   "fieldtype": "Data",
+   "label": "Product Relatedness"
+  },
+  {
+   "description": "Practitioner\nPractitionerRole",
+   "fieldname": "author",
+   "fieldtype": "Dynamic Link",
+   "label": "Author",
+   "options": "author_type"
+  },
+  {
+   "fieldname": "method",
+   "fieldtype": "Link",
+   "label": "Method",
+   "options": "Adverse Event Causality Assessment"
+  },
+  {
+   "fieldname": "author_type",
+   "fieldtype": "Link",
+   "label": "Author Type",
+   "options": "DocType"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-10-28 13:00:17.917653",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Adverse Event Causality",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

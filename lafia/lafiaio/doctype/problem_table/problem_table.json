@@ -1,0 +1,41 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2022-11-13 22:20:34.465316",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "problem_type",
+  "problem"
+ ],
+ "fields": [
+  {
+   "fieldname": "problem_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Problem Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "problem",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "label": "Problem",
+   "options": "problem_type"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-11-13 22:20:34.465316",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Problem Table",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

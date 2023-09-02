@@ -1,0 +1,234 @@
+{
+ "actions": [],
+ "autoname": "format:CPLN-LIO-{fhir_serverid}",
+ "creation": "2021-06-01 20:18:20.859778",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "identifier",
+  "instantiates_canonical",
+  "instantiates_uri",
+  "section_break_4",
+  "based_on",
+  "replaces",
+  "part_of",
+  "status",
+  "intent",
+  "category",
+  "encounter",
+  "title",
+  "description",
+  "column_break_11",
+  "subject_type",
+  "subject",
+  "created",
+  "author",
+  "author_type",
+  "care_team",
+  "addresses",
+  "goal",
+  "section_break_17",
+  "period",
+  "contributor",
+  "column_break_26",
+  "supporting_info",
+  "note",
+  "fhir_serverid"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "instantiates_canonical",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Instantiates Canonical"
+  },
+  {
+   "fieldname": "instantiates_uri",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Instantiates URI"
+  },
+  {
+   "fieldname": "based_on",
+   "fieldtype": "Table MultiSelect",
+   "label": "Based On",
+   "options": "Care Plan Multi"
+  },
+  {
+   "fieldname": "replaces",
+   "fieldtype": "Table MultiSelect",
+   "label": "Replaces",
+   "options": "Care Plan Multi"
+  },
+  {
+   "fieldname": "part_of",
+   "fieldtype": "Table MultiSelect",
+   "label": "Part Of",
+   "options": "Care Plan Multi"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "draft\nactive\non-hold\nrevoked\ncompleted\nentered-in-error\nunknown",
+   "reqd": 1
+  },
+  {
+   "fieldname": "intent",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Intent",
+   "options": "proposal\nplan\norder\noption",
+   "reqd": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Table MultiSelect",
+   "label": "Category",
+   "options": "Care Plan Category Multi"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description"
+  },
+  {
+   "fieldname": "subject_type",
+   "fieldtype": "Link",
+   "label": "Subject Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Dynamic Link",
+   "label": "Subject",
+   "options": "subject_type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "encounter",
+   "fieldtype": "Link",
+   "label": "Encounter",
+   "options": "Encounter"
+  },
+  {
+   "fieldname": "period",
+   "fieldtype": "Table",
+   "label": "Period",
+   "options": "Period"
+  },
+  {
+   "fieldname": "created",
+   "fieldtype": "Datetime",
+   "label": "Created"
+  },
+  {
+   "fieldname": "author_type",
+   "fieldtype": "Link",
+   "label": "Author Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "author",
+   "fieldtype": "Dynamic Link",
+   "label": "Author",
+   "options": "author_type"
+  },
+  {
+   "fieldname": "contributor",
+   "fieldtype": "Table",
+   "label": "Contributor",
+   "options": "Care Plan Contributor"
+  },
+  {
+   "fieldname": "care_team",
+   "fieldtype": "Table MultiSelect",
+   "label": "Care Team",
+   "options": "Care Team Multi"
+  },
+  {
+   "fieldname": "addresses",
+   "fieldtype": "Table MultiSelect",
+   "label": "Addresses",
+   "options": "Condition Multi"
+  },
+  {
+   "fieldname": "supporting_info",
+   "fieldtype": "Table",
+   "label": "Supporting Info",
+   "options": "Dynamic Link"
+  },
+  {
+   "fieldname": "goal",
+   "fieldtype": "Table MultiSelect",
+   "label": "Goal",
+   "options": "Goal Multi"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Table",
+   "label": "Note",
+   "options": "Annotation"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "label": "FHIR Serverid",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-10-25 13:03:29.375857",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Care Plan",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

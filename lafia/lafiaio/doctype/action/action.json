@@ -1,0 +1,168 @@
+{
+ "actions": [],
+ "creation": "2021-06-07 19:50:10.034350",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "do_not_perform",
+  "type",
+  "subject",
+  "intent",
+  "linkid",
+  "status",
+  "context",
+  "context_link_id",
+  "occurence",
+  "requester",
+  "requester_link_id",
+  "performer_type",
+  "performer_role",
+  "performer",
+  "performer_linkid",
+  "reason_code",
+  "reason_reference",
+  "reason",
+  "reason_linkid",
+  "note",
+  "security_label_number"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "do_not_perform",
+   "fieldtype": "Check",
+   "label": "Do not perform",
+   "options": "boolean"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Table",
+   "label": "Type",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Table",
+   "label": "Subject",
+   "options": "Action Subject"
+  },
+  {
+   "fieldname": "intent",
+   "fieldtype": "Table",
+   "label": "Intent",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "linkid",
+   "fieldtype": "Data",
+   "label": "LinkID"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Table",
+   "label": "Status",
+   "options": "Codable Concept"
+  },
+  {
+   "description": "Encounter\nEpisodeOfCare",
+   "fieldname": "context",
+   "fieldtype": "Table",
+   "label": "Context",
+   "options": "Dynamic Link"
+  },
+  {
+   "fieldname": "context_link_id",
+   "fieldtype": "Data",
+   "label": "Context Link ID"
+  },
+  {
+   "fieldname": "occurence",
+   "fieldtype": "Table",
+   "label": "Occurence",
+   "options": "Occurence"
+  },
+  {
+   "description": "Patient\nRelatedPerson\nPractitioner\nPractitionerRole\nDevice\nGroup\nOrganization",
+   "fieldname": "requester",
+   "fieldtype": "Table",
+   "label": "Requester",
+   "options": "Dynamic Link"
+  },
+  {
+   "fieldname": "requester_link_id",
+   "fieldtype": "Data",
+   "label": "Requester Link ID"
+  },
+  {
+   "fieldname": "performer_type",
+   "fieldtype": "Table",
+   "label": "Performer Type",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "performer_role",
+   "fieldtype": "Table",
+   "label": "Performer Role",
+   "options": "Codable Concept"
+  },
+  {
+   "description": "RelatedPerson\nPatient\nPractitioner\nPractitionerRole\nCareTeam\nDevice\nSubstance\nOrganization\nLocation",
+   "fieldname": "performer",
+   "fieldtype": "Table",
+   "label": "Performer",
+   "options": "Dynamic Link"
+  },
+  {
+   "fieldname": "performer_linkid",
+   "fieldtype": "Data",
+   "label": "Performer LinkID"
+  },
+  {
+   "fieldname": "reason_code",
+   "fieldtype": "Table",
+   "label": "Reason Code",
+   "options": "Codable Concept"
+  },
+  {
+   "description": "Condition\nObservation\nDiagnosticReport\nDocumentReference\nQuestionnaire\nQuestionnaireResponse",
+   "fieldname": "reason_reference",
+   "fieldtype": "Table",
+   "label": "Reason Reference",
+   "options": "Dynamic Link"
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Data",
+   "label": "Reason"
+  },
+  {
+   "fieldname": "reason_linkid",
+   "fieldtype": "Data",
+   "label": "Reason LinkID"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Table",
+   "label": "Note",
+   "options": "Annotation"
+  },
+  {
+   "fieldname": "security_label_number",
+   "fieldtype": "Data",
+   "label": "Security Label Number"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-11-30 13:45:38.982722",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Action",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,115 @@
+{
+ "actions": [],
+ "creation": "2021-06-08 12:18:47.327653",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "product",
+  "eye",
+  "sphere",
+  "cylinder",
+  "axis",
+  "prism",
+  "add",
+  "power",
+  "back_power",
+  "diameter",
+  "duration",
+  "color",
+  "brand",
+  "note"
+ ],
+ "fields": [
+  {
+   "fieldname": "product",
+   "fieldtype": "Table",
+   "label": "Product",
+   "options": "Codable Concept",
+   "reqd": 1
+  },
+  {
+   "fieldname": "eye",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Eye",
+   "options": "right\nleft",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sphere",
+   "fieldtype": "Data",
+   "label": "Sphere"
+  },
+  {
+   "fieldname": "cylinder",
+   "fieldtype": "Data",
+   "label": "Cylinder"
+  },
+  {
+   "fieldname": "axis",
+   "fieldtype": "Data",
+   "label": "Axis"
+  },
+  {
+   "fieldname": "prism",
+   "fieldtype": "Table",
+   "label": "Prism",
+   "options": "Prism Child"
+  },
+  {
+   "fieldname": "add",
+   "fieldtype": "Data",
+   "label": "Add"
+  },
+  {
+   "fieldname": "power",
+   "fieldtype": "Data",
+   "label": "Power"
+  },
+  {
+   "fieldname": "back_power",
+   "fieldtype": "Data",
+   "label": "Back Power"
+  },
+  {
+   "fieldname": "diameter",
+   "fieldtype": "Data",
+   "label": "Diameter"
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Table",
+   "label": "Duration",
+   "options": "Quantity"
+  },
+  {
+   "fieldname": "color",
+   "fieldtype": "Data",
+   "label": "Color"
+  },
+  {
+   "fieldname": "brand",
+   "fieldtype": "Data",
+   "label": "Brand"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Table",
+   "label": "Note",
+   "options": "Annotation"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-11-30 23:57:51.018834",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Lens Specification",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

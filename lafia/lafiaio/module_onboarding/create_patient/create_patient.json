@@ -1,0 +1,41 @@
+{
+ "allow_roles": [
+  {
+   "role": "LafiaIO Patient"
+  },
+  {
+   "role": "Lafia Practitioner"
+  },
+  {
+   "role": "LafiaIO Nurse"
+  },
+  {
+   "role": "All"
+  }
+ ],
+ "creation": "2021-07-07 14:39:31.196726",
+ "docstatus": 0,
+ "doctype": "Module Onboarding",
+ "documentation_url": "https://app.lafia.io",
+ "idx": 0,
+ "is_complete": 0,
+ "modified": "2021-07-08 12:33:32.359175",
+ "modified_by": "v.emas@parallelscore.com",
+ "module": "LafiaIO",
+ "name": "Create Patient",
+ "owner": "v.emas@parallelscore.com",
+ "steps": [
+  {
+   "step": "Create Patient"
+  },
+  {
+   "step": "View Patients"
+  },
+  {
+   "step": "Create encounter"
+  }
+ ],
+ "subtitle": "Let you healthcare providers know you.",
+ "success_message": "Profile created successfully!",
+ "title": "Hello there! Let's get started with the Basics"
+}

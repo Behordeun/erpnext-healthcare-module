@@ -1,0 +1,41 @@
+{
+ "actions": [],
+ "creation": "2021-06-14 15:46:27.960029",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "language",
+  "use",
+  "value"
+ ],
+ "fields": [
+  {
+   "fieldname": "language",
+   "fieldtype": "Data",
+   "label": "Language"
+  },
+  {
+   "fieldname": "use",
+   "fieldtype": "Data",
+   "label": "Use"
+  },
+  {
+   "fieldname": "value",
+   "fieldtype": "Data",
+   "label": "Value"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-07-10 12:07:16.756344",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Concept Designation",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

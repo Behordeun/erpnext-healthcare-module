@@ -1,0 +1,35 @@
+{
+ "actions": [],
+ "creation": "2021-05-24 08:38:38.863341",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "high",
+  "low"
+ ],
+ "fields": [
+  {
+   "fieldname": "high",
+   "fieldtype": "Data",
+   "label": "High"
+  },
+  {
+   "fieldname": "low",
+   "fieldtype": "Data",
+   "label": "Low"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-06-11 19:49:20.413246",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Range",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

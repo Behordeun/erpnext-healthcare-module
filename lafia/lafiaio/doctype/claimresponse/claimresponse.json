@@ -1,0 +1,367 @@
+{
+ "actions": [],
+ "creation": "2021-06-04 15:29:31.276531",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "status",
+  "use",
+  "column_break_5",
+  "created",
+  "type",
+  "sub_type",
+  "section_break_8",
+  "request",
+  "requestor",
+  "requestor_name",
+  "column_break_12",
+  "insurer",
+  "identifier_section",
+  "identifier",
+  "section_break_16",
+  "outcome",
+  "disposition",
+  "column_break_19",
+  "payee_type",
+  "total_section",
+  "total",
+  "payment_section",
+  "payment_type",
+  "payment_amount",
+  "column_break_26",
+  "date",
+  "insurance_section",
+  "insurance",
+  "section_break_30",
+  "pre_auth_ref",
+  "pre_auth_period",
+  "item",
+  "add_item",
+  "adjudication",
+  "funds_reserve",
+  "form_code",
+  "form",
+  "process_note",
+  "communication_request",
+  "error",
+  "section_break_42",
+  "fhir_serverid"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nCancelled\nDraft\nEntered-in-error"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "label": "Type",
+   "options": "Claim Type"
+  },
+  {
+   "fieldname": "sub_type",
+   "fieldtype": "Link",
+   "label": "Sub Type",
+   "options": "Claim Subtype"
+  },
+  {
+   "fieldname": "use",
+   "fieldtype": "Select",
+   "label": "Use",
+   "options": "\nClaim\nPreauthorization\nPredetermination"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "created",
+   "fieldtype": "Datetime",
+   "label": "Creation date"
+  },
+  {
+   "fieldname": "insurer",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Insurer",
+   "options": "Organization"
+  },
+  {
+   "fieldname": "request",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Request",
+   "options": "Claims"
+  },
+  {
+   "fieldname": "outcome",
+   "fieldtype": "Select",
+   "label": "Outcome",
+   "options": "\nQueued\nComplete\nError\nPartial"
+  },
+  {
+   "fieldname": "disposition",
+   "fieldtype": "Data",
+   "label": "Disposition"
+  },
+  {
+   "fieldname": "pre_auth_ref",
+   "fieldtype": "Data",
+   "label": "Pre Auth Ref"
+  },
+  {
+   "fieldname": "pre_auth_period",
+   "fieldtype": "Table",
+   "label": "Pre Auth Period",
+   "options": "Period"
+  },
+  {
+   "fieldname": "payee_type",
+   "fieldtype": "Link",
+   "label": "Payee Type",
+   "options": "Payee Type"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Table",
+   "label": "Item",
+   "options": "Item Child"
+  },
+  {
+   "fieldname": "add_item",
+   "fieldtype": "Table",
+   "label": "Add Item",
+   "options": "Add Item Child"
+  },
+  {
+   "fieldname": "adjudication",
+   "fieldtype": "Table",
+   "label": "Adjudication",
+   "options": "Adjudication"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Table",
+   "label": "Total",
+   "options": "Total Child"
+  },
+  {
+   "fieldname": "funds_reserve",
+   "fieldtype": "Table",
+   "label": "Funds Reserve ",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "form_code",
+   "fieldtype": "Table",
+   "label": "Form Code",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "form",
+   "fieldtype": "Table",
+   "label": "Form",
+   "options": "Coding"
+  },
+  {
+   "fieldname": "process_note",
+   "fieldtype": "Table",
+   "label": "Process Note",
+   "options": "Process Note_child"
+  },
+  {
+   "fieldname": "communication_request",
+   "fieldtype": "Link",
+   "label": "Communication Request",
+   "options": "Communication Request"
+  },
+  {
+   "fieldname": "insurance",
+   "fieldtype": "Table",
+   "label": "Insurance",
+   "options": "Insurance"
+  },
+  {
+   "fieldname": "error",
+   "fieldtype": "Table",
+   "label": "Error",
+   "options": "Error Child"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "identifier_section",
+   "fieldtype": "Section Break",
+   "label": "Identifier"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "requestor",
+   "fieldtype": "Link",
+   "label": "Requestor",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fetch_from": "requestor.practitioner_name",
+   "fieldname": "requestor_name",
+   "fieldtype": "Data",
+   "label": "Requestor name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "total_section",
+   "fieldtype": "Section Break",
+   "label": "Total"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "payment_section",
+   "fieldtype": "Section Break",
+   "label": "Payment"
+  },
+  {
+   "fieldname": "payment_type",
+   "fieldtype": "Link",
+   "label": "Type",
+   "options": "Ex-Payment Type"
+  },
+  {
+   "fieldname": "payment_amount",
+   "fieldtype": "Currency",
+   "label": "Amount",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "insurance_section",
+   "fieldtype": "Section Break",
+   "label": "Insurance"
+  },
+  {
+   "fieldname": "section_break_30",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "section_break_42",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "label": "Fhir ServerID",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-03-29 07:33:37.087854",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "ClaimResponse",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Nursing User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

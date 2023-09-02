@@ -1,0 +1,154 @@
+{
+ "actions": [],
+ "creation": "2021-06-14 15:32:52.361037",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "url",
+  "identifier",
+  "version",
+  "name1",
+  "title",
+  "status",
+  "experimental",
+  "date",
+  "publisher",
+  "contact",
+  "description",
+  "use_context",
+  "jurisdiction",
+  "immutable",
+  "purpose",
+  "copyright",
+  "compose",
+  "expansion"
+ ],
+ "fields": [
+  {
+   "fieldname": "url",
+   "fieldtype": "Data",
+   "label": "URL"
+  },
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "version",
+   "fieldtype": "Data",
+   "label": "Version"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "draft\nactive\nretired\nunknown",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "experimental",
+   "fieldtype": "Check",
+   "label": "Experimental",
+   "options": "boolean"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Data",
+   "label": "Date"
+  },
+  {
+   "fieldname": "publisher",
+   "fieldtype": "Data",
+   "label": "Publisher"
+  },
+  {
+   "fieldname": "contact",
+   "fieldtype": "Data",
+   "label": "Contact"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description"
+  },
+  {
+   "fieldname": "use_context",
+   "fieldtype": "Data",
+   "label": "Use Context"
+  },
+  {
+   "fieldname": "jurisdiction",
+   "fieldtype": "Table",
+   "label": "Jurisdiction",
+   "options": "Codable Concept"
+  },
+  {
+   "default": "0",
+   "fieldname": "immutable",
+   "fieldtype": "Check",
+   "label": "Immutable",
+   "options": "boolean"
+  },
+  {
+   "fieldname": "purpose",
+   "fieldtype": "Data",
+   "label": "Purpose"
+  },
+  {
+   "fieldname": "copyright",
+   "fieldtype": "Data",
+   "label": "Copyright"
+  },
+  {
+   "fieldname": "compose",
+   "fieldtype": "Table",
+   "label": "Compose",
+   "options": "Compose"
+  },
+  {
+   "fieldname": "expansion",
+   "fieldtype": "Table",
+   "label": "Expansion",
+   "options": "Expansion"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-07-10 12:07:02.509586",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Value Set",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,217 @@
+{
+ "actions": [],
+ "creation": "2021-06-16 14:23:42.825746",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_1",
+  "status",
+  "description",
+  "supporting_information",
+  "priority",
+  "created",
+  "start",
+  "column_break_9",
+  "minutes_duration",
+  "requested_period",
+  "comment",
+  "patient_instruction",
+  "slot",
+  "end",
+  "section_break_17",
+  "based_on",
+  "participant",
+  "cancelation_reason",
+  "service_category",
+  "column_break_20",
+  "service_type",
+  "specialty",
+  "appointment_type",
+  "reason_code",
+  "reason_reference"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break",
+   "label": "Appointment Details"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "proposed\npending\nbooked\narrived\nfulfilled\ncancelled\nnoshow\nentered-in-error\nchecked-in\nwaitlist",
+   "reqd": 1
+  },
+  {
+   "description": "Shown on a subject line in a meeting request, or appointment list",
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description"
+  },
+  {
+   "description": "Additional information to support the appointment",
+   "fieldname": "supporting_information",
+   "fieldtype": "Data",
+   "label": "Supporting Information"
+  },
+  {
+   "description": "Used to make informed decisions if needing to re-prioritize",
+   "fieldname": "priority",
+   "fieldtype": "Data",
+   "label": "Priority"
+  },
+  {
+   "description": "The date that this appointment was initially created",
+   "fieldname": "created",
+   "fieldtype": "Data",
+   "label": "Created"
+  },
+  {
+   "description": "When appointment is to take place",
+   "fieldname": "start",
+   "fieldtype": "Data",
+   "label": "Start"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Can be less than start/end (e.g. estimate)",
+   "fieldname": "minutes_duration",
+   "fieldtype": "Data",
+   "label": "Minutes Duration"
+  },
+  {
+   "description": "Potential date/time interval(s) requested to allocate the appointment within",
+   "fieldname": "requested_period",
+   "fieldtype": "Data",
+   "label": "Requested Period"
+  },
+  {
+   "description": "Additional comments",
+   "fieldname": "comment",
+   "fieldtype": "Data",
+   "label": "Comment"
+  },
+  {
+   "description": "Detailed information and instructions for the patient",
+   "fieldname": "patient_instruction",
+   "fieldtype": "Data",
+   "label": "Patient Instruction"
+  },
+  {
+   "description": "The slots that this appointment is filling",
+   "fieldname": "slot",
+   "fieldtype": "Link",
+   "label": "Slot",
+   "options": "Slot"
+  },
+  {
+   "description": "When appointment is to conclude",
+   "fieldname": "end",
+   "fieldtype": "Data",
+   "label": "End"
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "The service request this appointment is allocated to assess",
+   "fieldname": "based_on",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Based On",
+   "options": "Service Request"
+  },
+  {
+   "description": "Participants involved in appointment\n+ Rule: Either the type or actor on the participant SHALL be specified",
+   "fieldname": "participant",
+   "fieldtype": "Table",
+   "label": "Participant",
+   "options": "Appointment Participant Child"
+  },
+  {
+   "description": "The coded reason for the appointment being cancelled",
+   "fieldname": "cancelation_reason",
+   "fieldtype": "Table MultiSelect",
+   "label": "Cancelation Reason",
+   "options": "Codable Concept"
+  },
+  {
+   "description": "A broad categorization of the service that is to be performed during this appointment",
+   "fieldname": "service_category",
+   "fieldtype": "Table",
+   "label": "Service Category",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "The specific service that is to be performed during this appointment",
+   "fieldname": "service_type",
+   "fieldtype": "Table",
+   "label": "Service Type",
+   "options": "Codable Concept"
+  },
+  {
+   "description": "The specialty of a practitioner that would be required to perform the service requested in this appointment",
+   "fieldname": "specialty",
+   "fieldtype": "Table",
+   "label": "Specialty",
+   "options": "Codable Concept"
+  },
+  {
+   "description": "The style of appointment or patient that has been booked in the slot (not service type)",
+   "fieldname": "appointment_type",
+   "fieldtype": "Table MultiSelect",
+   "label": "Appointment Type",
+   "options": "Codable Concept"
+  },
+  {
+   "description": "Coded reason this appointment is scheduled",
+   "fieldname": "reason_code",
+   "fieldtype": "Table",
+   "label": "Reason Code",
+   "options": "Codable Concept"
+  },
+  {
+   "description": "Reason the appointment is to take place (resource)",
+   "fieldname": "reason_reference",
+   "fieldtype": "Table",
+   "label": "Reason Reference",
+   "options": "Dynamic Link"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-11-02 22:55:16.522652",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Appointment FHIR",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

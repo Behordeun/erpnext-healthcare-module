@@ -1,0 +1,65 @@
+{
+ "actions": [],
+ "creation": "2021-06-09 14:55:00.678532",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "type",
+  "doserange",
+  "dosequantity",
+  "rateratio",
+  "raterange",
+  "ratequantity"
+ ],
+ "fields": [
+  {
+   "fieldname": "type",
+   "fieldtype": "Table",
+   "label": "type",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "doserange",
+   "fieldtype": "Table",
+   "label": "doseRange",
+   "options": "Range"
+  },
+  {
+   "fieldname": "dosequantity",
+   "fieldtype": "Table",
+   "label": "doseQuantity",
+   "options": "Quantity"
+  },
+  {
+   "fieldname": "rateratio",
+   "fieldtype": "Table",
+   "label": "rateRatio",
+   "options": "Ratio"
+  },
+  {
+   "fieldname": "raterange",
+   "fieldtype": "Table",
+   "label": "rateRange",
+   "options": "Range"
+  },
+  {
+   "fieldname": "ratequantity",
+   "fieldtype": "Table",
+   "label": "rateQuantity",
+   "options": "Quantity"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-06-11 19:48:25.456806",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Dose And Rate Child",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

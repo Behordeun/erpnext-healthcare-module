@@ -1,0 +1,39 @@
+{
+ "actions": [],
+ "creation": "2021-05-25 11:36:02.097437",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "class",
+  "period"
+ ],
+ "fields": [
+  {
+   "fieldname": "class",
+   "fieldtype": "Table",
+   "label": "Class",
+   "options": "Coding",
+   "reqd": 1
+  },
+  {
+   "fieldname": "period",
+   "fieldtype": "Table",
+   "label": "Period",
+   "options": "Period",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-06-11 19:49:17.975842",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Class History",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

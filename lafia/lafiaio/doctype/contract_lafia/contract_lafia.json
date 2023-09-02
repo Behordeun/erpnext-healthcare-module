@@ -1,0 +1,294 @@
+{
+ "actions": [],
+ "creation": "2021-06-07 13:11:00.197411",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "identifier",
+  "url",
+  "version",
+  "status",
+  "legal_states",
+  "instantiates_canonical",
+  "instantiates_uri",
+  "content_derivative",
+  "issued",
+  "applies",
+  "expiration_type",
+  "subject",
+  "authority",
+  "domain",
+  "site",
+  "name1",
+  "title",
+  "subtitle",
+  "alias",
+  "author",
+  "scope",
+  "topic",
+  "type",
+  "sub_type",
+  "content_definiftion",
+  "term",
+  "supporting_info",
+  "relevant_history",
+  "signer",
+  "friendly",
+  "legal",
+  "rule",
+  "legally_binding"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "url",
+   "fieldtype": "Data",
+   "label": "Url"
+  },
+  {
+   "fieldname": "version",
+   "fieldtype": "Data",
+   "label": "Version"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "amended\nappended\ncancelled\ndisputed\nentered-in-error\nexecutable\nexecuted\nnegotiable\noffered\npolicy\nrejected\nrenewed\nrevoked\nresolved\nterminated"
+  },
+  {
+   "fieldname": "legal_states",
+   "fieldtype": "Table",
+   "label": "Legal States",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "instantiates_canonical",
+   "fieldtype": "Link",
+   "label": "Instantiates Canonical",
+   "options": "Contract Lafia"
+  },
+  {
+   "fieldname": "instantiates_uri",
+   "fieldtype": "Data",
+   "label": "Instantiates Uri"
+  },
+  {
+   "fieldname": "content_derivative",
+   "fieldtype": "Table",
+   "label": "Content Derivative",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "issued",
+   "fieldtype": "Data",
+   "label": "Issued"
+  },
+  {
+   "fieldname": "applies",
+   "fieldtype": "Table",
+   "label": "Applies",
+   "options": "Period"
+  },
+  {
+   "fieldname": "expiration_type",
+   "fieldtype": "Table",
+   "label": "Expiration Type",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "label": "Subject"
+  },
+  {
+   "fieldname": "authority",
+   "fieldtype": "Link",
+   "label": "Authority",
+   "options": "Organization"
+  },
+  {
+   "fieldname": "domain",
+   "fieldtype": "Link",
+   "label": "Domain",
+   "options": "Locations"
+  },
+  {
+   "fieldname": "site",
+   "fieldtype": "Link",
+   "label": "Site",
+   "options": "Locations"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "fieldname": "subtitle",
+   "fieldtype": "Data",
+   "label": "Subtitle"
+  },
+  {
+   "fieldname": "alias",
+   "fieldtype": "Data",
+   "label": "Alias"
+  },
+  {
+   "description": "Patient\nPractitioner\nPractitionerRole\nOrganization",
+   "fieldname": "author",
+   "fieldtype": "Table",
+   "label": "Author",
+   "options": "Dynamic Link"
+  },
+  {
+   "fieldname": "scope",
+   "fieldtype": "Table",
+   "label": "Scope",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "topic",
+   "fieldtype": "Table",
+   "label": "Topic",
+   "options": "Contract Topic"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Table",
+   "label": "Type",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "sub_type",
+   "fieldtype": "Table",
+   "label": "Sub Type",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "content_definiftion",
+   "fieldtype": "Table",
+   "label": "Content Definiftion",
+   "options": "Content Definition"
+  },
+  {
+   "fieldname": "term",
+   "fieldtype": "Table",
+   "label": "Term",
+   "options": "Term"
+  },
+  {
+   "fieldname": "supporting_info",
+   "fieldtype": "Data",
+   "label": "Supporting Info"
+  },
+  {
+   "fieldname": "relevant_history",
+   "fieldtype": "Link",
+   "label": "Relevant History",
+   "options": "Provenance"
+  },
+  {
+   "fieldname": "signer",
+   "fieldtype": "Table",
+   "label": "Signer",
+   "options": "Signer"
+  },
+  {
+   "fieldname": "friendly",
+   "fieldtype": "Table",
+   "label": "Friendly",
+   "options": "Friendly"
+  },
+  {
+   "fieldname": "legal",
+   "fieldtype": "Table",
+   "label": "Legal",
+   "options": "Legal"
+  },
+  {
+   "fieldname": "rule",
+   "fieldtype": "Table",
+   "label": "Rule",
+   "options": "Rule"
+  },
+  {
+   "fieldname": "legally_binding",
+   "fieldtype": "Table",
+   "label": "Legally Binding",
+   "options": "Legally Binding"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-03-29 19:07:34.946117",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Contract Lafia",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

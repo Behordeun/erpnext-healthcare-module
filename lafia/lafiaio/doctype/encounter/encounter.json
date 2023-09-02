@@ -1,0 +1,241 @@
+{
+ "actions": [],
+ "autoname": "format:ENC-LIO-{fhir_serverid}",
+ "creation": "2021-06-15 19:34:00.944521",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "engine": "InnoDB",
+ "field_order": [
+  "identifier",
+  "encounter_details_section",
+  "status",
+  "status_history",
+  "class",
+  "type",
+  "period",
+  "diagnosis",
+  "service_provider",
+  "episode_of_care",
+  "account",
+  "class_history",
+  "section_break_10",
+  "subject_type",
+  "subject",
+  "participants",
+  "appointment",
+  "length",
+  "priority",
+  "part_of",
+  "based_on",
+  "route",
+  "service_type",
+  "hospitalization",
+  "location",
+  "reason_code",
+  "reason_reference",
+  "fhir_serverid"
+ ],
+ "fields": [
+  {
+   "description": "Identifier(s) by which this encounter is known",
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "planned\narrived\ntriaged\nin-progress\nonleave\nfinished\ncancelled",
+   "reqd": 1
+  },
+  {
+   "description": "List of past encounter statuses",
+   "fieldname": "status_history",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Status History",
+   "options": "Status History"
+  },
+  {
+   "description": "Classification of patient encounter",
+   "fieldname": "class",
+   "fieldtype": "Link",
+   "label": "Class",
+   "options": "Encounter Class Code",
+   "reqd": 1
+  },
+  {
+   "description": "List of past encounter classes",
+   "fieldname": "class_history",
+   "fieldtype": "Table",
+   "label": "Class History",
+   "options": "Class History"
+  },
+  {
+   "description": "Specific type of encounter",
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "label": "Type",
+   "options": "Encounter Type Code"
+  },
+  {
+   "description": "Specific type of service",
+   "fieldname": "service_type",
+   "fieldtype": "Table",
+   "label": "Service Type",
+   "options": "Codable Concept"
+  },
+  {
+   "description": "Indicates the urgency of the encounter",
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Priority",
+   "options": "ASAP\nCallback results\nCallback for scheduling\nCallback placer for scheduling\nContact recipient for scheduling\nElective\nEmergency\nPreop\nAs needed\nRoutine\nRush reporting\nStat\nTiming critical\nUse as directed\nUrgent"
+  },
+  {
+   "description": "The patient or group present at the encounter",
+   "fieldname": "subject",
+   "fieldtype": "Link",
+   "label": "Subject",
+   "options": "Patient"
+  },
+  {
+   "description": "Episode(s) of care that this encounter should be recorded against",
+   "fieldname": "episode_of_care",
+   "fieldtype": "Link",
+   "label": "Episode Of Care",
+   "options": "Episode Of Care"
+  },
+  {
+   "description": "The ServiceRequest that initiated this encounter",
+   "fieldname": "based_on",
+   "fieldtype": "Table MultiSelect",
+   "label": "Based On",
+   "options": "Service Request Multi"
+  },
+  {
+   "description": "The appointment that scheduled this encounter",
+   "fieldname": "appointment",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Appointment",
+   "options": "Appointment FHIR"
+  },
+  {
+   "description": "The start and end time of the encounter",
+   "fieldname": "period",
+   "fieldtype": "Table",
+   "label": "Period",
+   "options": "Period"
+  },
+  {
+   "description": "Quantity of time the encounter lasted (less time absent)",
+   "fieldname": "length",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Length"
+  },
+  {
+   "fieldname": "reason_code",
+   "fieldtype": "Text",
+   "label": "Reason Code"
+  },
+  {
+   "fieldname": "reason_reference",
+   "fieldtype": "Table",
+   "label": "Reason Reference",
+   "options": "Dynamic Link"
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Diagnosis"
+  },
+  {
+   "fieldname": "account",
+   "fieldtype": "Link",
+   "label": "Account",
+   "options": "Account Lafia"
+  },
+  {
+   "fieldname": "hospitalization",
+   "fieldtype": "Table",
+   "label": "Hospitalization",
+   "options": "Hospitalization"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Table",
+   "label": "Location",
+   "options": "Encounter Location Child"
+  },
+  {
+   "description": "The organization (facility) responsible for this encounter",
+   "fieldname": "service_provider",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Service Provider",
+   "options": "Organization"
+  },
+  {
+   "description": "Another Encounter this encounter is part of",
+   "fieldname": "part_of",
+   "fieldtype": "Link",
+   "label": "Part Of",
+   "options": "Encounter"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "fieldname": "subject_type",
+   "fieldtype": "Link",
+   "label": "Subject Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "encounter_details_section",
+   "fieldtype": "Section Break",
+   "label": "Encounter Details"
+  },
+  {
+   "description": "List of participants involved in the encounter",
+   "fieldname": "participants",
+   "fieldtype": "Table",
+   "label": "Participants",
+   "options": "Encounter Participant Child"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "label": "FHIR ServerId",
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "modified": "2023-05-23 16:45:27.955843",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Encounter",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "subject",
+ "track_changes": 1,
+ "track_views": 1
+}

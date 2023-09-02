@@ -1,0 +1,127 @@
+{
+ "actions": [],
+ "creation": "2021-06-14 15:11:26.855223",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "category",
+  "code",
+  "identifier",
+  "permitted_data_type",
+  "multiple_results_allowed",
+  "method",
+  "preferred_report_name",
+  "quantitative_details",
+  "qualified_interval",
+  "valid_coded_value_set",
+  "normal_coded_value_set",
+  "abnormal_coded_value_set",
+  "critical_coded_value_set"
+ ],
+ "fields": [
+  {
+   "fieldname": "category",
+   "fieldtype": "Table",
+   "label": "Category",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "code",
+   "fieldtype": "Table",
+   "label": "Code",
+   "options": "Codable Concept",
+   "reqd": 1
+  },
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "permitted_data_type",
+   "fieldtype": "Select",
+   "label": "Permitted Data Type",
+   "options": "Quantity\nCodableConcept\nstring\nboolean\ninteger\nRange\nRatio\nSampledData\ntime\ndateTime\nPeriod"
+  },
+  {
+   "default": "0",
+   "fieldname": "multiple_results_allowed",
+   "fieldtype": "Check",
+   "label": "Multiple Results Allowed",
+   "options": "boolean"
+  },
+  {
+   "fieldname": "method",
+   "fieldtype": "Table",
+   "label": "Method",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "preferred_report_name",
+   "fieldtype": "Data",
+   "label": "Preferred Report Name"
+  },
+  {
+   "fieldname": "quantitative_details",
+   "fieldtype": "Table",
+   "label": "Quantitative Details",
+   "options": "Quantitative Details"
+  },
+  {
+   "fieldname": "qualified_interval",
+   "fieldtype": "Table",
+   "label": "Qualified Interval",
+   "options": "Qualified Interval"
+  },
+  {
+   "fieldname": "valid_coded_value_set",
+   "fieldtype": "Link",
+   "label": "Valid Coded Value Set",
+   "options": "Value Set"
+  },
+  {
+   "fieldname": "normal_coded_value_set",
+   "fieldtype": "Link",
+   "label": "Normal Coded Value Set",
+   "options": "Value Set"
+  },
+  {
+   "fieldname": "abnormal_coded_value_set",
+   "fieldtype": "Link",
+   "label": "Abnormal Coded Value Set",
+   "options": "Value Set"
+  },
+  {
+   "fieldname": "critical_coded_value_set",
+   "fieldtype": "Link",
+   "label": "Critical Coded Value Set",
+   "options": "Value Set"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-07-10 12:07:01.423699",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Observation Definition",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

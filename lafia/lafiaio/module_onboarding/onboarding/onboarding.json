@@ -1,0 +1,38 @@
+{
+ "allow_roles": [
+  {
+   "role": "All"
+  }
+ ],
+ "creation": "2021-07-08 13:57:07.182060",
+ "docstatus": 0,
+ "doctype": "Module Onboarding",
+ "documentation_url": "app.lafia.io",
+ "idx": 0,
+ "is_complete": 0,
+ "modified": "2022-09-06 00:32:07.726990",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Onboarding",
+ "owner": "v.emas@parallelscore.com",
+ "steps": [
+  {
+   "step": "Add New Patient"
+  },
+  {
+   "step": "View Patients"
+  },
+  {
+   "step": "Create Appointment"
+  },
+  {
+   "step": "Appointment List"
+  },
+  {
+   "step": "Create encounter"
+  }
+ ],
+ "subtitle": "Let's get you Started",
+ "success_message": "Successful",
+ "title": "Onboarding"
+}

@@ -1,0 +1,62 @@
+{
+ "actions": [],
+ "creation": "2021-05-20 10:48:17.911678",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "role",
+  "member_type",
+  "member",
+  "onbehalfof",
+  "period"
+ ],
+ "fields": [
+  {
+   "fieldname": "role",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Role",
+   "options": "Participant Role"
+  },
+  {
+   "fieldname": "member",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "label": "Member",
+   "options": "member_type"
+  },
+  {
+   "fieldname": "onbehalfof",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "OnBehalfOf",
+   "options": "Organization"
+  },
+  {
+   "fieldname": "period",
+   "fieldtype": "Table",
+   "label": "Period",
+   "options": "Period"
+  },
+  {
+   "fieldname": "member_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Member Type",
+   "options": "DocType"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-11-14 23:53:11.952849",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Participant Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

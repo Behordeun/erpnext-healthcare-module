@@ -1,0 +1,15 @@
+  <h1>{{_("Realtime communication with WebRTC")}}</h1>
+  
+  <h6>{{ frappe.session.user }}</h6>
+
+  <div id="my-media-div"></div>
+  <div class="call-buttons">
+    <button class="audio-control" data-switch="on">Mute</button>
+    <button class="video-control" data-switch="on">Toggle Video</button>
+    <button class="end-call" data-switch="on">Hang Up</button>
+  </div>
+  
+  <div id="remote-media-div"></div>
+
+  <!-- <script src="//sdk.twilio.com/js/video/releases/2.8.0/twilio-video.min.js"></script>
+  <script src="./video-conf.js"></script> -->

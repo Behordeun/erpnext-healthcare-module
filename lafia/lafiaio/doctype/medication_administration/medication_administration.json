@@ -1,0 +1,300 @@
+{
+ "actions": [],
+ "autoname": "format:MED-ADM-{fhir_serverid}",
+ "creation": "2021-06-09 12:58:52.639961",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "encounter",
+  "encounter_name",
+  "status",
+  "status_reason",
+  "column_break_4",
+  "category",
+  "medication",
+  "start_date",
+  "end_date",
+  "identifier_section",
+  "identifier",
+  "instantiates",
+  "part_of_section",
+  "part_of",
+  "supporting_information_section",
+  "supporting_information",
+  "performer_section",
+  "performer",
+  "reason_section",
+  "reason_code",
+  "reason_reference",
+  "dosage_section",
+  "instructions",
+  "site",
+  "route",
+  "column_break_27",
+  "method",
+  "dose",
+  "section_break_30",
+  "request",
+  "device",
+  "event_history",
+  "note_section",
+  "note",
+  "section_break_36",
+  "fhir_serverid"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "part_of",
+   "fieldtype": "Table",
+   "label": "Part of",
+   "options": "Reference Table"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "In-progress\nNot-done\nOn-hold\nCompleted\nEntered-in-error\nStopped\nUnknown",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status_reason",
+   "fieldtype": "Table MultiSelect",
+   "label": "Status Reason",
+   "options": "Medication Administration Status Reason Multi"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "Inpatient\nOutpatient\nCommunity"
+  },
+  {
+   "fieldname": "supporting_information",
+   "fieldtype": "Table",
+   "label": "Supporting Information",
+   "options": "Reference Table"
+  },
+  {
+   "fieldname": "performer",
+   "fieldtype": "Table",
+   "label": "Performer",
+   "options": "Medication Administration Performer"
+  },
+  {
+   "fieldname": "reason_code",
+   "fieldtype": "Small Text",
+   "label": "Reason Code"
+  },
+  {
+   "fieldname": "reason_reference",
+   "fieldtype": "Table",
+   "label": "Reason Reference",
+   "options": "Reference Table"
+  },
+  {
+   "fieldname": "request",
+   "fieldtype": "Link",
+   "label": "Request",
+   "options": "Medication Request"
+  },
+  {
+   "fieldname": "device",
+   "fieldtype": "Table MultiSelect",
+   "label": "Device",
+   "options": "Device Multi"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Table",
+   "label": "Note",
+   "options": "Annotation"
+  },
+  {
+   "fieldname": "event_history",
+   "fieldtype": "Table MultiSelect",
+   "label": "Event History",
+   "options": "Provenance Multi"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "identifier_section",
+   "fieldtype": "Section Break",
+   "label": "Identifier"
+  },
+  {
+   "fieldname": "instantiates",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Instantiates"
+  },
+  {
+   "collapsible": 1,
+   "description": "Part of referenced event",
+   "fieldname": "part_of_section",
+   "fieldtype": "Section Break",
+   "label": "Part Of"
+  },
+  {
+   "fieldname": "encounter",
+   "fieldtype": "Link",
+   "label": "Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "fieldname": "medication",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Medication",
+   "options": "Medication"
+  },
+  {
+   "fetch_from": "encounter.title",
+   "fieldname": "encounter_name",
+   "fieldtype": "Data",
+   "label": "Encounter name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Datetime",
+   "label": "Start date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Datetime",
+   "label": "End date"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "supporting_information_section",
+   "fieldtype": "Section Break",
+   "label": "Supporting Information"
+  },
+  {
+   "collapsible": 1,
+   "description": "Who performed the medication administration",
+   "fieldname": "performer_section",
+   "fieldtype": "Section Break",
+   "label": "Performer"
+  },
+  {
+   "collapsible": 1,
+   "description": "Reason administration performed",
+   "fieldname": "reason_section",
+   "fieldtype": "Section Break",
+   "label": "Reason"
+  },
+  {
+   "collapsible": 1,
+   "description": "Details of how medication was taken",
+   "fieldname": "dosage_section",
+   "fieldtype": "Section Break",
+   "label": "Dosage"
+  },
+  {
+   "fieldname": "instructions",
+   "fieldtype": "Small Text",
+   "label": "Instructions"
+  },
+  {
+   "fieldname": "site",
+   "fieldtype": "Link",
+   "label": "Site",
+   "options": "Body Site Code"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Link",
+   "label": "Route",
+   "options": "Exposure Route"
+  },
+  {
+   "fieldname": "column_break_27",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "method",
+   "fieldtype": "Link",
+   "label": "Method",
+   "options": "Dosage method"
+  },
+  {
+   "fieldname": "dose",
+   "fieldtype": "Int",
+   "label": "Dose"
+  },
+  {
+   "fieldname": "section_break_30",
+   "fieldtype": "Section Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "note_section",
+   "fieldtype": "Section Break",
+   "label": "Note"
+  },
+  {
+   "fieldname": "section_break_36",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Fhir ServerID",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-01-18 15:29:25.905022",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Medication Administration",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

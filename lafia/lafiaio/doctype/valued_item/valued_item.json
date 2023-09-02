@@ -1,0 +1,114 @@
+{
+ "actions": [],
+ "creation": "2021-06-07 17:54:13.948725",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "entity",
+  "identifier",
+  "effective_time",
+  "quantity",
+  "unit_price",
+  "factor",
+  "point",
+  "net",
+  "payment",
+  "payment_date",
+  "responsible",
+  "recipient",
+  "link_id",
+  "security_label_number"
+ ],
+ "fields": [
+  {
+   "fieldname": "entity",
+   "fieldtype": "Table",
+   "label": "Entity",
+   "options": "Valued Item Entity"
+  },
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "effective_time",
+   "fieldtype": "Table",
+   "label": "Effective Time",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Data",
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "unit_price",
+   "fieldtype": "Data",
+   "label": "Unit Price"
+  },
+  {
+   "fieldname": "factor",
+   "fieldtype": "Data",
+   "label": "Factor"
+  },
+  {
+   "fieldname": "point",
+   "fieldtype": "Data",
+   "label": "Point"
+  },
+  {
+   "fieldname": "net",
+   "fieldtype": "Data",
+   "label": "Net"
+  },
+  {
+   "fieldname": "payment",
+   "fieldtype": "Data",
+   "label": "Payment"
+  },
+  {
+   "fieldname": "payment_date",
+   "fieldtype": "Data",
+   "label": "Payment Date"
+  },
+  {
+   "description": "Organization\nPatient\nPractitioner\nPractitionerRole\nRelatedPerson",
+   "fieldname": "responsible",
+   "fieldtype": "Table",
+   "label": "Responsible",
+   "options": "Dynamic Link"
+  },
+  {
+   "description": "Organization\nPatient\nPractitioner\nPractitionerRole\nRelatedPerson",
+   "fieldname": "recipient",
+   "fieldtype": "Table",
+   "label": "Recipient",
+   "options": "Dynamic Link"
+  },
+  {
+   "fieldname": "link_id",
+   "fieldtype": "Data",
+   "label": "Link ID"
+  },
+  {
+   "fieldname": "security_label_number",
+   "fieldtype": "Data",
+   "label": "Security Label Number"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-11-30 23:39:55.893481",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Valued Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

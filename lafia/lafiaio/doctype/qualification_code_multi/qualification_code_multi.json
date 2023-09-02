@@ -1,0 +1,31 @@
+{
+ "actions": [],
+ "creation": "2021-07-23 12:47:31.126758",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "qualification"
+ ],
+ "fields": [
+  {
+   "fieldname": "qualification",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Qualification Code",
+   "options": "Qualification Code"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-07-23 13:41:58.874554",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Qualification Code Multi",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

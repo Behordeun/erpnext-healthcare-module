@@ -1,0 +1,239 @@
+{
+ "actions": [],
+ "autoname": "format:PRAC-ROL-{fhir_serverid}",
+ "creation": "2021-06-08 12:09:49.076842",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "practitioner",
+  "practitioner_name",
+  "email",
+  "phone",
+  "active",
+  "column_break_4",
+  "organization",
+  "start_date",
+  "end_date",
+  "section_break_10",
+  "identifier",
+  "roles",
+  "healthcare_service",
+  "column_break_8",
+  "location",
+  "specialty",
+  "section_break_16",
+  "availabletime",
+  "notavailable",
+  "availability_exceptions",
+  "endpoint",
+  "section_break_22",
+  "fhir_serverid"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "practitioner",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Practitioner",
+   "options": "Healthcare Practitioner",
+   "reqd": 1
+  },
+  {
+   "fieldname": "organization",
+   "fieldtype": "Link",
+   "label": "Organization",
+   "options": "Company"
+  },
+  {
+   "fieldname": "specialty",
+   "fieldtype": "Table MultiSelect",
+   "label": "Specialty",
+   "options": "Service Specialty"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Table MultiSelect",
+   "label": "Location",
+   "options": "Service Location"
+  },
+  {
+   "fieldname": "availability_exceptions",
+   "fieldtype": "Data",
+   "label": "Availability Exceptions"
+  },
+  {
+   "fieldname": "endpoint",
+   "fieldtype": "Table MultiSelect",
+   "label": "Endpoint",
+   "options": "Service Endpoint"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "roles",
+   "fieldtype": "Table MultiSelect",
+   "label": "Roles",
+   "options": "Role Multi"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start date"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End date"
+  },
+  {
+   "fetch_from": "practitioner.practitioner_name",
+   "fieldname": "practitioner_name",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Practitioner name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "practitioner.email",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "practitioner.mobile_phone",
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_22",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "label": "Fhir ServerID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "healthcare_service",
+   "fieldtype": "Table MultiSelect",
+   "label": "HealthCare Service",
+   "options": "Service Multi"
+  },
+  {
+   "fieldname": "availabletime",
+   "fieldtype": "Table",
+   "label": "Available Time",
+   "options": "Hours Of Operation 2"
+  },
+  {
+   "fieldname": "notavailable",
+   "fieldtype": "Table",
+   "label": "Not Available",
+   "options": "Unavailability"
+  },
+  {
+   "default": "1",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Active"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-03-06 22:42:48.031531",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "PractitionerRole",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Nursing User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

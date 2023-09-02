@@ -1,0 +1,38 @@
+{
+ "actions": [],
+ "creation": "2021-06-04 14:23:48.099524",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "type",
+  "party"
+ ],
+ "fields": [
+  {
+   "fieldname": "type",
+   "fieldtype": "Table",
+   "label": "Type ",
+   "options": "Codable Concept"
+  },
+  {
+   "description": "This leads to the following Doctypes:\n- Practitioner\n- PractitionerRole\n- Organization\n- Patient \n- RelatedPerson",
+   "fieldname": "party",
+   "fieldtype": "Table",
+   "label": "Party",
+   "options": "Dynamic Link"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-06-11 19:48:54.725748",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Payee Child",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,89 @@
+{
+ "actions": [],
+ "creation": "2021-06-07 17:32:59.577072",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "identifier",
+  "party",
+  "topic",
+  "type",
+  "decision",
+  "decision_mode",
+  "answer",
+  "text",
+  "link_id",
+  "security_label_number"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "party",
+   "fieldtype": "Table",
+   "label": "Party",
+   "options": "Party"
+  },
+  {
+   "fieldname": "topic",
+   "fieldtype": "Data",
+   "label": "Topic"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Table",
+   "label": "Type",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "decision",
+   "fieldtype": "Table",
+   "label": "Decision",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "decision_mode",
+   "fieldtype": "Table",
+   "label": "Decision Mode",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "answer",
+   "fieldtype": "Table",
+   "label": "Answer",
+   "options": "Answer"
+  },
+  {
+   "fieldname": "text",
+   "fieldtype": "Data",
+   "label": "Text"
+  },
+  {
+   "fieldname": "link_id",
+   "fieldtype": "Data",
+   "label": "Link ID"
+  },
+  {
+   "fieldname": "security_label_number",
+   "fieldtype": "Data",
+   "label": "Security Label Number"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-06-11 19:48:41.982684",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Offer",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

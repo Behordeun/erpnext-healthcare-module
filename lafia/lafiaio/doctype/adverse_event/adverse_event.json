@@ -1,0 +1,315 @@
+{
+ "actions": [],
+ "autoname": "format:ADVE-LIO-{fhir_serverid}",
+ "creation": "2021-06-01 15:02:17.538089",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "subject_type",
+  "subject",
+  "encounter",
+  "encounter_name",
+  "column_break_5",
+  "status",
+  "actuality",
+  "category",
+  "event",
+  "identifier_section",
+  "identifier",
+  "event_dates_section",
+  "occurrence_date",
+  "dectection_date",
+  "column_break_7",
+  "recorded_date",
+  "effects_section",
+  "resulting_condition",
+  "location",
+  "seriousness",
+  "severity",
+  "column_break_17",
+  "outcome",
+  "recorder_type",
+  "recorder",
+  "participants_section",
+  "participants",
+  "section_break_28",
+  "study",
+  "contributor_type",
+  "contributor",
+  "suspect_entity",
+  "subject_medical_history_type",
+  "column_break_27",
+  "subject_medical_history",
+  "reference_document",
+  "section_break_37",
+  "fhir_serverid"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "actuality",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Actuality",
+   "options": "Actual\nPotential",
+   "reqd": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Table MultiSelect",
+   "label": "Category",
+   "options": "Adverse Event Category Multi"
+  },
+  {
+   "fieldname": "event",
+   "fieldtype": "Link",
+   "label": "Event",
+   "options": "Adverse Event Type"
+  },
+  {
+   "description": "Patient\nGroup\nPractitioner\nRelatedPerson",
+   "fieldname": "subject",
+   "fieldtype": "Dynamic Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Subject",
+   "options": "subject_type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "encounter",
+   "fieldtype": "Link",
+   "label": "Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "fieldname": "recorded_date",
+   "fieldtype": "Datetime",
+   "label": "Recorded Date"
+  },
+  {
+   "fieldname": "resulting_condition",
+   "fieldtype": "Table MultiSelect",
+   "label": "Resulting Condition",
+   "options": "Condition Multi"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "label": "Location",
+   "options": "Locations"
+  },
+  {
+   "fieldname": "seriousness",
+   "fieldtype": "Select",
+   "label": "Seriousness",
+   "options": "\nNon-serious\nSerious"
+  },
+  {
+   "fieldname": "severity",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Severity",
+   "options": "Adverse Event Severity"
+  },
+  {
+   "fieldname": "outcome",
+   "fieldtype": "Table MultiSelect",
+   "label": "Outcome",
+   "options": "Adverse Event Outcome Multi"
+  },
+  {
+   "description": "Patient\nPractitioner\nPractitionerRole\nRelatedPerson",
+   "fieldname": "recorder",
+   "fieldtype": "Dynamic Link",
+   "label": "Recorder",
+   "options": "recorder_type"
+  },
+  {
+   "description": "Practitioner\nPractitionerRole\nDevice",
+   "fieldname": "contributor",
+   "fieldtype": "Dynamic Link",
+   "label": "Contributor",
+   "options": "contributor_type"
+  },
+  {
+   "fieldname": "suspect_entity",
+   "fieldtype": "Table",
+   "label": "Suspect Entity",
+   "options": "Adverse Event Suspect Entity"
+  },
+  {
+   "description": "Condition\nObservation\nAllergyIntolerance\nFamilyMemberHistory\nImmunization\nProcedure\nMedia\nDocumentReference",
+   "fieldname": "subject_medical_history",
+   "fieldtype": "Dynamic Link",
+   "label": "Subject Medical History",
+   "options": "subject_medical_history_type"
+  },
+  {
+   "fieldname": "reference_document",
+   "fieldtype": "Link",
+   "label": "Reference Document",
+   "options": "Document Reference"
+  },
+  {
+   "fieldname": "study",
+   "fieldtype": "Link",
+   "label": "Study",
+   "options": "Research study"
+  },
+  {
+   "fieldname": "subject_type",
+   "fieldtype": "Link",
+   "label": "Subject Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "recorder_type",
+   "fieldtype": "Link",
+   "label": "Recorder Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "contributor_type",
+   "fieldtype": "Link",
+   "label": "Contributor Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "subject_medical_history_type",
+   "fieldtype": "Link",
+   "label": "Subject Medical History Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "label": "FHIR Serverid",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_27",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "In-progress\nCompleted\nEntered-in-error\nUnknown",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "encounter.title",
+   "fieldname": "encounter_name",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Encounter name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "identifier_section",
+   "fieldtype": "Section Break",
+   "label": "Identifier"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "event_dates_section",
+   "fieldtype": "Section Break",
+   "label": "Event dates"
+  },
+  {
+   "description": "When the event occurred",
+   "fieldname": "occurrence_date",
+   "fieldtype": "Datetime",
+   "label": "Occurrence Date"
+  },
+  {
+   "description": "When the event was detected",
+   "fieldname": "dectection_date",
+   "fieldtype": "Datetime",
+   "label": "Dectection date"
+  },
+  {
+   "fieldname": "effects_section",
+   "fieldtype": "Section Break",
+   "label": "Effects"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "participants_section",
+   "fieldtype": "Section Break",
+   "label": "Participants"
+  },
+  {
+   "fieldname": "participants",
+   "fieldtype": "Table",
+   "label": "Participants",
+   "options": "Condition Participant"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_28",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Study"
+  },
+  {
+   "fieldname": "section_break_37",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-11-10 10:16:24.405939",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Adverse Event",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

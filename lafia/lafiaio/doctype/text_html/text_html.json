@@ -1,0 +1,46 @@
+{
+ "actions": [],
+ "creation": "2021-07-09 14:13:25.820332",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "status",
+  "div",
+  "add_html"
+ ],
+ "fields": [
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "generated\nextensions\nadditional\nempty",
+   "reqd": 1
+  },
+  {
+   "default": "<div>\\n\\t\\t\\t<p>{{parent.name}}@ {{parent.address}}</p>\\n\\t\\t</div>",
+   "fieldname": "div",
+   "fieldtype": "HTML",
+   "label": "Div"
+  },
+  {
+   "fieldname": "add_html",
+   "fieldtype": "HTML Editor",
+   "label": "Add Html",
+   "options": "div"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-07-09 14:25:16.664687",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Text HTML",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,84 @@
+{
+ "actions": [],
+ "creation": "2021-06-08 11:27:39.792949",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "identifier",
+  "status",
+  "created",
+  "insurer",
+  "provider",
+  "candidate",
+  "coverage"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "active\ncancelled\ndraft\nentered-in-error"
+  },
+  {
+   "fieldname": "created",
+   "fieldtype": "Data",
+   "label": "Created"
+  },
+  {
+   "fieldname": "insurer",
+   "fieldtype": "Link",
+   "label": "Insurer",
+   "options": "Organization"
+  },
+  {
+   "description": "This leads to the following doctypes:\n- Practitioner\n- PractitionerRole\n- Organization",
+   "fieldname": "provider",
+   "fieldtype": "Table",
+   "label": "Provider",
+   "options": "Dynamic Link"
+  },
+  {
+   "fieldname": "candidate",
+   "fieldtype": "Link",
+   "label": "Candidate",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "coverage",
+   "fieldtype": "Link",
+   "label": "Coverage",
+   "options": "Coverage"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-06-11 19:48:37.238964",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Enrollment Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

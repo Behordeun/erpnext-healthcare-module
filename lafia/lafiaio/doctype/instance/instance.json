@@ -1,0 +1,43 @@
+{
+ "actions": [],
+ "creation": "2021-06-02 16:07:02.449496",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "identifier",
+  "expiry",
+  "quantity"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "expiry",
+   "fieldtype": "Data",
+   "label": "Expiry"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Table",
+   "label": "Quantity",
+   "options": "Quantity"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-06-11 19:49:06.160390",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Instance",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

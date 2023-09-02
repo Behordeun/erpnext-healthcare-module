@@ -1,0 +1,43 @@
+{
+ "actions": [],
+ "creation": "2021-06-07 19:45:35.768512",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "occurrence_datetime",
+  "occurrence_period",
+  "occurrence_timing"
+ ],
+ "fields": [
+  {
+   "fieldname": "occurrence_datetime",
+   "fieldtype": "Data",
+   "label": "Occurrence DateTime"
+  },
+  {
+   "fieldname": "occurrence_period",
+   "fieldtype": "Table",
+   "label": "Occurrence Period",
+   "options": "Period"
+  },
+  {
+   "fieldname": "occurrence_timing",
+   "fieldtype": "Table",
+   "label": "Occurrence Timing",
+   "options": "Timing"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-06-11 19:48:40.398791",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Occurence",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

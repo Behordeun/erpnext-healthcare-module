@@ -1,0 +1,65 @@
+{
+ "actions": [],
+ "creation": "2021-06-07 16:31:22.649696",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "type",
+  "subtype",
+  "publisher",
+  "publication_date",
+  "publication_status",
+  "copyright"
+ ],
+ "fields": [
+  {
+   "fieldname": "type",
+   "fieldtype": "Table",
+   "label": "Type",
+   "options": "Codable Concept",
+   "reqd": 1
+  },
+  {
+   "fieldname": "subtype",
+   "fieldtype": "Table",
+   "label": "Subtype",
+   "options": "Codable Concept"
+  },
+  {
+   "description": "Practitioner\nPractitionerRole\nOrganization",
+   "fieldname": "publisher",
+   "fieldtype": "Table",
+   "label": "Publisher",
+   "options": "Dynamic Link"
+  },
+  {
+   "fieldname": "publication_date",
+   "fieldtype": "Data",
+   "label": "Publication Date"
+  },
+  {
+   "fieldname": "publication_status",
+   "fieldtype": "Data",
+   "label": "Publication Status"
+  },
+  {
+   "fieldname": "copyright",
+   "fieldtype": "Select",
+   "label": "Copyright",
+   "options": "amended\nappended\ncancelled\ndisputed\nentered-in-error\nexecutable\nexecuted\nnegotiable\noffered\npolicy\nrejected\nrenewed\nrevoked\nresolved\nterminated"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-06-11 19:48:43.186502",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Content Definition",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,155 @@
+{
+ "actions": [],
+ "creation": "2021-06-07 13:40:34.752622",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "identifier",
+  "status",
+  "priority",
+  "purpose",
+  "patient",
+  "serviced_date",
+  "serviced_period",
+  "created",
+  "enterer",
+  "provider",
+  "insurer",
+  "facility",
+  "supporting_info",
+  "insurance",
+  "item",
+  "details"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "active\ncancelled\ndraft\nentered-in-error",
+   "reqd": 1
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Table",
+   "label": "Priority",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "purpose",
+   "fieldtype": "Select",
+   "label": "Purpose",
+   "options": "auth-requirements\nbenefits\ndiscovery\nvalidation"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient LafiaIO",
+   "reqd": 1
+  },
+  {
+   "fieldname": "serviced_date",
+   "fieldtype": "Data",
+   "label": "Serviced Date"
+  },
+  {
+   "fieldname": "serviced_period",
+   "fieldtype": "Table",
+   "label": "Serviced Period",
+   "options": "Period"
+  },
+  {
+   "fieldname": "created",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Created",
+   "reqd": 1
+  },
+  {
+   "description": "This leads to the following doctypes:\n- Practitioner\n- PractitionerRole",
+   "fieldname": "enterer",
+   "fieldtype": "Table",
+   "label": "Enterer",
+   "options": "Dynamic Link"
+  },
+  {
+   "description": "This leads to the following doctypes:\n- Practitioner\n- PractitionerRole\n- Organization",
+   "fieldname": "provider",
+   "fieldtype": "Table",
+   "label": "Provider",
+   "options": "Dynamic Link"
+  },
+  {
+   "fieldname": "insurer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Insurer",
+   "options": "Organization",
+   "reqd": 1
+  },
+  {
+   "fieldname": "facility",
+   "fieldtype": "Link",
+   "label": "Facility",
+   "options": "Location FHIR"
+  },
+  {
+   "fieldname": "supporting_info",
+   "fieldtype": "Table",
+   "label": "Supporting Info",
+   "options": "Supporting Info Child"
+  },
+  {
+   "fieldname": "insurance",
+   "fieldtype": "Table",
+   "label": "Insurance",
+   "options": "Insurance"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Table",
+   "label": "Item",
+   "options": "Item Eligibility Request"
+  },
+  {
+   "fieldname": "details",
+   "fieldtype": "Table",
+   "label": "Details",
+   "options": "Coding"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-12-01 00:17:25.347489",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Coverage Eligibility Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

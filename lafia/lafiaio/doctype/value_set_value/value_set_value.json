@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "creation": "2021-06-14 16:03:25.196312",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "value_string",
+  "value_boolean",
+  "value_integer",
+  "value_decimal",
+  "value_uri",
+  "value_code",
+  "value_date_time"
+ ],
+ "fields": [
+  {
+   "fieldname": "value_string",
+   "fieldtype": "Data",
+   "label": "Value String"
+  },
+  {
+   "default": "0",
+   "fieldname": "value_boolean",
+   "fieldtype": "Check",
+   "label": "Value Boolean",
+   "options": "boolean"
+  },
+  {
+   "fieldname": "value_integer",
+   "fieldtype": "Data",
+   "label": "Value Integer"
+  },
+  {
+   "fieldname": "value_decimal",
+   "fieldtype": "Data",
+   "label": "Value Decimal"
+  },
+  {
+   "fieldname": "value_uri",
+   "fieldtype": "Data",
+   "label": "Value URI"
+  },
+  {
+   "fieldname": "value_code",
+   "fieldtype": "Data",
+   "label": "Value Code"
+  },
+  {
+   "fieldname": "value_date_time",
+   "fieldtype": "Data",
+   "label": "Value Date Time"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-07-10 12:07:14.152936",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Value Set Value",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

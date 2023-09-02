@@ -1,0 +1,260 @@
+{
+ "actions": [],
+ "creation": "2021-06-03 14:50:00.094146",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "subject_type",
+  "subject",
+  "status",
+  "encounter",
+  "column_break_5",
+  "started",
+  "modality",
+  "identifier_section",
+  "identifier",
+  "reference_section",
+  "referrer_type",
+  "referrer",
+  "column_break_12",
+  "endpoint",
+  "basedon",
+  "interpreter",
+  "section_break_17",
+  "number_of_series",
+  "number_of_instances",
+  "column_break_20",
+  "procedure_reference",
+  "procedure_code",
+  "location",
+  "reason_section",
+  "reason_code",
+  "reason_reference",
+  "section_break_27",
+  "note",
+  "description",
+  "series_section",
+  "series",
+  "section_break_32",
+  "fhir_serverid"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Registered\nAvailable\nCancelled\nEntered-in-error\nUnknown",
+   "reqd": 1
+  },
+  {
+   "fieldname": "modality",
+   "fieldtype": "Table MultiSelect",
+   "label": "Modality",
+   "options": "Modality Multi"
+  },
+  {
+   "fieldname": "subject_type",
+   "fieldtype": "Link",
+   "label": "Subject Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "label": "Subject",
+   "options": "subject_type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "encounter",
+   "fieldtype": "Link",
+   "label": "Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "description": "When the study was started",
+   "fieldname": "started",
+   "fieldtype": "Datetime",
+   "label": "Started"
+  },
+  {
+   "fieldname": "basedon",
+   "fieldtype": "Table",
+   "label": "Based On",
+   "options": "Reference Table"
+  },
+  {
+   "fieldname": "referrer_type",
+   "fieldtype": "Link",
+   "label": "Referrer Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "referrer",
+   "fieldtype": "Dynamic Link",
+   "label": "Referrer",
+   "options": "referrer_type"
+  },
+  {
+   "fieldname": "interpreter",
+   "fieldtype": "Table",
+   "label": "Interpreter",
+   "options": "Reference Table"
+  },
+  {
+   "fieldname": "endpoint",
+   "fieldtype": "Table MultiSelect",
+   "label": "Endpoint",
+   "options": "Endpoint Multi"
+  },
+  {
+   "fieldname": "number_of_series",
+   "fieldtype": "Int",
+   "label": "Number Of Series"
+  },
+  {
+   "fieldname": "number_of_instances",
+   "fieldtype": "Int",
+   "label": "Number Of Instances"
+  },
+  {
+   "fieldname": "procedure_reference",
+   "fieldtype": "Table MultiSelect",
+   "label": "Procedure Reference",
+   "options": "Procedure Multi"
+  },
+  {
+   "fieldname": "procedure_code",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Procedure Code",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "label": "Location",
+   "options": "Location"
+  },
+  {
+   "fieldname": "reason_code",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Reason Code",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "reason_reference",
+   "fieldtype": "Table",
+   "label": "Reason Reference",
+   "options": "Reference Table"
+  },
+  {
+   "description": "User-defined comments",
+   "fieldname": "note",
+   "fieldtype": "Small Text",
+   "label": "Note"
+  },
+  {
+   "description": "Institution-generated description",
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "series",
+   "fieldtype": "Table",
+   "label": "Series",
+   "options": "Series"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "identifier_section",
+   "fieldtype": "Section Break",
+   "label": "Identifier"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "description": "Why the study was requested / performed",
+   "fieldname": "reason_section",
+   "fieldtype": "Section Break",
+   "label": "Reason"
+  },
+  {
+   "fieldname": "section_break_27",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Each study has one or more series of instances",
+   "fieldname": "series_section",
+   "fieldtype": "Section Break",
+   "label": "Series"
+  },
+  {
+   "fieldname": "section_break_32",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "label": "Fhir ServerID",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-11-20 19:47:50.865516",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Imaging Study",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

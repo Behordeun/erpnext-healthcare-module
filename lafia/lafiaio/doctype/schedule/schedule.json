@@ -1,0 +1,99 @@
+{
+ "actions": [],
+ "creation": "2021-06-16 14:39:03.093686",
+ "description": "A container for slots of time that may be available for booking appointments",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "identifier",
+  "active",
+  "service_category",
+  "service_type",
+  "specialty",
+  "actor",
+  "planning_horizon",
+  "comment"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "default": "0",
+   "description": "Whether this schedule is in active use",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "label": "Active",
+   "options": "boolean"
+  },
+  {
+   "description": "High-level category",
+   "fieldname": "service_category",
+   "fieldtype": "Table",
+   "label": "Service Category",
+   "options": "Codable Concept"
+  },
+  {
+   "description": "Specific service",
+   "fieldname": "service_type",
+   "fieldtype": "Table",
+   "label": "Service Type",
+   "options": "Codable Concept"
+  },
+  {
+   "description": "Type of specialty needed",
+   "fieldname": "specialty",
+   "fieldtype": "Table",
+   "label": "Specialty",
+   "options": "Codable Concept"
+  },
+  {
+   "description": "Resource(s) that availability information is being provided for",
+   "fieldname": "actor",
+   "fieldtype": "Table",
+   "label": "Actor",
+   "options": "Dynamic Link",
+   "reqd": 1
+  },
+  {
+   "description": "Period of time covered by schedule",
+   "fieldname": "planning_horizon",
+   "fieldtype": "Data",
+   "label": "Planning Horizon"
+  },
+  {
+   "description": "Comments on availability",
+   "fieldname": "comment",
+   "fieldtype": "Data",
+   "label": "Comment"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-07-10 12:06:58.483618",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Schedule",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

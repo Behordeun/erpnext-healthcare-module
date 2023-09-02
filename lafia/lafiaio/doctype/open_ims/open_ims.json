@@ -1,0 +1,131 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-05-18 13:06:08.766625",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "username",
+  "password",
+  "host",
+  "preference_section",
+  "patient",
+  "organization",
+  "claims",
+  "claims_response",
+  "contractspolicy",
+  "coverage",
+  "coverage_eligibility_request",
+  "group",
+  "suresalama_column",
+  "contracts"
+ ],
+ "fields": [
+  {
+   "fieldname": "username",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Username"
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Data",
+   "label": "Password"
+  },
+  {
+   "fieldname": "host",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Host"
+  },
+  {
+   "fieldname": "preference_section",
+   "fieldtype": "Section Break",
+   "label": "Preference"
+  },
+  {
+   "default": "0",
+   "fieldname": "patient",
+   "fieldtype": "Check",
+   "label": "Patient"
+  },
+  {
+   "default": "0",
+   "fieldname": "organization",
+   "fieldtype": "Check",
+   "label": "Organization"
+  },
+  {
+   "default": "0",
+   "fieldname": "claims",
+   "fieldtype": "Check",
+   "label": "Claims"
+  },
+  {
+   "default": "0",
+   "fieldname": "claims_response",
+   "fieldtype": "Check",
+   "label": "Claims response"
+  },
+  {
+   "default": "0",
+   "fieldname": "contractspolicy",
+   "fieldtype": "Check",
+   "label": "Contracts(Policy)"
+  },
+  {
+   "default": "0",
+   "fieldname": "coverage",
+   "fieldtype": "Check",
+   "label": "Coverage"
+  },
+  {
+   "default": "0",
+   "fieldname": "coverage_eligibility_request",
+   "fieldtype": "Check",
+   "label": "Coverage Eligibility Request"
+  },
+  {
+   "default": "0",
+   "fieldname": "group",
+   "fieldtype": "Check",
+   "label": "Group"
+  },
+  {
+   "fieldname": "suresalama_column",
+   "fieldtype": "Column Break",
+   "label": "Suresalama"
+  },
+  {
+   "default": "0",
+   "fieldname": "contracts",
+   "fieldtype": "Check",
+   "label": "Contracts"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-05-18 13:47:31.858969",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Open IMS",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

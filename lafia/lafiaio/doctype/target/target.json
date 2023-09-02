@@ -1,0 +1,44 @@
+{
+ "actions": [],
+ "creation": "2021-06-02 13:53:59.074272",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "measure",
+  "detail",
+  "due"
+ ],
+ "fields": [
+  {
+   "fieldname": "measure",
+   "fieldtype": "Table",
+   "label": "Measure",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "detail",
+   "fieldtype": "Table",
+   "label": "Detail",
+   "options": "Target Detail"
+  },
+  {
+   "fieldname": "due",
+   "fieldtype": "Table",
+   "label": "Due",
+   "options": "Target Due"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-12-01 00:18:34.630330",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Target",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,44 @@
+{
+ "actions": [],
+ "creation": "2021-06-02 16:09:22.786622",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "quantity",
+  "substance_codeable_concept",
+  "substance_reference"
+ ],
+ "fields": [
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Table",
+   "label": "Quantity",
+   "options": "Ratio"
+  },
+  {
+   "fieldname": "substance_codeable_concept",
+   "fieldtype": "Table",
+   "label": "Substance Codeable Concept",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "substance_reference",
+   "fieldtype": "Link",
+   "label": "Substance Reference",
+   "options": "Substance"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-06-11 19:49:05.889116",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Ingredient",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

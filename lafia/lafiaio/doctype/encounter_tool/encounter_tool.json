@@ -1,0 +1,146 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "creation": "2022-07-12 20:42:50.170970",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "uid",
+  "p_uid",
+  "patient",
+  "column_break_4",
+  "class",
+  "type",
+  "start",
+  "stop",
+  "time",
+  "section_break_10",
+  "org_id",
+  "organization",
+  "column_break_13",
+  "prov_id",
+  "provider",
+  "section_break_16",
+  "reason",
+  "reason_code"
+ ],
+ "fields": [
+  {
+   "fieldname": "uid",
+   "fieldtype": "Data",
+   "label": "Encounter UID"
+  },
+  {
+   "fieldname": "p_uid",
+   "fieldtype": "Data",
+   "label": "Patient ID"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "class",
+   "fieldtype": "Link",
+   "label": "Class",
+   "options": "Encounter Class Code"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Data",
+   "label": "Type"
+  },
+  {
+   "fieldname": "start",
+   "fieldtype": "Data",
+   "label": "Encounter Start Date"
+  },
+  {
+   "fieldname": "stop",
+   "fieldtype": "Data",
+   "label": "Encounter end Date"
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Data",
+   "label": "Encounter Time"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "org_id",
+   "fieldtype": "Data",
+   "label": "Organization ID"
+  },
+  {
+   "fieldname": "organization",
+   "fieldtype": "Link",
+   "label": "Organization",
+   "options": "Organization"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "prov_id",
+   "fieldtype": "Data",
+   "label": "Provider_id"
+  },
+  {
+   "fieldname": "provider",
+   "fieldtype": "Link",
+   "label": "Provider",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Data",
+   "label": "Reason"
+  },
+  {
+   "fieldname": "reason_code",
+   "fieldtype": "Link",
+   "label": "Reason Code",
+   "options": "Encounter Reason Code"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-07-13 15:56:30.502504",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Encounter Tool",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

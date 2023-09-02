@@ -1,0 +1,35 @@
+{
+ "actions": [],
+ "creation": "2021-06-09 13:54:19.083297",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "dose_positive_int",
+  "dose_number_string"
+ ],
+ "fields": [
+  {
+   "fieldname": "dose_positive_int",
+   "fieldtype": "Int",
+   "label": "Dose Positive Int"
+  },
+  {
+   "fieldname": "dose_number_string",
+   "fieldtype": "Data",
+   "label": "Dose Number String"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-06-11 19:48:27.738790",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Dose Number",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

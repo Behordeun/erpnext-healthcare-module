@@ -1,0 +1,172 @@
+{
+ "actions": [],
+ "creation": "2021-06-03 17:15:33.792704",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "coordinative_sytem",
+  "type",
+  "column_break_4",
+  "specimen",
+  "device",
+  "performer",
+  "identifier_section",
+  "identifier",
+  "section_break_10",
+  "quantity",
+  "reference_sequence_section",
+  "reference_sq",
+  "variant",
+  "observed_sq",
+  "quality",
+  "read_coverage",
+  "repository",
+  "pointer",
+  "structure_variant"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "AA\nDNA\nRNA"
+  },
+  {
+   "fieldname": "coordinative_sytem",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Coordinative Sytem",
+   "reqd": 1
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "specimen",
+   "fieldtype": "Link",
+   "label": "Specimen",
+   "options": "Specimen"
+  },
+  {
+   "fieldname": "device",
+   "fieldtype": "Link",
+   "label": "Device",
+   "options": "Device"
+  },
+  {
+   "fieldname": "performer",
+   "fieldtype": "Link",
+   "label": "Performer",
+   "options": "Organization"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Float",
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "reference_sq",
+   "fieldtype": "Table",
+   "label": "Reference Sq",
+   "options": "ReferenceSeq Child"
+  },
+  {
+   "fieldname": "variant",
+   "fieldtype": "Table",
+   "label": "Variant",
+   "options": "Variant Child"
+  },
+  {
+   "fieldname": "observed_sq",
+   "fieldtype": "Data",
+   "label": "Observed Sq"
+  },
+  {
+   "fieldname": "quality",
+   "fieldtype": "Table",
+   "label": "Quality",
+   "options": "Quality Child"
+  },
+  {
+   "fieldname": "read_coverage",
+   "fieldtype": "Data",
+   "label": "Read Coverage"
+  },
+  {
+   "fieldname": "repository",
+   "fieldtype": "Table",
+   "label": "Repository",
+   "options": "Repository Child"
+  },
+  {
+   "fieldname": "pointer",
+   "fieldtype": "Link",
+   "label": "Pointer",
+   "options": "MolecularSequence"
+  },
+  {
+   "fieldname": "structure_variant",
+   "fieldtype": "Table",
+   "label": "Structure Variant",
+   "options": "Structure Variant Child"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "identifier_section",
+   "fieldtype": "Section Break",
+   "label": "Identifier"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "collapsible": 1,
+   "description": "A sequence used as reference",
+   "fieldname": "reference_sequence_section",
+   "fieldtype": "Section Break",
+   "label": "Reference Sequence"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-11-20 20:15:52.890302",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "MolecularSequence",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

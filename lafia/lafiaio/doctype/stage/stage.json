@@ -1,0 +1,44 @@
+{
+ "actions": [],
+ "creation": "2021-05-24 08:47:07.650945",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "summary",
+  "assessment",
+  "type"
+ ],
+ "fields": [
+  {
+   "fieldname": "summary",
+   "fieldtype": "Table",
+   "label": "Summary",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "assessment",
+   "fieldtype": "Table",
+   "label": "Assessment",
+   "options": "Dynamic Link"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Table",
+   "label": "Type",
+   "options": "Codable Concept"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-06-11 19:49:19.682392",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Stage",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

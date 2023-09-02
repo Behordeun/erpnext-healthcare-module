@@ -1,0 +1,261 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-05-10 13:48:03.987663",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "hospital_name",
+  "email",
+  "column_break_3",
+  "mobile",
+  "preferred_url",
+  "address_section",
+  "address",
+  "column_break_7",
+  "city",
+  "state",
+  "country",
+  "currency",
+  "company_details_section",
+  "number_of_branches",
+  "estimated_number_of_practitioners",
+  "column_break_15",
+  "estimated_number_of_patients",
+  "facilities_section",
+  "pharmacy",
+  "laboratory",
+  "accept_insurance",
+  "insurance_company",
+  "admin_information_section",
+  "first_name",
+  "last_name",
+  "admin_email",
+  "column_break_27",
+  "gender",
+  "date_of_birth",
+  "date_of_joining",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "hospital_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Hospital Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email",
+   "options": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Mobile",
+   "options": "Phone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "address_section",
+   "fieldtype": "Section Break",
+   "label": "Address"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City",
+   "reqd": 1
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State",
+   "reqd": 1
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company_details_section",
+   "fieldtype": "Section Break",
+   "label": "Company Details"
+  },
+  {
+   "fieldname": "number_of_branches",
+   "fieldtype": "Int",
+   "label": "Number of Branches",
+   "reqd": 1
+  },
+  {
+   "fieldname": "estimated_number_of_practitioners",
+   "fieldtype": "Int",
+   "label": "Estimated Number of Practitioners",
+   "reqd": 1
+  },
+  {
+   "fieldname": "estimated_number_of_patients",
+   "fieldtype": "Int",
+   "label": "Estimated Number of Patients",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "facilities_section",
+   "fieldtype": "Section Break",
+   "label": "Facilities"
+  },
+  {
+   "default": "0",
+   "fieldname": "pharmacy",
+   "fieldtype": "Check",
+   "label": "Pharmacy"
+  },
+  {
+   "default": "0",
+   "fieldname": "laboratory",
+   "fieldtype": "Check",
+   "label": "Laboratory"
+  },
+  {
+   "default": "0",
+   "fieldname": "accept_insurance",
+   "fieldtype": "Check",
+   "label": "Accept Insurance?"
+  },
+  {
+   "depends_on": "eval:doc.accept_insurance == 1;",
+   "fieldname": "insurance_company",
+   "fieldtype": "Data",
+   "label": "Insurance Company"
+  },
+  {
+   "fieldname": "preferred_url",
+   "fieldtype": "Data",
+   "label": "Preferred URL"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Organization Onboarding",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "admin_information_section",
+   "fieldtype": "Section Break",
+   "label": "Admin Information"
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First name"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last name"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "column_break_27",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "date_of_joining",
+   "fieldtype": "Date",
+   "label": "Date of Joining"
+  },
+  {
+   "fieldname": "admin_email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-05-16 23:23:13.734923",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Organization Onboarding",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Guest",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "hospital_name",
+ "track_changes": 1
+}

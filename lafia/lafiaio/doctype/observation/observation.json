@@ -1,0 +1,348 @@
+{
+ "actions": [],
+ "autoname": "format:{subject}_{fhir_serverid}",
+ "creation": "2021-06-02 16:28:54.364406",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "subject_type",
+  "subject",
+  "status",
+  "column_break_4",
+  "code",
+  "category",
+  "encounter",
+  "encounter_name",
+  "identifier_section",
+  "identifier",
+  "observation_details_section",
+  "performer",
+  "based_on",
+  "part_of",
+  "section_break_7",
+  "focus",
+  "effective",
+  "column_break_10",
+  "issued",
+  "value",
+  "section_break_15",
+  "data_absent_reason",
+  "interpretation",
+  "note_section",
+  "note",
+  "section_break_24",
+  "body_site",
+  "method",
+  "column_break_26",
+  "specimen",
+  "device",
+  "section_break_29",
+  "reference_range",
+  "related_resource_section",
+  "has_member",
+  "derived_from",
+  "component",
+  "section_break_35",
+  "fhir_serverid"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "bold": 1,
+   "description": "Reference Type Include: CarePlan, DeviceRequest, ImmunizationRecommendation, MedicationRequest, NutritionOrder, ServiceRequest",
+   "fieldname": "based_on",
+   "fieldtype": "Table",
+   "label": "Observation is based On",
+   "options": "Reference Table"
+  },
+  {
+   "bold": 1,
+   "description": "Reference type include : MedicationAdministration, MedicationDispense, MedicationStatement, Procedure, Immunization, ImagingStudy",
+   "fieldname": "part_of",
+   "fieldtype": "Table",
+   "label": "Observation is part of",
+   "options": "Reference Table"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Registered\nPreliminary\nFinal\nAmended",
+   "reqd": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Table MultiSelect",
+   "label": "Category",
+   "options": "Observation Multi"
+  },
+  {
+   "description": "Type of observation ",
+   "fieldname": "code",
+   "fieldtype": "Link",
+   "label": "Type",
+   "options": "Observation Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Dynamic Link",
+   "label": "Subject",
+   "options": "subject_type",
+   "reqd": 1
+  },
+  {
+   "description": "What the observation is about, when it is not about the subject of record",
+   "fieldname": "focus",
+   "fieldtype": "Data",
+   "label": "Focus"
+  },
+  {
+   "fieldname": "encounter",
+   "fieldtype": "Link",
+   "label": "Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "description": "Clinically relevant time/time-period for observation",
+   "fieldname": "effective",
+   "fieldtype": "Datetime",
+   "label": "Effective DateTime"
+  },
+  {
+   "fieldname": "issued",
+   "fieldtype": "Datetime",
+   "label": "Issued"
+  },
+  {
+   "bold": 1,
+   "description": "Who is responsible for the observation: e.g \nPractitioner\nPractitionerRole\nOrganization\nCareTeam\nPatient\nRelatedPerson",
+   "fieldname": "performer",
+   "fieldtype": "Table",
+   "label": "Performer",
+   "options": "Reference Table"
+  },
+  {
+   "description": "This is value of the observation",
+   "fieldname": "value",
+   "fieldtype": "Data",
+   "label": "Result"
+  },
+  {
+   "fieldname": "data_absent_reason",
+   "fieldtype": "Select",
+   "label": "Data Absent Reason",
+   "options": "Unknown\nAsked But Unknown\nTemporarily Unknown\nNot Asked\nAsked But Declined\nMasked\nNot Applicable\nUnsupported\nNot Performed\nNot Permitted\nAs Text\nError\nNot a Number (NaN)\nNegative Infinity (NINF)\nPositive Infinity (PINF)"
+  },
+  {
+   "fieldname": "interpretation",
+   "fieldtype": "Link",
+   "label": "Interpretation",
+   "options": "Observation Interpretation"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Table",
+   "label": "Note",
+   "options": "Annotation"
+  },
+  {
+   "fieldname": "body_site",
+   "fieldtype": "Link",
+   "label": "Body Site",
+   "options": "Body Site Code"
+  },
+  {
+   "fieldname": "method",
+   "fieldtype": "Link",
+   "label": "Method",
+   "options": "Observation Method"
+  },
+  {
+   "fieldname": "specimen",
+   "fieldtype": "Link",
+   "label": "Specimen",
+   "options": "Specimen"
+  },
+  {
+   "description": "Device\nDeviceMetric",
+   "fieldname": "device",
+   "fieldtype": "Link",
+   "label": "Device",
+   "options": "Device"
+  },
+  {
+   "fieldname": "reference_range",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Reference Range",
+   "options": "Reference Range"
+  },
+  {
+   "description": "Observation\nQuestionnaireResponse\nMolecularSequence",
+   "fieldname": "has_member",
+   "fieldtype": "Table",
+   "label": "Member",
+   "options": "Reference Table"
+  },
+  {
+   "description": "DocumentReference\nImagingStudy\nMedia\nQuestionnaireResponse\nObservation\nMolecularSequence",
+   "fieldname": "derived_from",
+   "fieldtype": "Table",
+   "label": "Derived From",
+   "options": "Reference Table"
+  },
+  {
+   "fieldname": "component",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Component",
+   "options": "Component"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "observation_details_section",
+   "fieldtype": "Section Break",
+   "label": "Observation Details"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Patient\nGroup\nDevice\nLocation",
+   "fieldname": "subject_type",
+   "fieldtype": "Link",
+   "label": "Subject Type",
+   "options": "DocType",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "identifier_section",
+   "fieldtype": "Section Break",
+   "label": "Identifier"
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_29",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_24",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_35",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "label": "Fhir ServerID",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "encounter.title",
+   "fieldname": "encounter_name",
+   "fieldtype": "Data",
+   "label": "Encounter name",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "note_section",
+   "fieldtype": "Section Break",
+   "label": "Note"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "related_resource_section",
+   "fieldtype": "Section Break",
+   "label": "Related Resource"
+  }
+ ],
+ "links": [],
+ "modified": "2022-11-20 21:09:11.711394",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Observation",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Nursing User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

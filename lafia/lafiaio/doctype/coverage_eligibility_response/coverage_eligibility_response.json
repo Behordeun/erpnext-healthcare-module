@@ -1,0 +1,137 @@
+{
+ "actions": [],
+ "creation": "2021-06-07 14:06:57.195239",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "identifier",
+  "status",
+  "purpose",
+  "patient",
+  "serviced_date",
+  "serviced_period",
+  "creator",
+  "requestor",
+  "outcome",
+  "disposition",
+  "insurer",
+  "insurance",
+  "pre_authref",
+  "form",
+  "error"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "active\ncancelled\ndraft\nentered-in-error"
+  },
+  {
+   "fieldname": "purpose",
+   "fieldtype": "Select",
+   "label": "Purpose",
+   "options": "auth-requirements\nbenefits\ndiscovery\nvalidation"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient LafiaIO"
+  },
+  {
+   "fieldname": "serviced_date",
+   "fieldtype": "Data",
+   "label": "Serviced Date"
+  },
+  {
+   "fieldname": "serviced_period",
+   "fieldtype": "Table",
+   "label": "Serviced Period",
+   "options": "Period"
+  },
+  {
+   "fieldname": "creator",
+   "fieldtype": "Data",
+   "label": "Creator"
+  },
+  {
+   "description": "This leads to the following doctypes:\n- Practitioner\n- PractitionerRole\n- Organization",
+   "fieldname": "requestor",
+   "fieldtype": "Table",
+   "label": "Requestor",
+   "options": "Dynamic Link"
+  },
+  {
+   "fieldname": "outcome",
+   "fieldtype": "Select",
+   "label": "Outcome",
+   "options": "queued\ncomplete\nerror\npartial"
+  },
+  {
+   "fieldname": "disposition",
+   "fieldtype": "Data",
+   "label": "Disposition"
+  },
+  {
+   "fieldname": "insurer",
+   "fieldtype": "Link",
+   "label": "Insurer",
+   "options": "Organization"
+  },
+  {
+   "fieldname": "insurance",
+   "fieldtype": "Table",
+   "label": "Insurance",
+   "options": "Insurance Eligibility Response"
+  },
+  {
+   "fieldname": "pre_authref",
+   "fieldtype": "Data",
+   "label": "Pre AuthRef"
+  },
+  {
+   "fieldname": "form",
+   "fieldtype": "Table",
+   "label": "Form",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "error",
+   "fieldtype": "Table",
+   "label": "Error",
+   "options": "Error Child"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-11-30 23:50:58.314004",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Coverage Eligibility Response",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

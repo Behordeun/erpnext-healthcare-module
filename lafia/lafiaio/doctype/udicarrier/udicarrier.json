@@ -1,0 +1,60 @@
+{
+ "actions": [],
+ "creation": "2021-05-18 15:57:37.739092",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "deviceidentifier",
+  "issuer",
+  "jurisdiction",
+  "carrieraidc",
+  "carrierhrf",
+  "entrytype"
+ ],
+ "fields": [
+  {
+   "fieldname": "deviceidentifier",
+   "fieldtype": "Data",
+   "label": "deviceIdentifier"
+  },
+  {
+   "fieldname": "issuer",
+   "fieldtype": "Data",
+   "label": "issuer"
+  },
+  {
+   "fieldname": "jurisdiction",
+   "fieldtype": "Data",
+   "label": "jurisdiction"
+  },
+  {
+   "fieldname": "carrieraidc",
+   "fieldtype": "Float",
+   "label": "carrierAIDC"
+  },
+  {
+   "fieldname": "carrierhrf",
+   "fieldtype": "Data",
+   "label": "carrierHRF"
+  },
+  {
+   "fieldname": "entrytype",
+   "fieldtype": "Select",
+   "label": "entryType",
+   "options": "barcode  rfid  manual"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-06-11 19:49:24.244404",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "UdiCarrier",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

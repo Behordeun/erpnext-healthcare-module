@@ -1,0 +1,44 @@
+{
+ "actions": [],
+ "creation": "2021-06-09 16:44:17.378195",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "areaundercurve",
+  "lethaldose50",
+  "halflifeperiod"
+ ],
+ "fields": [
+  {
+   "fieldname": "areaundercurve",
+   "fieldtype": "Table",
+   "label": "areaUnderCurve",
+   "options": "Quantity"
+  },
+  {
+   "fieldname": "lethaldose50",
+   "fieldtype": "Table",
+   "label": "lethalDose50",
+   "options": "Quantity"
+  },
+  {
+   "fieldname": "halflifeperiod",
+   "fieldtype": "Table",
+   "label": "halfLifePeriod",
+   "options": "Duration"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-06-11 19:48:19.331518",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Kinetics Child",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

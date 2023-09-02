@@ -1,0 +1,64 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2023-01-10 13:05:05.775748",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_type",
+  "item",
+  "flag",
+  "date",
+  "deleted"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "item_type"
+  },
+  {
+   "fieldname": "flag",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Flag",
+   "options": "\nUnchanged\nChanged\nCancelled\nPrescribed\nCeased\nSuspended"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "deleted",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Deleted"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-01-10 13:05:05.775748",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "List Entry",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

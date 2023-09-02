@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "creation": "2021-06-16 14:52:16.140681",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "type",
+  "from_period",
+  "to_period",
+  "individual_type",
+  "individual",
+  "text"
+ ],
+ "fields": [
+  {
+   "description": "Role of participant in encounter",
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Participant Type",
+   "options": "Participant Type Code"
+  },
+  {
+   "default": "Healthcare Practitioner",
+   "fieldname": "individual_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Individual Type",
+   "options": "DocType"
+  },
+  {
+   "description": "Persons involved in the encounter other than the patient",
+   "fieldname": "individual",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "label": "Individual",
+   "options": "individual_type"
+  },
+  {
+   "fieldname": "text",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "description": "Period of time during the encounter that the participant participated",
+   "fieldname": "from_period",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "From Period"
+  },
+  {
+   "fieldname": "to_period",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "To Period"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2022-06-13 16:19:06.312441",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Encounter Participant Child",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

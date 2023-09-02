@@ -1,0 +1,37 @@
+{
+ "actions": [],
+ "creation": "2021-06-14 15:00:16.836800",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "additive_codeable_concept",
+  "additive_reference"
+ ],
+ "fields": [
+  {
+   "fieldname": "additive_codeable_concept",
+   "fieldtype": "Table",
+   "label": "Additive Codeable Concept",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "additive_reference",
+   "fieldtype": "Link",
+   "label": "Additive Reference",
+   "options": "Substance"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-07-10 12:07:10.465569",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Additive",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

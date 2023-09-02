@@ -1,0 +1,61 @@
+{
+ "actions": [],
+ "creation": "2021-06-04 14:57:14.508114",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sequence",
+  "type",
+  "date",
+  "procedure_reference",
+  "udi"
+ ],
+ "fields": [
+  {
+   "fieldname": "sequence",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Sequence "
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "Primary\nSecondary"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "procedure_reference",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Procedure Reference",
+   "options": "Procedure"
+  },
+  {
+   "fieldname": "udi",
+   "fieldtype": "Link",
+   "label": "Udi",
+   "options": "Device"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-06-27 16:41:18.911928",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Procedure Child",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,326 @@
+{
+ "actions": [],
+ "autoname": "format:CLI-LIO-{fhir_serverid}",
+ "creation": "2021-06-02 18:15:22.016587",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "subject_type",
+  "subject",
+  "encounter",
+  "encounter_name",
+  "column_break_5",
+  "status",
+  "statusreason",
+  "change",
+  "section_break_8",
+  "effectivedatetime",
+  "column_break_10",
+  "date",
+  "identifier_section",
+  "identifier",
+  "description_section",
+  "description",
+  "reference_section",
+  "performer",
+  "practitioner_name",
+  "column_break_19",
+  "previous",
+  "section_break_21",
+  "problem",
+  "investigation",
+  "protocol",
+  "finding",
+  "prognosis_section",
+  "prognosiscodeableconcept",
+  "prognosisreference",
+  "supportinginfo",
+  "note",
+  "summary_section",
+  "summary",
+  "section_break_29",
+  "fhir_serverid"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Preparation\nIn-progress\nNot-done\nOn-hold\nStopped\nCompleted\nEntered-in-error"
+  },
+  {
+   "fieldname": "statusreason",
+   "fieldtype": "Link",
+   "label": "Status Reason",
+   "options": "Clinical Impression Status Reason"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Long Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "label": "Subject",
+   "options": "subject_type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "encounter",
+   "fieldtype": "Link",
+   "label": "Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "description": "When the assessment was documented",
+   "fieldname": "date",
+   "fieldtype": "Datetime",
+   "label": "Date"
+  },
+  {
+   "description": "Reference to last assessment",
+   "fieldname": "previous",
+   "fieldtype": "Link",
+   "label": "Previous",
+   "options": "ClinicalImpression"
+  },
+  {
+   "description": "Relevant impressions of patient state",
+   "fieldname": "problem",
+   "fieldtype": "Table",
+   "label": "Problem",
+   "options": "Problem Table"
+  },
+  {
+   "fieldname": "investigation",
+   "fieldtype": "Table",
+   "label": "Investigation",
+   "options": "Investigation Table"
+  },
+  {
+   "fieldname": "protocol",
+   "fieldtype": "Data",
+   "label": "Protocol"
+  },
+  {
+   "fieldname": "summary",
+   "fieldtype": "Data",
+   "label": "Summary"
+  },
+  {
+   "fieldname": "finding",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Finding",
+   "options": "Finding"
+  },
+  {
+   "fieldname": "prognosiscodeableconcept",
+   "fieldtype": "Table MultiSelect",
+   "label": "PrognosisCodeableConcept",
+   "options": "Clinical Impression Prognosis Multi"
+  },
+  {
+   "fieldname": "prognosisreference",
+   "fieldtype": "Table MultiSelect",
+   "label": "PrognosisReference",
+   "options": "RiskAssessment Multi"
+  },
+  {
+   "fieldname": "supportinginfo",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": " Supporting Info",
+   "options": "Dynamic Link"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "note",
+   "options": "Annotation"
+  },
+  {
+   "fieldname": "subject_type",
+   "fieldtype": "Link",
+   "label": "Subject Type",
+   "options": "DocType"
+  },
+  {
+   "description": "Time of assessment",
+   "fieldname": "effectivedatetime",
+   "fieldtype": "Datetime",
+   "label": "Effective Date"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "label": "FHIR Serverid",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "encounter.title",
+   "fieldname": "encounter_name",
+   "fieldtype": "Data",
+   "label": "Encounter name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "identifier_section",
+   "fieldtype": "Section Break",
+   "label": "Identifier"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "description_section",
+   "fieldtype": "Section Break",
+   "label": "Description"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "description": "The clinician performing the assessment",
+   "fieldname": "performer",
+   "fieldtype": "Link",
+   "label": "Performer",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "summary_section",
+   "fieldtype": "Section Break",
+   "label": "Summary"
+  },
+  {
+   "fieldname": "section_break_29",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "performer.practitioner_name",
+   "fieldname": "practitioner_name",
+   "fieldtype": "Data",
+   "label": "Practitioner name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_21",
+   "fieldtype": "Section Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "prognosis_section",
+   "fieldtype": "Section Break",
+   "label": "Prognosis"
+  },
+  {
+   "fieldname": "change",
+   "fieldtype": "Select",
+   "label": "Change",
+   "options": "\nWorsening\nImproving\nNo-change"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-11-14 15:59:58.587996",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "ClinicalImpression",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Nursing User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

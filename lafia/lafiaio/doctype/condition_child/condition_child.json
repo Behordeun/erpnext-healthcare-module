@@ -1,0 +1,72 @@
+{
+ "actions": [],
+ "creation": "2021-06-01 15:21:08.135002",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "code",
+  "outcome",
+  "contributed_to_death",
+  "onset_age",
+  "onset_range",
+  "onset_period",
+  "onset_string"
+ ],
+ "fields": [
+  {
+   "fieldname": "code",
+   "fieldtype": "Table",
+   "label": "Code",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "outcome",
+   "fieldtype": "Table",
+   "label": "Outcome",
+   "options": "Codable Concept"
+  },
+  {
+   "default": "0",
+   "fieldname": "contributed_to_death",
+   "fieldtype": "Check",
+   "label": "Contributed to Death",
+   "options": "True\nFalse"
+  },
+  {
+   "fieldname": "onset_age",
+   "fieldtype": "Table",
+   "label": "Onset Age",
+   "options": "Coding"
+  },
+  {
+   "fieldname": "onset_range",
+   "fieldtype": "Table",
+   "label": "Onset Range",
+   "options": "Range"
+  },
+  {
+   "fieldname": "onset_period",
+   "fieldtype": "Table",
+   "label": "Onset Period",
+   "options": "Period"
+  },
+  {
+   "fieldname": "onset_string",
+   "fieldtype": "Data",
+   "label": "Onset String"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-06-11 19:49:16.543233",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Condition Child",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,165 @@
+{
+ "actions": [],
+ "autoname": "format:CTM-LIO-{fhir_serverid}",
+ "creation": "2021-05-18 15:18:50.407605",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "identifier",
+  "section_break_2",
+  "status",
+  "category",
+  "name1",
+  "subject_type",
+  "subject",
+  "column_break_8",
+  "encounter",
+  "managingorganization",
+  "reasoncode",
+  "reason_reference",
+  "section_break_13",
+  "period",
+  "column_break_15",
+  "note",
+  "section_break_16",
+  "telecom",
+  "participant",
+  "fhir_serverid"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "proposed\nactive\nsuspended\ninactive\nentered-in-error"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Table MultiSelect",
+   "label": "Category",
+   "options": "CareTeam Category Multi"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "period",
+   "fieldtype": "Table",
+   "label": "Period",
+   "options": "Period"
+  },
+  {
+   "fieldname": "reasoncode",
+   "fieldtype": "Table MultiSelect",
+   "label": "ReasonCode",
+   "options": "Clinical Findings Multi"
+  },
+  {
+   "fieldname": "managingorganization",
+   "fieldtype": "Table MultiSelect",
+   "label": "ManagingOrganization",
+   "options": "Organization Multi"
+  },
+  {
+   "fieldname": "telecom",
+   "fieldtype": "Table",
+   "label": "Telecom",
+   "options": "Contact Point"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Table",
+   "label": "Note",
+   "options": "Annotation"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Dynamic Link",
+   "label": "Subject",
+   "options": "subject_type"
+  },
+  {
+   "fieldname": "encounter",
+   "fieldtype": "Link",
+   "label": "Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "fieldname": "participant",
+   "fieldtype": "Table",
+   "label": "Participant",
+   "options": "Participant Table"
+  },
+  {
+   "fieldname": "subject_type",
+   "fieldtype": "Link",
+   "label": "Subject Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "reason_reference",
+   "fieldtype": "Table MultiSelect",
+   "label": "Reason Reference",
+   "options": "Condition Multi"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "label": "FHIR Serverid"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-11-15 13:21:40.231817",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "CareTeam",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

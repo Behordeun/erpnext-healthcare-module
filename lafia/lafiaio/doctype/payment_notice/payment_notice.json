@@ -1,0 +1,125 @@
+{
+ "actions": [],
+ "creation": "2021-06-08 11:37:14.413049",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "identifier",
+  "status",
+  "request",
+  "response",
+  "created",
+  "provider",
+  "payment",
+  "payment_date",
+  "payee",
+  "recipient",
+  "amount",
+  "payment_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "active\ncancelled\ndraft\nentered-in-error",
+   "reqd": 1
+  },
+  {
+   "fieldname": "request",
+   "fieldtype": "Data",
+   "label": "Request"
+  },
+  {
+   "fieldname": "response",
+   "fieldtype": "Data",
+   "label": "Response"
+  },
+  {
+   "fieldname": "created",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Created",
+   "reqd": 1
+  },
+  {
+   "description": "Practitioner\nPractitionerRole\nOrganization",
+   "fieldname": "provider",
+   "fieldtype": "Table",
+   "label": "Provider",
+   "options": "Dynamic Link"
+  },
+  {
+   "fieldname": "payment",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Payment",
+   "options": "Payment Reconciliation FHIR",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_date",
+   "fieldtype": "Data",
+   "label": "Payment Date"
+  },
+  {
+   "description": "Practitioner\nPractitionerRole\nOrganization",
+   "fieldname": "payee",
+   "fieldtype": "Table",
+   "label": "Payee",
+   "options": "Dynamic Link"
+  },
+  {
+   "fieldname": "recipient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Recipient",
+   "options": "Organization",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Data",
+   "label": "Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_status",
+   "fieldtype": "Table",
+   "label": "Payment Status",
+   "options": "Codable Concept"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-11-30 23:56:28.313637",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Payment Notice",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

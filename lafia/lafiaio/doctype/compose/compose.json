@@ -1,0 +1,50 @@
+{
+ "actions": [],
+ "creation": "2021-06-14 15:53:34.567524",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "locked_date",
+  "inactive",
+  "include",
+  "exclude"
+ ],
+ "fields": [
+  {
+   "fieldname": "locked_date",
+   "fieldtype": "Data",
+   "label": "Locked Date"
+  },
+  {
+   "fieldname": "inactive",
+   "fieldtype": "Data",
+   "label": "Inactive"
+  },
+  {
+   "fieldname": "include",
+   "fieldtype": "Table",
+   "label": "Include",
+   "options": "Include",
+   "reqd": 1
+  },
+  {
+   "fieldname": "exclude",
+   "fieldtype": "Link",
+   "label": "Exclude",
+   "options": "Value Set"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-07-10 12:07:14.663687",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Compose",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

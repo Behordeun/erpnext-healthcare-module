@@ -1,0 +1,265 @@
+{
+ "actions": [],
+ "autoname": "format:SPE-{fhir_serverid}",
+ "creation": "2021-06-02 15:22:46.633989",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "subject_type",
+  "subject",
+  "status",
+  "type",
+  "column_break_3",
+  "role",
+  "combined",
+  "received_time",
+  "identifier_section",
+  "identifier",
+  "parent_specimen_section",
+  "parent1",
+  "service_request_section",
+  "request",
+  "feature",
+  "collection_section",
+  "collection",
+  "accession_identifier",
+  "processing_section",
+  "processing",
+  "section_break_21",
+  "container",
+  "section_break_23",
+  "condition",
+  "column_break_25",
+  "note",
+  "section_break_27",
+  "fhir_serverid"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "accession_identifier",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Accession Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Available\nUnavailable\nUnsatisfactory\nEntered-in-error",
+   "reqd": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "label": "Type",
+   "options": "Specimen Type"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Dynamic Link",
+   "label": "Subject",
+   "options": "subject_type"
+  },
+  {
+   "description": "The time when specimen is received by the testing laboratory",
+   "fieldname": "received_time",
+   "fieldtype": "Datetime",
+   "label": "Received Time"
+  },
+  {
+   "fieldname": "parent1",
+   "fieldtype": "Table",
+   "label": "Parent",
+   "options": "Specimen Multi"
+  },
+  {
+   "fieldname": "request",
+   "fieldtype": "Table",
+   "label": "Request",
+   "options": "Service Request Multi"
+  },
+  {
+   "fieldname": "processing",
+   "fieldtype": "Table",
+   "label": "Processing",
+   "options": "Specimen Processing"
+  },
+  {
+   "fieldname": "container",
+   "fieldtype": "Table",
+   "label": "Container",
+   "options": "Specimen Container"
+  },
+  {
+   "fieldname": "condition",
+   "fieldtype": "Table MultiSelect",
+   "label": "Condition",
+   "options": "Specimen Condition Multi"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Small Text",
+   "label": "Note"
+  },
+  {
+   "description": "Patient\nGroup\nDevice\nSubstance\nLocation",
+   "fieldname": "subject_type",
+   "fieldtype": "Link",
+   "label": "Subject Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "identifier_section",
+   "fieldtype": "Section Break",
+   "label": "Identifier"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "parent_specimen_section",
+   "fieldtype": "Section Break",
+   "label": "Parent Specimen"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "service_request_section",
+   "fieldtype": "Section Break",
+   "label": "Service Request"
+  },
+  {
+   "fieldname": "role",
+   "fieldtype": "Table MultiSelect",
+   "label": "Role",
+   "options": "Specimen Role Multi"
+  },
+  {
+   "fieldname": "combined",
+   "fieldtype": "Select",
+   "label": "Combined",
+   "options": "Grouped\nPooled"
+  },
+  {
+   "fieldname": "feature",
+   "fieldtype": "Table",
+   "label": "Feature",
+   "options": "Specimen Feature"
+  },
+  {
+   "collapsible": 1,
+   "description": "Collection details",
+   "fieldname": "collection_section",
+   "fieldtype": "Section Break",
+   "label": "Collection"
+  },
+  {
+   "collapsible": 1,
+   "description": "Processing and processing step details",
+   "fieldname": "processing_section",
+   "fieldtype": "Section Break",
+   "label": "Processing"
+  },
+  {
+   "fieldname": "section_break_21",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_23",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_27",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "label": "Fhir ServerID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "collection",
+   "fieldtype": "Table",
+   "label": "Collection",
+   "options": "Specimen Collection"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-11-20 22:39:23.953414",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Specimen",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Nursing User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

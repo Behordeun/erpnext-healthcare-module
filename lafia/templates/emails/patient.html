@@ -1,0 +1,17 @@
+<p>
+	{{_("Hello")}} {{ first_name }}{% if last_name %} {{ last_name}}{% endif %},
+</p>
+<p>{{_("A new account has been created for you on Lafia")}}.</p>
+<p>{{_("Your login id is")}}: <b>{{ user }}</b>
+<p>{{_("Your password is")}}: <b>{{ password }}</b>
+<p>{{_("Click on the link below to open the Lafia mobile app")}}.</p>
+
+<p style="margin: 15px 0px;">
+	<a href="{{ link }}" rel="nofollow" class="btn btn-primary">{{ _("Open App") }}</a>
+</p>
+<br>
+<p style="margin-top: 15px">
+	{{_("Thanks")}},<br>
+	{{ created_by }}
+</p>
+

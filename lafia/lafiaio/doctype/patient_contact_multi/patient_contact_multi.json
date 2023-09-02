@@ -1,0 +1,31 @@
+{
+ "actions": [],
+ "creation": "2021-07-18 02:36:28.856991",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_contact"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient_contact",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient Contact",
+   "options": "PatientContact"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-07-18 03:26:23.541311",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Patient Contact Multi",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

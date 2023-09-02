@@ -1,0 +1,122 @@
+{
+ "actions": [],
+ "creation": "2021-06-03 18:34:37.951660",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "uid",
+  "performer_type",
+  "performer",
+  "fuction",
+  "number",
+  "modality",
+  "body_site",
+  "column_break_8",
+  "description",
+  "number_of_instances",
+  "endpoint",
+  "laterality",
+  "specimen",
+  "started"
+ ],
+ "fields": [
+  {
+   "fieldname": "uid",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Uid",
+   "reqd": 1
+  },
+  {
+   "fieldname": "number",
+   "fieldtype": "Int",
+   "label": "Number"
+  },
+  {
+   "fieldname": "modality",
+   "fieldtype": "Link",
+   "label": "Modality",
+   "options": "Study Modality",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description"
+  },
+  {
+   "fieldname": "number_of_instances",
+   "fieldtype": "Int",
+   "label": "Number Of Instances"
+  },
+  {
+   "fieldname": "endpoint",
+   "fieldtype": "Link",
+   "label": "Endpoint",
+   "options": "Endpoint"
+  },
+  {
+   "fieldname": "body_site",
+   "fieldtype": "Link",
+   "label": "Body Site",
+   "options": "Body Site Code"
+  },
+  {
+   "fieldname": "laterality",
+   "fieldtype": "Select",
+   "label": "Laterality",
+   "options": "Unilateral Left\nUnilateral Right\nBilateral"
+  },
+  {
+   "fieldname": "specimen",
+   "fieldtype": "Link",
+   "label": "Specimen",
+   "options": "Specimen"
+  },
+  {
+   "fieldname": "started",
+   "fieldtype": "Datetime",
+   "label": "Started"
+  },
+  {
+   "fieldname": "performer_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Performer Type",
+   "options": "DocType"
+  },
+  {
+   "description": "Who performed the series",
+   "fieldname": "performer",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "label": "Performer",
+   "options": "performer_type"
+  },
+  {
+   "fieldname": "fuction",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Fuction",
+   "options": "Consultant\nVerifier\nPerformer\nSecondary Performer\nReferrer"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-11-20 19:35:39.053880",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Series",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

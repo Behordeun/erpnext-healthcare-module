@@ -1,0 +1,64 @@
+{
+ "actions": [],
+ "creation": "2021-05-18 15:44:45.814709",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "author_ref",
+  "author",
+  "column_break_3",
+  "time",
+  "section_break_5",
+  "text"
+ ],
+ "fields": [
+  {
+   "fieldname": "author",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "label": "Author",
+   "options": "author_ref"
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Time"
+  },
+  {
+   "fieldname": "text",
+   "fieldtype": "Long Text",
+   "in_list_view": 1,
+   "label": "Text"
+  },
+  {
+   "fieldname": "author_ref",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Author Ref",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-09-12 23:13:53.698466",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Annotation",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

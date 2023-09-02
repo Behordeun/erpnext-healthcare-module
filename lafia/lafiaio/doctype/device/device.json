@@ -1,0 +1,257 @@
+{
+ "actions": [],
+ "creation": "2021-05-18 16:17:33.185671",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "identifier",
+  "definition",
+  "udicarrier",
+  "status",
+  "statusreason",
+  "distinctidentifier",
+  "manufacturer",
+  "manufacturedate",
+  "expirationdate",
+  "lotnumber",
+  "serialnumber",
+  "devicename",
+  "modelnumber",
+  "partnumber",
+  "type",
+  "specialization",
+  "version",
+  "property",
+  "patient",
+  "owner",
+  "contact",
+  "location",
+  "url",
+  "note",
+  "safety",
+  "parent1"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "definition",
+   "fieldtype": "Link",
+   "label": "definition",
+   "options": "DeviceDefinition"
+  },
+  {
+   "fieldname": "udicarrier",
+   "fieldtype": "Table",
+   "label": "udiCarrier",
+   "options": "UdiCarrier"
+  },
+  {
+   "default": "0",
+   "fieldname": "status",
+   "fieldtype": "Check",
+   "label": "status",
+   "options": "active  inactive  entered-in-error  unknown"
+  },
+  {
+   "fieldname": "statusreason",
+   "fieldtype": "Text",
+   "label": "statusReason",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "distinctidentifier",
+   "fieldtype": "Data",
+   "label": "distinctIdentifier"
+  },
+  {
+   "fieldname": "manufacturer",
+   "fieldtype": "Data",
+   "label": "manufacturer"
+  },
+  {
+   "fieldname": "manufacturedate",
+   "fieldtype": "Datetime",
+   "label": "manufactureDate"
+  },
+  {
+   "fieldname": "expirationdate",
+   "fieldtype": "Datetime",
+   "label": "expirationDate"
+  },
+  {
+   "fieldname": "lotnumber",
+   "fieldtype": "Data",
+   "label": "lotNumber"
+  },
+  {
+   "fieldname": "serialnumber",
+   "fieldtype": "Data",
+   "label": "serialNumber"
+  },
+  {
+   "fieldname": "devicename",
+   "fieldtype": "Table",
+   "label": "deviceName",
+   "options": "Device Name"
+  },
+  {
+   "fieldname": "modelnumber",
+   "fieldtype": "Data",
+   "label": "modelNumber"
+  },
+  {
+   "fieldname": "partnumber",
+   "fieldtype": "Data",
+   "label": "partNumber"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Data",
+   "label": "type"
+  },
+  {
+   "fieldname": "specialization",
+   "fieldtype": "Table",
+   "label": "specialization",
+   "options": "specialization"
+  },
+  {
+   "fieldname": "version",
+   "fieldtype": "Table",
+   "label": "version",
+   "options": "version 1"
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Table",
+   "label": "property",
+   "options": "property"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "patient",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "owner",
+   "fieldtype": "Link",
+   "label": "owner",
+   "options": "Organization"
+  },
+  {
+   "fieldname": "contact",
+   "fieldtype": "Table",
+   "label": "contact",
+   "options": "Contact Point"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "label": "location",
+   "options": "Locations"
+  },
+  {
+   "fieldname": "url",
+   "fieldtype": "Data",
+   "label": "url"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Table",
+   "label": "note",
+   "options": "Annotation"
+  },
+  {
+   "fieldname": "safety",
+   "fieldtype": "Table",
+   "label": "safety",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "parent1",
+   "fieldtype": "Link",
+   "label": "parent",
+   "options": "Device"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-11-20 21:05:37.350039",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Device",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Nursing User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

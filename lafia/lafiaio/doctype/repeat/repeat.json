@@ -1,0 +1,130 @@
+{
+ "actions": [],
+ "creation": "2021-06-02 14:26:36.790548",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "bounds_duration",
+  "bounds_range",
+  "bounds_period",
+  "count",
+  "count_max",
+  "duration",
+  "duration_max",
+  "duration_unit",
+  "frequency",
+  "frequency_max",
+  "period",
+  "period_max",
+  "period_unit",
+  "day_of_week",
+  "time_of_day",
+  "when",
+  "offset"
+ ],
+ "fields": [
+  {
+   "fieldname": "bounds_duration",
+   "fieldtype": "Data",
+   "label": "Bounds Duration"
+  },
+  {
+   "fieldname": "bounds_range",
+   "fieldtype": "Table",
+   "label": "Bounds Range",
+   "options": "Range"
+  },
+  {
+   "fieldname": "bounds_period",
+   "fieldtype": "Table",
+   "label": "Bounds Period",
+   "options": "Period"
+  },
+  {
+   "fieldname": "count",
+   "fieldtype": "Data",
+   "label": "Count"
+  },
+  {
+   "fieldname": "count_max",
+   "fieldtype": "Data",
+   "label": "Count Max"
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Data",
+   "label": "Duration"
+  },
+  {
+   "fieldname": "duration_max",
+   "fieldtype": "Data",
+   "label": "Duration Max"
+  },
+  {
+   "fieldname": "duration_unit",
+   "fieldtype": "Select",
+   "label": "Duration Unit",
+   "options": "s\nmin\nh\nd\nwk\nmo\na"
+  },
+  {
+   "fieldname": "frequency",
+   "fieldtype": "Data",
+   "label": "Frequency"
+  },
+  {
+   "fieldname": "frequency_max",
+   "fieldtype": "Data",
+   "label": "Frequency Max"
+  },
+  {
+   "fieldname": "period",
+   "fieldtype": "Data",
+   "label": "Period"
+  },
+  {
+   "fieldname": "period_max",
+   "fieldtype": "Data",
+   "label": "Period Max"
+  },
+  {
+   "fieldname": "period_unit",
+   "fieldtype": "Select",
+   "label": "Period Unit",
+   "options": "s\nmin\nh\nd\nwk\nmo\na"
+  },
+  {
+   "fieldname": "day_of_week",
+   "fieldtype": "Select",
+   "label": "Day of Week",
+   "options": "mon\ntue\nwed\nthu\nfri\nsat\nsun"
+  },
+  {
+   "fieldname": "time_of_day",
+   "fieldtype": "Data",
+   "label": "Time of Day"
+  },
+  {
+   "fieldname": "when",
+   "fieldtype": "Data",
+   "label": "When"
+  },
+  {
+   "fieldname": "offset",
+   "fieldtype": "Data",
+   "label": "Offset"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-06-11 19:49:09.682686",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Repeat",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,210 @@
+{
+ "actions": [],
+ "creation": "2021-06-01 18:26:40.873898",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "identifier",
+  "version",
+  "name1",
+  "title",
+  "subtitle",
+  "status",
+  "experimental",
+  "subject",
+  "date",
+  "publisher",
+  "contact",
+  "description",
+  "usage_context",
+  "jurisdiction",
+  "purpose",
+  "usage",
+  "copyright",
+  "approval_date",
+  "last_review_date",
+  "effective_period",
+  "topic",
+  "author",
+  "editor",
+  "reviewer",
+  "endorser",
+  "related_artifact",
+  "library",
+  "goal",
+  "action"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "version",
+   "fieldtype": "Data",
+   "label": "Version"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "fieldname": "subtitle",
+   "fieldtype": "Table",
+   "label": "Subtitle",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "draft\nactive\nretired\nunknown"
+  },
+  {
+   "default": "0",
+   "fieldname": "experimental",
+   "fieldtype": "Check",
+   "label": "Experimental"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Link",
+   "label": "Subject",
+   "options": "Subject"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Data",
+   "label": "Date"
+  },
+  {
+   "fieldname": "publisher",
+   "fieldtype": "Data",
+   "label": "Publisher"
+  },
+  {
+   "fieldname": "contact",
+   "fieldtype": "Table",
+   "label": "Contact",
+   "options": "Contact Table"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description"
+  },
+  {
+   "fieldname": "usage_context",
+   "fieldtype": "Data",
+   "label": "Usage Context"
+  },
+  {
+   "fieldname": "jurisdiction",
+   "fieldtype": "Table",
+   "label": "Jurisdiction",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "purpose",
+   "fieldtype": "Data",
+   "label": "Purpose"
+  },
+  {
+   "fieldname": "usage",
+   "fieldtype": "Data",
+   "label": "Usage"
+  },
+  {
+   "fieldname": "copyright",
+   "fieldtype": "Data",
+   "label": "Copyright"
+  },
+  {
+   "fieldname": "approval_date",
+   "fieldtype": "Data",
+   "label": "Approval Date"
+  },
+  {
+   "fieldname": "last_review_date",
+   "fieldtype": "Data",
+   "label": "Last Review Date"
+  },
+  {
+   "fieldname": "effective_period",
+   "fieldtype": "Table",
+   "label": "Effective Period",
+   "options": "Period"
+  },
+  {
+   "fieldname": "topic",
+   "fieldtype": "Table",
+   "label": "Topic",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "author",
+   "fieldtype": "Table",
+   "label": "Author",
+   "options": "Contact Table"
+  },
+  {
+   "fieldname": "editor",
+   "fieldtype": "Table",
+   "label": "Editor",
+   "options": "Contact Table"
+  },
+  {
+   "fieldname": "reviewer",
+   "fieldtype": "Table",
+   "label": "Reviewer",
+   "options": "Contact Table"
+  },
+  {
+   "fieldname": "endorser",
+   "fieldtype": "Table",
+   "label": "Endorser",
+   "options": "Contact Table"
+  },
+  {
+   "fieldname": "related_artifact",
+   "fieldtype": "Data",
+   "label": "Related Artifact"
+  },
+  {
+   "fieldname": "library",
+   "fieldtype": "Data",
+   "label": "Library"
+  },
+  {
+   "fieldname": "goal",
+   "fieldtype": "Data",
+   "label": "Goal"
+  },
+  {
+   "fieldname": "action",
+   "fieldtype": "Data",
+   "label": "Action"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-06-11 19:49:12.961786",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Plan Definition",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

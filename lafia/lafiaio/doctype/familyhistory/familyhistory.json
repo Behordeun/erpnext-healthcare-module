@@ -1,0 +1,274 @@
+{
+ "actions": [],
+ "autoname": "format:FMH-LIO-{fhir_serverid}",
+ "creation": "2021-06-01 12:55:10.949614",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "identifier",
+  "section_break_2",
+  "instantiates_canonical",
+  "instantiates_uri",
+  "status",
+  "column_break_6",
+  "absent_reason",
+  "patient",
+  "date",
+  "section_break_9",
+  "member_name",
+  "relationship",
+  "sex",
+  "born_section",
+  "born_period",
+  "born_date",
+  "born_string",
+  "age_section",
+  "age",
+  "age_range",
+  "age_string",
+  "section_break_22",
+  "estimated_age",
+  "deceased_section",
+  "deceased_boolean",
+  "deceased_age",
+  "deceased_range",
+  "column_break_19",
+  "deceased_date",
+  "deceased_string",
+  "section_break_31",
+  "reason_code",
+  "reason_reference_type",
+  "reason_reference",
+  "note",
+  "condition",
+  "fhir_serverid"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "partial\ncompleted\nentered-in-error\nhealth-unknown",
+   "reqd": 1
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient LafiaIO",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Data",
+   "label": "Date"
+  },
+  {
+   "fieldname": "relationship",
+   "fieldtype": "Link",
+   "label": "Relationship",
+   "options": "Relationship Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sex",
+   "fieldtype": "Link",
+   "label": "Sex",
+   "options": "FamilyHistory Sex Code"
+  },
+  {
+   "fieldname": "born_string",
+   "fieldtype": "Data",
+   "label": "Born String"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fieldname": "age_range",
+   "fieldtype": "Link",
+   "label": "Age Range",
+   "options": "Range"
+  },
+  {
+   "fieldname": "age_string",
+   "fieldtype": "Data",
+   "label": "Age String"
+  },
+  {
+   "default": "0",
+   "fieldname": "estimated_age",
+   "fieldtype": "Check",
+   "label": "Estimated Age",
+   "options": "true\nfalse"
+  },
+  {
+   "fieldname": "deceased_boolean",
+   "fieldtype": "Data",
+   "label": "Deceased Boolean"
+  },
+  {
+   "fieldname": "deceased_age",
+   "fieldtype": "Data",
+   "label": "Deceased Age"
+  },
+  {
+   "fieldname": "deceased_range",
+   "fieldtype": "Table",
+   "label": "Deceased Range",
+   "options": "Range"
+  },
+  {
+   "fieldname": "deceased_date",
+   "fieldtype": "Data",
+   "label": "Deceased Date"
+  },
+  {
+   "fieldname": "deceased_string",
+   "fieldtype": "Data",
+   "label": "Deceased String"
+  },
+  {
+   "fieldname": "reason_code",
+   "fieldtype": "Table MultiSelect",
+   "label": "Reason Code",
+   "options": "FamilyHistory Reason Code Multi"
+  },
+  {
+   "description": "This links to the following Doctypes:\nCondition\nObservation\nAllergyIntolerance\nQuestionnaireResponse\nDiagnosticReport\nDocumentReference",
+   "fieldname": "reason_reference",
+   "fieldtype": "Dynamic Link",
+   "label": "Reason Reference",
+   "options": "reason_reference_type"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Table",
+   "label": "Note",
+   "options": "Annotation"
+  },
+  {
+   "fieldname": "condition",
+   "fieldtype": "Table",
+   "label": "Condition",
+   "options": "Condition Table"
+  },
+  {
+   "fieldname": "instantiates_canonical",
+   "fieldtype": "Data",
+   "label": "Instantiates Canonical"
+  },
+  {
+   "fieldname": "instantiates_uri",
+   "fieldtype": "Data",
+   "label": "Instantiates Uri"
+  },
+  {
+   "fieldname": "absent_reason",
+   "fieldtype": "Link",
+   "label": "Data Absent Reason",
+   "options": "FamilyHistory Absent Reason"
+  },
+  {
+   "fieldname": "born_section",
+   "fieldtype": "Section Break",
+   "label": "Born"
+  },
+  {
+   "fieldname": "born_period",
+   "fieldtype": "Table",
+   "label": "Born Period",
+   "options": "Period"
+  },
+  {
+   "fieldname": "born_date",
+   "fieldtype": "Data",
+   "label": "Born Date"
+  },
+  {
+   "fieldname": "age_section",
+   "fieldtype": "Section Break",
+   "label": "Age"
+  },
+  {
+   "fieldname": "reason_reference_type",
+   "fieldtype": "Link",
+   "label": "Reason Reference Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "deceased_section",
+   "fieldtype": "Section Break",
+   "label": "Deceased"
+  },
+  {
+   "fieldname": "section_break_31",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "member_name",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "label": "FHIR Serverid"
+  },
+  {
+   "fieldname": "section_break_22",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-11-30 23:50:52.874773",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "FamilyHistory",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

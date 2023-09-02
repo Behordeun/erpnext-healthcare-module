@@ -1,0 +1,31 @@
+{
+ "actions": [],
+ "creation": "2021-06-07 17:31:38.723838",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "value"
+ ],
+ "fields": [
+  {
+   "fieldname": "value",
+   "fieldtype": "Table",
+   "label": "Value",
+   "options": "Answer Value",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-11-30 22:53:48.877151",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Answer",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

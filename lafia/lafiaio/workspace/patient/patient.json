@@ -1,0 +1,62 @@
+{
+ "category": "Modules",
+ "charts": [],
+ "creation": "2021-07-07 14:57:02.625040",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends": "Home",
+ "extends_another_page": 0,
+ "hide_custom": 0,
+ "icon": "hospital",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "Patient",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Add new Patient",
+   "link_to": "Patient_LafiaIO",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Schedule Appointments",
+   "link_to": "Appointment_FHIR",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Create an Encounter",
+   "link_to": "Encounter",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2021-07-08 12:45:02.870938",
+ "modified_by": "v.emas@parallelscore.com",
+ "module": "LafiaIO",
+ "name": "Patient",
+ "onboarding": "Patient",
+ "owner": "v.emas@parallelscore.com",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "shortcuts": [
+  {
+   "doc_view": "List",
+   "label": "Patient List",
+   "link_to": "Patient_LafiaIO",
+   "type": "DocType"
+  }
+ ]
+}

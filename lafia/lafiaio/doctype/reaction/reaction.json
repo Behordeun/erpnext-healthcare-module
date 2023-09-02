@@ -1,0 +1,74 @@
+{
+ "actions": [],
+ "creation": "2021-05-21 11:34:49.552290",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "substance",
+  "manifestation",
+  "severity",
+  "column_break_4",
+  "exposureroute",
+  "onset",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "substance",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Substance",
+   "options": "Substance Code"
+  },
+  {
+   "fieldname": "manifestation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Manifestation",
+   "options": "Observation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "description"
+  },
+  {
+   "fieldname": "onset",
+   "fieldtype": "Datetime",
+   "label": "Date"
+  },
+  {
+   "fieldname": "severity",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Severity",
+   "options": "Mild\nModerate\nSevere"
+  },
+  {
+   "fieldname": "exposureroute",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Exposure Route",
+   "options": "Exposure Route"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-11-08 23:30:54.873158",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Reaction",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

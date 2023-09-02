@@ -1,0 +1,256 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:VER-{fhir_serverid}",
+ "creation": "2023-01-05 14:59:25.124515",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "target_resource",
+  "target",
+  "target_location",
+  "need",
+  "column_break_6",
+  "status",
+  "status_date",
+  "validation_section",
+  "validation_type",
+  "validation_process",
+  "last_performed",
+  "column_break_11",
+  "unit",
+  "frequency",
+  "next_scheduled",
+  "failure_action",
+  "primary_source_section",
+  "primary_source",
+  "attestation_section",
+  "attestation",
+  "validator_section",
+  "validator",
+  "section_break_22",
+  "fhir_serverid"
+ ],
+ "fields": [
+  {
+   "fieldname": "target_resource",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Target Resource",
+   "options": "DocType",
+   "reqd": 1
+  },
+  {
+   "fieldname": "target",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Target",
+   "options": "target_resource",
+   "reqd": 1
+  },
+  {
+   "fieldname": "need",
+   "fieldtype": "Select",
+   "label": "Need",
+   "options": "None\nInitial\nPeriodic"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Attested\nValidated\nIn-process\nReq-revalid\nVal-fail\nReval-fail",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status_date",
+   "fieldtype": "Datetime",
+   "label": "Status date"
+  },
+  {
+   "fieldname": "validation_type",
+   "fieldtype": "Select",
+   "label": "Validation Type",
+   "options": "Nothing\nPrimary\nMultiple"
+  },
+  {
+   "fieldname": "validation_process",
+   "fieldtype": "Table MultiSelect",
+   "label": "Validation Process",
+   "options": "Verification Process Multi"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": " Frequency of revalidation",
+   "fieldname": "frequency",
+   "fieldtype": "Data",
+   "label": "Frequency"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "validation_section",
+   "fieldtype": "Section Break",
+   "label": "Validation"
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Select",
+   "label": "Frequency Unit",
+   "options": "\ns\nmin\nh\nd\nwk\nmo\na - unit of time (UCUM)"
+  },
+  {
+   "description": " The date/time validation was last completed (including failed validations)",
+   "fieldname": "last_performed",
+   "fieldtype": "Datetime",
+   "label": "Last Performed"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "The date when target is next validated, if appropriate",
+   "fieldname": "next_scheduled",
+   "fieldtype": "Datetime",
+   "label": "Next Scheduled"
+  },
+  {
+   "fieldname": "failure_action",
+   "fieldtype": "Select",
+   "label": "Failure Action",
+   "options": "Fatal\nWarn\nRec-only\nNone"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "primary_source_section",
+   "fieldtype": "Section Break",
+   "label": "Primary Source"
+  },
+  {
+   "fieldname": "primary_source",
+   "fieldtype": "Table",
+   "label": "Primary Source",
+   "options": "Primary Source"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "attestation_section",
+   "fieldtype": "Section Break",
+   "label": "Attestation"
+  },
+  {
+   "fieldname": "attestation",
+   "fieldtype": "Table",
+   "label": "Attestation",
+   "options": "Verification Attestation"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "validator_section",
+   "fieldtype": "Section Break",
+   "label": "Validator"
+  },
+  {
+   "fieldname": "validator",
+   "fieldtype": "Table",
+   "label": "Validator",
+   "options": "Verification Validator"
+  },
+  {
+   "fieldname": "section_break_22",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Fhir ServerID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "target_location",
+   "fieldtype": "Data",
+   "label": "Target Location"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-01-13 00:24:47.503424",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Verification Result",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Nursing User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,75 @@
+{
+ "actions": [],
+ "creation": "2021-06-14 15:20:06.519757",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "category",
+  "range",
+  "context",
+  "applies_to",
+  "gender",
+  "age",
+  "gestational_age",
+  "condition"
+ ],
+ "fields": [
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "reference\ncritical\nabsolute"
+  },
+  {
+   "fieldname": "range",
+   "fieldtype": "Data",
+   "label": "Range"
+  },
+  {
+   "fieldname": "context",
+   "fieldtype": "Table",
+   "label": "Context",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "applies_to",
+   "fieldtype": "Table",
+   "label": "Applies To",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "male\nfemale\nother\nunknown"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fieldname": "gestational_age",
+   "fieldtype": "Data",
+   "label": "Gestational Age"
+  },
+  {
+   "fieldname": "condition",
+   "fieldtype": "Data",
+   "label": "Condition"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-07-10 12:07:07.601677",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Qualified Interval",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,277 @@
+{
+ "actions": [],
+ "autoname": "format:DIA-REP-{fhir_serverid}",
+ "creation": "2021-06-03 07:56:40.368018",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "encounter",
+  "encounter_name",
+  "column_break_4",
+  "code",
+  "status",
+  "category",
+  "period_section",
+  "start_date",
+  "end_date",
+  "column_break_10",
+  "issued",
+  "identifier_section",
+  "identifier",
+  "reference_section",
+  "basedon",
+  "performer",
+  "result_interpreter",
+  "specimen",
+  "result",
+  "study",
+  "supporting_info",
+  "media",
+  "section_break_24",
+  "note",
+  "conclusion",
+  "section_break_27",
+  "fhir_serverid"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "basedon",
+   "fieldtype": "Table",
+   "label": "Based On",
+   "options": "Reference Table"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Registered\nPartial\nPreliminary\nFinal",
+   "reqd": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Table MultiSelect",
+   "label": "Category",
+   "options": "Diagnostic Report Category Multi"
+  },
+  {
+   "description": "Name/Code for this diagnostic report",
+   "fieldname": "code",
+   "fieldtype": "Link",
+   "label": "Code",
+   "options": "Report Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "encounter",
+   "fieldtype": "Link",
+   "label": "Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "fetch_from": "encounter.title",
+   "fieldname": "encounter_name",
+   "fieldtype": "Data",
+   "label": "Encounter name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "description": "Clinically relevant time/time-period for report",
+   "fieldname": "period_section",
+   "fieldtype": "Section Break",
+   "label": "Period"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Datetime",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Datetime",
+   "label": "End date"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "identifier_section",
+   "fieldtype": "Section Break",
+   "label": "Identifier"
+  },
+  {
+   "description": "DateTime this version was made",
+   "fieldname": "issued",
+   "fieldtype": "Datetime",
+   "label": "Issued"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "performer",
+   "fieldtype": "Table",
+   "label": "Performer",
+   "options": "Reference Table"
+  },
+  {
+   "fieldname": "result_interpreter",
+   "fieldtype": "Table",
+   "label": "Result Interpreter",
+   "options": "Reference Table"
+  },
+  {
+   "fieldname": "specimen",
+   "fieldtype": "Table",
+   "label": "Specimen",
+   "options": "Specimen Multi"
+  },
+  {
+   "fieldname": "result",
+   "fieldtype": "Table",
+   "label": "Result",
+   "options": "Observation Multis"
+  },
+  {
+   "fieldname": "study",
+   "fieldtype": "Table",
+   "label": "Study",
+   "options": "Reference Table"
+  },
+  {
+   "fieldname": "supporting_info",
+   "fieldtype": "Table",
+   "label": "Supporting Info",
+   "options": "Diagnostic SupportingInfo"
+  },
+  {
+   "fieldname": "media",
+   "fieldtype": "Table",
+   "label": "Media",
+   "options": "Diagnostic Media"
+  },
+  {
+   "fieldname": "section_break_24",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Small Text",
+   "label": "Note"
+  },
+  {
+   "fieldname": "conclusion",
+   "fieldtype": "Small Text",
+   "label": "Conclusion"
+  },
+  {
+   "fieldname": "section_break_27",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "label": "Fhir ServerID",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-11-20 22:15:00.820406",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Diagnostic Report",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Nursing User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

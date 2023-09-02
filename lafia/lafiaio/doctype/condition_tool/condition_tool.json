@@ -1,0 +1,104 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-07-26 12:45:41.694499",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_id",
+  "patient",
+  "column_break_3",
+  "encounter_id",
+  "encounter",
+  "section_break_6",
+  "uid",
+  "start",
+  "stop",
+  "code",
+  "body_site"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient_id",
+   "fieldtype": "Data",
+   "label": "Patient ID"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "encounter_id",
+   "fieldtype": "Data",
+   "label": "Encounter ID"
+  },
+  {
+   "fieldname": "encounter",
+   "fieldtype": "Link",
+   "label": "Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "uid",
+   "fieldtype": "Data",
+   "label": "UID"
+  },
+  {
+   "fieldname": "start",
+   "fieldtype": "Date",
+   "label": "Start"
+  },
+  {
+   "fieldname": "stop",
+   "fieldtype": "Date",
+   "label": "Stop"
+  },
+  {
+   "fieldname": "code",
+   "fieldtype": "Link",
+   "label": "Code",
+   "options": "Condition Code"
+  },
+  {
+   "fieldname": "body_site",
+   "fieldtype": "Table MultiSelect",
+   "label": "Body Site",
+   "options": "Body Site Multi"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-07-28 00:54:20.944018",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Condition Tool",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

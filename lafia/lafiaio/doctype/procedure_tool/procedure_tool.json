@@ -1,0 +1,125 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "creation": "2022-07-27 11:06:48.872876",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_id",
+  "patient",
+  "column_break_3",
+  "encounter_id",
+  "encounter",
+  "practitioner",
+  "section_break_6",
+  "start",
+  "stop",
+  "column_break_10",
+  "category",
+  "code",
+  "reason_code",
+  "procedure_template"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient_id",
+   "fieldtype": "Data",
+   "label": "Patient ID"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "encounter_id",
+   "fieldtype": "Data",
+   "label": "Encounter ID"
+  },
+  {
+   "fieldname": "encounter",
+   "fieldtype": "Link",
+   "label": "Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "start",
+   "fieldtype": "Data",
+   "label": "Start"
+  },
+  {
+   "fieldname": "stop",
+   "fieldtype": "Data",
+   "label": "Stop"
+  },
+  {
+   "fieldname": "code",
+   "fieldtype": "Link",
+   "label": "Code",
+   "options": "Procedure Code"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "label": "Category",
+   "options": "Procedure Category Code"
+  },
+  {
+   "fieldname": "reason_code",
+   "fieldtype": "Link",
+   "label": "Reason Code",
+   "options": "Procedure Not Performed Reason Code"
+  },
+  {
+   "fieldname": "procedure_template",
+   "fieldtype": "Link",
+   "label": "Procedure Template",
+   "options": "Clinical Procedure Template"
+  },
+  {
+   "fieldname": "practitioner",
+   "fieldtype": "Link",
+   "label": "Practitioner",
+   "options": "Healthcare Practitioner"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-08-18 11:21:24.621516",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Procedure Tool",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,85 @@
+name: Build
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+  push:
+    branches:
+      - dev
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      -
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.9"
+
+      - name: Setup Nodejs14
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Start Redis
+        run: |
+          sudo apt install redis-server
+
+      - name: Install Test/Coverage Dependencies
+        env:
+          LAFIA_SERVER_URL: "${{ secrets.LAFIA_SERVER_URL }}"
+        run: |
+          wget -qO - https://packages.confluent.io/deb/7.0/archive.key | sudo apt-key add -
+          sudo add-apt-repository "deb [arch=amd64] https://packages.confluent.io/deb/7.0 stable main"
+          sudo add-apt-repository "deb https://packages.confluent.io/clients/deb $(lsb_release -cs) main"
+          sudo apt-get update && sudo apt-get install librdkafka-dev
+          pip3 install frappe-bench
+          bench init ../frappe-bench
+          source ../frappe-bench/env/bin/activate
+          pip3 install RestrictedPython~=5.1
+          pip3 install -e ../frappe-bench/apps/frappe
+          cd ../frappe-bench
+          bench build
+          cd ../oyasync-lafia
+          pip3 install coverage
+          if [ -f requirements.txt ]; then pip3 install -r requirements.txt; fi
+
+      - name: Test with unittest
+        env:
+            LAFIA_SERVER_URL: "${{ secrets.LAFIA_SERVER_URL }}"
+            SERVER_ENV: "${{ secrets.SERVER_ENV }}"
+        run: |
+          source ../frappe-bench/env/bin/activate
+          pip3 install coverage
+          export LAFIA_SERVER_URL="${{ secrets.LAFIA_SERVER_URL }}"
+          export RABBITMQ_URL="${{ secrets.RABBITMQ_URL }}"
+          export SERVER_ENV="${{ secrets.SERVER_ENV }}"
+          coverage run -m unittest discover
+
+      - name: Generate Coverage
+        env:
+          LAFIA_SERVER_URL: "${{ secrets.LAFIA_SERVER_URL }}"
+        run: |
+          source ../frappe-bench/env/bin/activate
+          coverage report && coverage xml
+      -
+        env:
+          SONAR_HOST_URL: "${{ secrets.SONAR_HOST_URL }}"
+          SONAR_TOKEN: "${{ secrets.SONAR_TOKEN }}"
+        uses: sonarsource/sonarqube-scan-action@master
+        with:
+          args: >
+            -Dsonar.python.coverage.reportPaths=coverage.xml
+            -Dsonar.verbose=true
+      -
+        env:
+          SONAR_TOKEN: "${{ secrets.SONAR_TOKEN }}"
+        timeout-minutes: 240
+        uses: sonarsource/sonarqube-quality-gate-action@master

@@ -1,0 +1,33 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2022-08-26 01:28:32.009852",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "service_char"
+ ],
+ "fields": [
+  {
+   "fieldname": "service_char",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Service Char",
+   "options": "Healthcare Service Characteristics"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-08-31 00:03:20.145991",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Service Characteristics",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

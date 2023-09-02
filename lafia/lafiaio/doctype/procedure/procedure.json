@@ -1,0 +1,373 @@
+{
+ "actions": [],
+ "autoname": "format:PCD-LIO-{fhir_serverid}",
+ "creation": "2021-05-20 21:57:04.503479",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "subject",
+  "encounter",
+  "encounter_name",
+  "status",
+  "statusreason",
+  "column_break_8",
+  "category",
+  "code",
+  "start",
+  "stop",
+  "external_identifier_section",
+  "identifier",
+  "section_break_12",
+  "instantiatescanonical",
+  "instantiatesuri",
+  "section_break_4",
+  "basedon_type",
+  "basedon",
+  "column_break_18",
+  "partof_type",
+  "partof",
+  "section_break_20",
+  "recorder_type",
+  "recorder",
+  "column_break_25",
+  "asserter_type",
+  "asserter",
+  "performer_section",
+  "performer",
+  "section_break_30",
+  "report",
+  "section_break_29",
+  "column_break_34",
+  "location",
+  "column_break_35",
+  "reasoncode",
+  "reason_reference_type",
+  "reasonreference",
+  "section_break_39",
+  "bodysite",
+  "outcome",
+  "complication",
+  "complicationdetail",
+  "followup",
+  "note",
+  "column_break_43",
+  "focaldevice",
+  "usedreference",
+  "usedcode",
+  "fhir_serverid"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "fieldname": "instantiatescanonical",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "InstantiatesCanonical"
+  },
+  {
+   "fieldname": "instantiatesuri",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "InstantiatesUri"
+  },
+  {
+   "fieldname": "basedon",
+   "fieldtype": "Dynamic Link",
+   "label": "BasedOn",
+   "options": "basedon_type"
+  },
+  {
+   "fieldname": "partof",
+   "fieldtype": "Dynamic Link",
+   "label": "PartOf",
+   "options": "partof_type"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "preparation\nin-progress\nnot-done\non-hold\nstopped\ncompleted\nentered-in-error\nunknown",
+   "reqd": 1
+  },
+  {
+   "fieldname": "statusreason",
+   "fieldtype": "Link",
+   "label": "StatusReason",
+   "options": "Procedure Not Performed Reason Code"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "label": "Category",
+   "options": "Procedure Category Code"
+  },
+  {
+   "fieldname": "code",
+   "fieldtype": "Link",
+   "label": "Identification of Procedure",
+   "options": "Procedure Code"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Link",
+   "label": "Subject",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "encounter",
+   "fieldtype": "Link",
+   "label": "Encounter",
+   "options": "Patient Encounter"
+  },
+  {
+   "fieldname": "recorder",
+   "fieldtype": "Dynamic Link",
+   "label": "Recorder",
+   "options": "recorder_type"
+  },
+  {
+   "fieldname": "asserter",
+   "fieldtype": "Dynamic Link",
+   "label": "Asserter",
+   "options": "asserter_type"
+  },
+  {
+   "fieldname": "performer",
+   "fieldtype": "Table",
+   "label": "Performer",
+   "options": "Procedure Performer Table"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "label": "Location",
+   "options": "Location FHIR"
+  },
+  {
+   "fieldname": "reasoncode",
+   "fieldtype": "Table MultiSelect",
+   "label": "ReasonCode",
+   "options": "Procedure Reason Code Multi"
+  },
+  {
+   "fieldname": "reasonreference",
+   "fieldtype": "Dynamic Link",
+   "label": "Reason Reference",
+   "options": "reason_reference_type"
+  },
+  {
+   "fieldname": "bodysite",
+   "fieldtype": "Table MultiSelect",
+   "label": "Body Site",
+   "options": "Body Site Multi"
+  },
+  {
+   "fieldname": "outcome",
+   "fieldtype": "Link",
+   "label": "Outcome",
+   "options": "Procedure Outcome Code"
+  },
+  {
+   "fieldname": "report",
+   "fieldtype": "Table",
+   "label": "Report",
+   "options": "Procedure Report Table"
+  },
+  {
+   "fieldname": "complication",
+   "fieldtype": "Table MultiSelect",
+   "label": "Complication",
+   "options": "Condition Code Multi"
+  },
+  {
+   "fieldname": "complicationdetail",
+   "fieldtype": "Link",
+   "label": "ComplicationDetail",
+   "options": "Condition"
+  },
+  {
+   "fieldname": "followup",
+   "fieldtype": "Table MultiSelect",
+   "label": "FollowUp",
+   "options": "Procedure Followup Code Multi"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Table",
+   "label": "Note",
+   "options": "Annotation"
+  },
+  {
+   "fieldname": "focaldevice",
+   "fieldtype": "Data",
+   "label": "FocalDevice"
+  },
+  {
+   "fieldname": "usedreference",
+   "fieldtype": "Table",
+   "label": "UsedReference",
+   "options": "Procedure Used Reference"
+  },
+  {
+   "fieldname": "usedcode",
+   "fieldtype": "Table",
+   "label": "UsedCode",
+   "options": "Codable Concept"
+  },
+  {
+   "description": "Who recorded the procedure",
+   "fieldname": "recorder_type",
+   "fieldtype": "Link",
+   "label": "Recorder Type",
+   "options": "DocType"
+  },
+  {
+   "description": "Person who asserts this procedure",
+   "fieldname": "asserter_type",
+   "fieldtype": "Link",
+   "label": "Asserter Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "reason_reference_type",
+   "fieldtype": "Link",
+   "label": "Reason Reference Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "section_break_29",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_34",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_39",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_43",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Care Plan",
+   "description": "A request for this procedure",
+   "fieldname": "basedon_type",
+   "fieldtype": "Link",
+   "label": "BasedOn Type",
+   "options": "DocType"
+  },
+  {
+   "description": "Part of referenced event",
+   "fieldname": "partof_type",
+   "fieldtype": "Link",
+   "label": "PartOf Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "label": "FHIR Serverid"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "external_identifier_section",
+   "fieldtype": "Section Break",
+   "label": "External Identifier"
+  },
+  {
+   "fieldname": "start",
+   "fieldtype": "Datetime",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "stop",
+   "fieldtype": "Datetime",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "encounter.title",
+   "fieldname": "encounter_name",
+   "fieldtype": "Data",
+   "label": "Encounter name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "collapsible": 1,
+   "fieldname": "performer_section",
+   "fieldtype": "Section Break",
+   "label": "Performer"
+  },
+  {
+   "bold": 1,
+   "collapsible": 1,
+   "fieldname": "section_break_30",
+   "fieldtype": "Section Break",
+   "label": "Report"
+  },
+  {
+   "fieldname": "column_break_35",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-07-26 22:56:25.193711",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Procedure",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

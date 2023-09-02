@@ -1,0 +1,56 @@
+{
+ "actions": [],
+ "creation": "2021-06-09 16:30:24.363724",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "type",
+  "valuecodeableconcept",
+  "valuestring",
+  "valuequantity",
+  "valuebase64binary"
+ ],
+ "fields": [
+  {
+   "fieldname": "type",
+   "fieldtype": "Table",
+   "label": "type",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "valuecodeableconcept",
+   "fieldtype": "Table",
+   "label": "valueCodeableConcept",
+   "options": "Codable Concept"
+  },
+  {
+   "fieldname": "valuestring",
+   "fieldtype": "Text",
+   "label": "valueString"
+  },
+  {
+   "fieldname": "valuequantity",
+   "fieldtype": "Table",
+   "label": "valueQuantity",
+   "options": "Quantity"
+  },
+  {
+   "fieldname": "valuebase64binary",
+   "fieldtype": "Data",
+   "label": "valueBase64Binary"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-06-11 19:48:20.752393",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Drug Characteristic Child",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

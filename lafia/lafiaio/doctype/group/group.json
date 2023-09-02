@@ -1,0 +1,234 @@
+{
+ "actions": [],
+ "autoname": "field:name1",
+ "creation": "2021-06-01 18:16:25.125461",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "type",
+  "code",
+  "active",
+  "column_break_5",
+  "membership",
+  "quantity",
+  "characteristic",
+  "identifier_section",
+  "identifier",
+  "description_section",
+  "description",
+  "managing_entity_section",
+  "entity_type",
+  "column_break_14",
+  "entity",
+  "members_section",
+  "members",
+  "section_break_19",
+  "fhir_serverid"
+ ],
+ "fields": [
+  {
+   "fieldname": "identifier",
+   "fieldtype": "Table",
+   "label": "Identifier",
+   "options": "Identifier"
+  },
+  {
+   "default": "0",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "label": "Active"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Type",
+   "options": "\nPerson\nAnimal\nPractitioner\nDevice\nCareTeam\nHealthcareService\nLocation\nOrganization\nRelatedPerson\nSpecimen",
+   "reqd": 1
+  },
+  {
+   "description": "Kind of Group members",
+   "fieldname": "code",
+   "fieldtype": "Link",
+   "label": "Kind",
+   "options": "Group Kind"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "description": "Number of members",
+   "fieldname": "quantity",
+   "fieldtype": "Int",
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "characteristic",
+   "fieldtype": "Data",
+   "label": "Characteristic"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "membership",
+   "fieldtype": "Select",
+   "label": "Membership",
+   "options": "Definitional\nEnumerated"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "identifier_section",
+   "fieldtype": "Section Break",
+   "label": "Identifier"
+  },
+  {
+   "collapsible": 1,
+   "description": "Description of the group",
+   "fieldname": "description_section",
+   "fieldtype": "Section Break",
+   "label": "Description"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Long Text",
+   "label": "Description"
+  },
+  {
+   "collapsible": 1,
+   "description": "Entity that is the custodian of the Group",
+   "fieldname": "managing_entity_section",
+   "fieldtype": "Section Break",
+   "label": "Managing Entity"
+  },
+  {
+   "description": "Organization\nRelatedPerson\nPractitioner\nPractitionerRole",
+   "fieldname": "entity_type",
+   "fieldtype": "Link",
+   "label": "Entity Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "entity",
+   "fieldtype": "Dynamic Link",
+   "label": "Entity",
+   "options": "entity_type"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "members_section",
+   "fieldtype": "Section Break",
+   "label": "Members"
+  },
+  {
+   "fieldname": "members",
+   "fieldtype": "Table",
+   "label": "Member",
+   "options": "Group Member"
+  },
+  {
+   "fieldname": "section_break_19",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "fhir_serverid",
+   "fieldtype": "Data",
+   "label": "Fhir ServerID",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-10-23 21:03:49.396553",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Group",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Nursing User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "name1",
+ "track_changes": 1
+}

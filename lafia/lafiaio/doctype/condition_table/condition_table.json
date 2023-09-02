@@ -1,0 +1,58 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2021-11-16 21:31:23.816443",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "code",
+  "outcome",
+  "contributed_to_death",
+  "age_condition_first_manifested"
+ ],
+ "fields": [
+  {
+   "fieldname": "code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Condition Suffered",
+   "options": "Condition Code"
+  },
+  {
+   "fieldname": "outcome",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Outcome"
+  },
+  {
+   "default": "0",
+   "fieldname": "contributed_to_death",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Contributed To Death"
+  },
+  {
+   "fieldname": "age_condition_first_manifested",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Age Condition First manifested"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-11-13 21:56:44.106695",
+ "modified_by": "Administrator",
+ "module": "LafiaIO",
+ "name": "Condition Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
